@@ -222,9 +222,9 @@
             this.labelLowerSection.ForeColor = System.Drawing.Color.White;
             this.labelLowerSection.Location = new System.Drawing.Point(244, 206);
             this.labelLowerSection.Name = "labelLowerSection";
-            this.labelLowerSection.Size = new System.Drawing.Size(186, 31);
+            this.labelLowerSection.Size = new System.Drawing.Size(200, 31);
             this.labelLowerSection.TabIndex = 15;
-            this.labelLowerSection.Text = "Lower Section";
+            this.labelLowerSection.Text = "Lower Sections";
             // 
             // Form1
             // 
