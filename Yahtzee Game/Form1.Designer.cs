@@ -102,7 +102,7 @@
             // checkBoxDie5
             // 
             this.checkBoxDie5.AutoSize = true;
-            this.checkBoxDie5.Location = new System.Drawing.Point(292, 80);
+            this.checkBoxDie5.Location = new System.Drawing.Point(293, 80);
             this.checkBoxDie5.Name = "checkBoxDie5";
             this.checkBoxDie5.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie5.TabIndex = 9;
@@ -111,7 +111,7 @@
             // checkBoxDie4
             // 
             this.checkBoxDie4.AutoSize = true;
-            this.checkBoxDie4.Location = new System.Drawing.Point(232, 80);
+            this.checkBoxDie4.Location = new System.Drawing.Point(233, 80);
             this.checkBoxDie4.Name = "checkBoxDie4";
             this.checkBoxDie4.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie4.TabIndex = 8;
@@ -120,7 +120,7 @@
             // checkBoxDie3
             // 
             this.checkBoxDie3.AutoSize = true;
-            this.checkBoxDie3.Location = new System.Drawing.Point(172, 80);
+            this.checkBoxDie3.Location = new System.Drawing.Point(173, 80);
             this.checkBoxDie3.Name = "checkBoxDie3";
             this.checkBoxDie3.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie3.TabIndex = 7;
@@ -129,7 +129,7 @@
             // checkBoxDie2
             // 
             this.checkBoxDie2.AutoSize = true;
-            this.checkBoxDie2.Location = new System.Drawing.Point(112, 80);
+            this.checkBoxDie2.Location = new System.Drawing.Point(113, 80);
             this.checkBoxDie2.Name = "checkBoxDie2";
             this.checkBoxDie2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie2.TabIndex = 6;
@@ -138,7 +138,7 @@
             // checkBoxDie1
             // 
             this.checkBoxDie1.AutoSize = true;
-            this.checkBoxDie1.Location = new System.Drawing.Point(52, 80);
+            this.checkBoxDie1.Location = new System.Drawing.Point(53, 80);
             this.checkBoxDie1.Name = "checkBoxDie1";
             this.checkBoxDie1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie1.TabIndex = 5;
