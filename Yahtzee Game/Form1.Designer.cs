@@ -38,6 +38,8 @@
             this.labelDie2 = new System.Windows.Forms.Label();
             this.labelDie1 = new System.Windows.Forms.Label();
             this.labelPlayer = new System.Windows.Forms.Label();
+            this.labelUpperSection = new System.Windows.Forms.Label();
+            this.labelLowerSection = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -51,6 +53,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.labelLowerSection);
+            this.splitContainer1.Panel1.Controls.Add(this.labelUpperSection);
             this.splitContainer1.Panel1.Controls.Add(this.labelPlayer);
             this.splitContainer1.Panel1.Controls.Add(this.labelMessage);
             this.splitContainer1.Panel1.Controls.Add(this.labelHoldValueMessage);
@@ -200,6 +204,28 @@
             this.labelPlayer.TabIndex = 13;
             this.labelPlayer.Text = "Player Label";
             // 
+            // labelUpperSection
+            // 
+            this.labelUpperSection.AutoSize = true;
+            this.labelUpperSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUpperSection.ForeColor = System.Drawing.Color.White;
+            this.labelUpperSection.Location = new System.Drawing.Point(36, 206);
+            this.labelUpperSection.Name = "labelUpperSection";
+            this.labelUpperSection.Size = new System.Drawing.Size(186, 31);
+            this.labelUpperSection.TabIndex = 14;
+            this.labelUpperSection.Text = "Upper Section";
+            // 
+            // labelLowerSection
+            // 
+            this.labelLowerSection.AutoSize = true;
+            this.labelLowerSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLowerSection.ForeColor = System.Drawing.Color.White;
+            this.labelLowerSection.Location = new System.Drawing.Point(244, 206);
+            this.labelLowerSection.Name = "labelLowerSection";
+            this.labelLowerSection.Size = new System.Drawing.Size(186, 31);
+            this.labelLowerSection.TabIndex = 15;
+            this.labelLowerSection.Text = "Lower Section";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +260,8 @@
         private System.Windows.Forms.CheckBox checkBoxDie1;
         private System.Windows.Forms.Button buttonRollDice;
         private System.Windows.Forms.Label labelPlayer;
+        private System.Windows.Forms.Label labelLowerSection;
+        private System.Windows.Forms.Label labelUpperSection;
     }
 }
 
