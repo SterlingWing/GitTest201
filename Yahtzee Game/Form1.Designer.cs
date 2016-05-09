@@ -45,7 +45,9 @@
             this.buttonTwos = new System.Windows.Forms.Button();
             this.scoreLabel2 = new System.Windows.Forms.Label();
             this.buttonThrees = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.scoreLabel3 = new System.Windows.Forms.Label();
+            this.buttonFours = new System.Windows.Forms.Button();
+            this.scoreLabel4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -59,7 +61,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.scoreLabel4);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonFours);
+            this.splitContainer1.Panel1.Controls.Add(this.scoreLabel3);
             this.splitContainer1.Panel1.Controls.Add(this.buttonThrees);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel2);
             this.splitContainer1.Panel1.Controls.Add(this.buttonTwos);
@@ -286,14 +290,33 @@
             this.buttonThrees.Text = "Threes";
             this.buttonThrees.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // scoreLabel3
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(121, 329);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 23);
-            this.label1.TabIndex = 21;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scoreLabel3.BackColor = System.Drawing.Color.White;
+            this.scoreLabel3.Location = new System.Drawing.Point(121, 329);
+            this.scoreLabel3.Name = "scoreLabel3";
+            this.scoreLabel3.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel3.TabIndex = 21;
+            this.scoreLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonFours
+            // 
+            this.buttonFours.AutoSize = true;
+            this.buttonFours.Location = new System.Drawing.Point(28, 358);
+            this.buttonFours.Name = "buttonFours";
+            this.buttonFours.Size = new System.Drawing.Size(75, 25);
+            this.buttonFours.TabIndex = 22;
+            this.buttonFours.Text = "Fours";
+            this.buttonFours.UseVisualStyleBackColor = true;
+            // 
+            // scoreLabel4
+            // 
+            this.scoreLabel4.BackColor = System.Drawing.Color.White;
+            this.scoreLabel4.Location = new System.Drawing.Point(121, 360);
+            this.scoreLabel4.Name = "scoreLabel4";
+            this.scoreLabel4.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel4.TabIndex = 23;
+            this.scoreLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -331,12 +354,14 @@
         private System.Windows.Forms.Label labelPlayer;
         private System.Windows.Forms.Label labelLowerSection;
         private System.Windows.Forms.Label labelUpperSection;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scoreLabel3;
         private System.Windows.Forms.Button buttonThrees;
         private System.Windows.Forms.Label scoreLabel2;
         private System.Windows.Forms.Button buttonTwos;
         private System.Windows.Forms.Label scoreLabel1;
         private System.Windows.Forms.Button buttonOnes;
+        private System.Windows.Forms.Button buttonFours;
+        private System.Windows.Forms.Label scoreLabel4;
     }
 }
 
