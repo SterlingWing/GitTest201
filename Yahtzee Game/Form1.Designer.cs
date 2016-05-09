@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelPlayer = new System.Windows.Forms.Label();
             this.labelMessage = new System.Windows.Forms.Label();
             this.labelHoldValueMessage = new System.Windows.Forms.Label();
             this.buttonRollDice = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.labelDie3 = new System.Windows.Forms.Label();
             this.labelDie2 = new System.Windows.Forms.Label();
             this.labelDie1 = new System.Windows.Forms.Label();
-            this.labelPlayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -47,6 +47,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -65,36 +66,52 @@
             this.splitContainer1.Panel1.Controls.Add(this.labelDie3);
             this.splitContainer1.Panel1.Controls.Add(this.labelDie2);
             this.splitContainer1.Panel1.Controls.Add(this.labelDie1);
-            this.splitContainer1.Size = new System.Drawing.Size(711, 607);
-            this.splitContainer1.SplitterDistance = 474;
+            this.splitContainer1.Size = new System.Drawing.Size(1066, 934);
+            this.splitContainer1.SplitterDistance = 710;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // labelPlayer
+            // 
+            this.labelPlayer.AutoSize = true;
+            this.labelPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlayer.ForeColor = System.Drawing.Color.White;
+            this.labelPlayer.Location = new System.Drawing.Point(190, 225);
+            this.labelPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPlayer.Name = "labelPlayer";
+            this.labelPlayer.Size = new System.Drawing.Size(509, 58);
+            this.labelPlayer.TabIndex = 13;
+            this.labelPlayer.Text = "Player Label changed";
             // 
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessage.ForeColor = System.Drawing.Color.White;
-            this.labelMessage.Location = new System.Drawing.Point(38, 114);
+            this.labelMessage.Location = new System.Drawing.Point(57, 175);
+            this.labelMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(60, 25);
+            this.labelMessage.Size = new System.Drawing.Size(93, 36);
             this.labelMessage.TabIndex = 12;
             this.labelMessage.Text = "Roll 1";
             // 
             // labelHoldValueMessage
             // 
             this.labelHoldValueMessage.BackColor = System.Drawing.Color.White;
-            this.labelHoldValueMessage.Location = new System.Drawing.Point(337, 71);
+            this.labelHoldValueMessage.Location = new System.Drawing.Point(506, 109);
+            this.labelHoldValueMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHoldValueMessage.Name = "labelHoldValueMessage";
-            this.labelHoldValueMessage.Size = new System.Drawing.Size(76, 30);
+            this.labelHoldValueMessage.Size = new System.Drawing.Size(114, 46);
             this.labelHoldValueMessage.TabIndex = 11;
             this.labelHoldValueMessage.Text = "Check box to hold value";
             this.labelHoldValueMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonRollDice
             // 
-            this.buttonRollDice.Location = new System.Drawing.Point(340, 36);
+            this.buttonRollDice.Location = new System.Drawing.Point(510, 55);
+            this.buttonRollDice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRollDice.Name = "buttonRollDice";
-            this.buttonRollDice.Size = new System.Drawing.Size(90, 23);
+            this.buttonRollDice.Size = new System.Drawing.Size(135, 35);
             this.buttonRollDice.TabIndex = 10;
             this.buttonRollDice.Text = "Click to roll dice";
             this.buttonRollDice.UseVisualStyleBackColor = true;
@@ -102,111 +119,111 @@
             // checkBoxDie5
             // 
             this.checkBoxDie5.AutoSize = true;
-            this.checkBoxDie5.Location = new System.Drawing.Point(292, 80);
+            this.checkBoxDie5.Location = new System.Drawing.Point(438, 123);
+            this.checkBoxDie5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxDie5.Name = "checkBoxDie5";
-            this.checkBoxDie5.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDie5.Size = new System.Drawing.Size(22, 21);
             this.checkBoxDie5.TabIndex = 9;
             this.checkBoxDie5.UseVisualStyleBackColor = true;
             // 
             // checkBoxDie4
             // 
             this.checkBoxDie4.AutoSize = true;
-            this.checkBoxDie4.Location = new System.Drawing.Point(232, 80);
+            this.checkBoxDie4.Location = new System.Drawing.Point(348, 123);
+            this.checkBoxDie4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxDie4.Name = "checkBoxDie4";
-            this.checkBoxDie4.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDie4.Size = new System.Drawing.Size(22, 21);
             this.checkBoxDie4.TabIndex = 8;
             this.checkBoxDie4.UseVisualStyleBackColor = true;
             // 
             // checkBoxDie3
             // 
             this.checkBoxDie3.AutoSize = true;
-            this.checkBoxDie3.Location = new System.Drawing.Point(172, 80);
+            this.checkBoxDie3.Location = new System.Drawing.Point(258, 123);
+            this.checkBoxDie3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxDie3.Name = "checkBoxDie3";
-            this.checkBoxDie3.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDie3.Size = new System.Drawing.Size(22, 21);
             this.checkBoxDie3.TabIndex = 7;
             this.checkBoxDie3.UseVisualStyleBackColor = true;
             // 
             // checkBoxDie2
             // 
             this.checkBoxDie2.AutoSize = true;
-            this.checkBoxDie2.Location = new System.Drawing.Point(112, 80);
+            this.checkBoxDie2.Location = new System.Drawing.Point(168, 123);
+            this.checkBoxDie2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxDie2.Name = "checkBoxDie2";
-            this.checkBoxDie2.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDie2.Size = new System.Drawing.Size(22, 21);
             this.checkBoxDie2.TabIndex = 6;
             this.checkBoxDie2.UseVisualStyleBackColor = true;
             // 
             // checkBoxDie1
             // 
             this.checkBoxDie1.AutoSize = true;
-            this.checkBoxDie1.Location = new System.Drawing.Point(52, 80);
+            this.checkBoxDie1.Location = new System.Drawing.Point(78, 123);
+            this.checkBoxDie1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxDie1.Name = "checkBoxDie1";
-            this.checkBoxDie1.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxDie1.Size = new System.Drawing.Size(22, 21);
             this.checkBoxDie1.TabIndex = 5;
             this.checkBoxDie1.UseVisualStyleBackColor = true;
             // 
             // labelDie5
             // 
             this.labelDie5.BackColor = System.Drawing.Color.White;
-            this.labelDie5.Location = new System.Drawing.Point(280, 27);
+            this.labelDie5.Location = new System.Drawing.Point(420, 42);
+            this.labelDie5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDie5.Name = "labelDie5";
-            this.labelDie5.Size = new System.Drawing.Size(40, 40);
+            this.labelDie5.Size = new System.Drawing.Size(60, 62);
             this.labelDie5.TabIndex = 4;
             this.labelDie5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDie4
             // 
             this.labelDie4.BackColor = System.Drawing.Color.White;
-            this.labelDie4.Location = new System.Drawing.Point(220, 27);
+            this.labelDie4.Location = new System.Drawing.Point(330, 42);
+            this.labelDie4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDie4.Name = "labelDie4";
-            this.labelDie4.Size = new System.Drawing.Size(40, 40);
+            this.labelDie4.Size = new System.Drawing.Size(60, 62);
             this.labelDie4.TabIndex = 3;
             this.labelDie4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDie3
             // 
             this.labelDie3.BackColor = System.Drawing.Color.White;
-            this.labelDie3.Location = new System.Drawing.Point(160, 27);
+            this.labelDie3.Location = new System.Drawing.Point(240, 42);
+            this.labelDie3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDie3.Name = "labelDie3";
-            this.labelDie3.Size = new System.Drawing.Size(40, 40);
+            this.labelDie3.Size = new System.Drawing.Size(60, 62);
             this.labelDie3.TabIndex = 2;
             this.labelDie3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDie2
             // 
             this.labelDie2.BackColor = System.Drawing.Color.White;
-            this.labelDie2.Location = new System.Drawing.Point(100, 27);
+            this.labelDie2.Location = new System.Drawing.Point(150, 42);
+            this.labelDie2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDie2.Name = "labelDie2";
-            this.labelDie2.Size = new System.Drawing.Size(40, 40);
+            this.labelDie2.Size = new System.Drawing.Size(60, 62);
             this.labelDie2.TabIndex = 1;
             this.labelDie2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDie1
             // 
             this.labelDie1.BackColor = System.Drawing.Color.White;
-            this.labelDie1.Location = new System.Drawing.Point(40, 27);
+            this.labelDie1.Location = new System.Drawing.Point(60, 42);
+            this.labelDie1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDie1.Name = "labelDie1";
-            this.labelDie1.Size = new System.Drawing.Size(40, 40);
+            this.labelDie1.Size = new System.Drawing.Size(60, 62);
             this.labelDie1.TabIndex = 0;
             this.labelDie1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPlayer
-            // 
-            this.labelPlayer.AutoSize = true;
-            this.labelPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlayer.ForeColor = System.Drawing.Color.White;
-            this.labelPlayer.Location = new System.Drawing.Point(127, 146);
-            this.labelPlayer.Name = "labelPlayer";
-            this.labelPlayer.Size = new System.Drawing.Size(198, 38);
-            this.labelPlayer.TabIndex = 13;
-            this.labelPlayer.Text = "Player Label";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(711, 607);
+            this.ClientSize = new System.Drawing.Size(1066, 934);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
