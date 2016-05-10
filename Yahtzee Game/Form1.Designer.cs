@@ -24,6 +24,36 @@
         /// </summary>
         private void InitializeComponent() {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelGrandScore = new System.Windows.Forms.Label();
+            this.labelGrandTotal = new System.Windows.Forms.Label();
+            this.labelBonus63Score = new System.Windows.Forms.Label();
+            this.labelUpperScore = new System.Windows.Forms.Label();
+            this.labelBonusYatzeeScore = new System.Windows.Forms.Label();
+            this.labelLowerScore = new System.Windows.Forms.Label();
+            this.labelSubScore = new System.Windows.Forms.Label();
+            this.labelLowerTotal = new System.Windows.Forms.Label();
+            this.labelYahtzeeBonus = new System.Windows.Forms.Label();
+            this.labelUpperTotal = new System.Windows.Forms.Label();
+            this.label63Bonus = new System.Windows.Forms.Label();
+            this.labelSubTotal = new System.Windows.Forms.Label();
+            this.scoreLabel7 = new System.Windows.Forms.Label();
+            this.scoreLabel8 = new System.Windows.Forms.Label();
+            this.scoreLabel9 = new System.Windows.Forms.Label();
+            this.scoreLabel10 = new System.Windows.Forms.Label();
+            this.scoreLabel11 = new System.Windows.Forms.Label();
+            this.scoreLabel12 = new System.Windows.Forms.Label();
+            this.scoreLabel13 = new System.Windows.Forms.Label();
+            this.buttonTriple = new System.Windows.Forms.Button();
+            this.buttonQuadruple = new System.Windows.Forms.Button();
+            this.buttonFullHouse = new System.Windows.Forms.Button();
+            this.buttonYahtzee = new System.Windows.Forms.Button();
+            this.buttonSmallStraight = new System.Windows.Forms.Button();
+            this.buttonLargeStraight = new System.Windows.Forms.Button();
+            this.buttonChance = new System.Windows.Forms.Button();
+            this.scoreLabel6 = new System.Windows.Forms.Label();
+            this.scoreLabel5 = new System.Windows.Forms.Label();
+            this.buttonSixes = new System.Windows.Forms.Button();
+            this.buttonFives = new System.Windows.Forms.Button();
             this.scoreLabel4 = new System.Windows.Forms.Label();
             this.buttonFours = new System.Windows.Forms.Button();
             this.scoreLabel3 = new System.Windows.Forms.Label();
@@ -48,36 +78,6 @@
             this.labelDie3 = new System.Windows.Forms.Label();
             this.labelDie2 = new System.Windows.Forms.Label();
             this.labelDie1 = new System.Windows.Forms.Label();
-            this.buttonFives = new System.Windows.Forms.Button();
-            this.buttonSixes = new System.Windows.Forms.Button();
-            this.scoreLabel5 = new System.Windows.Forms.Label();
-            this.scoreLabel6 = new System.Windows.Forms.Label();
-            this.buttonChance = new System.Windows.Forms.Button();
-            this.buttonLargeStraight = new System.Windows.Forms.Button();
-            this.buttonSmallStraight = new System.Windows.Forms.Button();
-            this.buttonYahtzee = new System.Windows.Forms.Button();
-            this.buttonFullHouse = new System.Windows.Forms.Button();
-            this.buttonQuadruple = new System.Windows.Forms.Button();
-            this.buttonTriple = new System.Windows.Forms.Button();
-            this.scoreLabel13 = new System.Windows.Forms.Label();
-            this.scoreLabel12 = new System.Windows.Forms.Label();
-            this.scoreLabel11 = new System.Windows.Forms.Label();
-            this.scoreLabel10 = new System.Windows.Forms.Label();
-            this.scoreLabel9 = new System.Windows.Forms.Label();
-            this.scoreLabel8 = new System.Windows.Forms.Label();
-            this.scoreLabel7 = new System.Windows.Forms.Label();
-            this.labelSubTotal = new System.Windows.Forms.Label();
-            this.label63Bonus = new System.Windows.Forms.Label();
-            this.labelUpperTotal = new System.Windows.Forms.Label();
-            this.labelYahtzeeBonus = new System.Windows.Forms.Label();
-            this.labelLowerTotal = new System.Windows.Forms.Label();
-            this.labelSubScore = new System.Windows.Forms.Label();
-            this.labelLowerScore = new System.Windows.Forms.Label();
-            this.labelBonusYatzeeScore = new System.Windows.Forms.Label();
-            this.labelUpperScore = new System.Windows.Forms.Label();
-            this.labelBonus63Score = new System.Windows.Forms.Label();
-            this.labelGrandTotal = new System.Windows.Forms.Label();
-            this.labelGrandScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -148,6 +148,292 @@
             this.splitContainer1.Size = new System.Drawing.Size(711, 607);
             this.splitContainer1.SplitterDistance = 474;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // labelGrandScore
+            // 
+            this.labelGrandScore.BackColor = System.Drawing.Color.White;
+            this.labelGrandScore.Location = new System.Drawing.Point(269, 559);
+            this.labelGrandScore.Name = "labelGrandScore";
+            this.labelGrandScore.Size = new System.Drawing.Size(100, 39);
+            this.labelGrandScore.TabIndex = 53;
+            this.labelGrandScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGrandTotal
+            // 
+            this.labelGrandTotal.AutoSize = true;
+            this.labelGrandTotal.BackColor = System.Drawing.Color.White;
+            this.labelGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
+            this.labelGrandTotal.Location = new System.Drawing.Point(42, 559);
+            this.labelGrandTotal.Name = "labelGrandTotal";
+            this.labelGrandTotal.Size = new System.Drawing.Size(207, 39);
+            this.labelGrandTotal.TabIndex = 52;
+            this.labelGrandTotal.Text = "Grand Total";
+            // 
+            // labelBonus63Score
+            // 
+            this.labelBonus63Score.BackColor = System.Drawing.Color.White;
+            this.labelBonus63Score.Location = new System.Drawing.Point(121, 490);
+            this.labelBonus63Score.Name = "labelBonus63Score";
+            this.labelBonus63Score.Size = new System.Drawing.Size(30, 23);
+            this.labelBonus63Score.TabIndex = 51;
+            this.labelBonus63Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelUpperScore
+            // 
+            this.labelUpperScore.BackColor = System.Drawing.Color.White;
+            this.labelUpperScore.Location = new System.Drawing.Point(121, 525);
+            this.labelUpperScore.Name = "labelUpperScore";
+            this.labelUpperScore.Size = new System.Drawing.Size(30, 23);
+            this.labelUpperScore.TabIndex = 50;
+            this.labelUpperScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelBonusYatzeeScore
+            // 
+            this.labelBonusYatzeeScore.BackColor = System.Drawing.Color.White;
+            this.labelBonusYatzeeScore.Location = new System.Drawing.Point(383, 488);
+            this.labelBonusYatzeeScore.Name = "labelBonusYatzeeScore";
+            this.labelBonusYatzeeScore.Size = new System.Drawing.Size(30, 23);
+            this.labelBonusYatzeeScore.TabIndex = 49;
+            this.labelBonusYatzeeScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelLowerScore
+            // 
+            this.labelLowerScore.BackColor = System.Drawing.Color.White;
+            this.labelLowerScore.Location = new System.Drawing.Point(383, 523);
+            this.labelLowerScore.Name = "labelLowerScore";
+            this.labelLowerScore.Size = new System.Drawing.Size(30, 23);
+            this.labelLowerScore.TabIndex = 48;
+            this.labelLowerScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSubScore
+            // 
+            this.labelSubScore.BackColor = System.Drawing.Color.White;
+            this.labelSubScore.Location = new System.Drawing.Point(121, 454);
+            this.labelSubScore.Name = "labelSubScore";
+            this.labelSubScore.Size = new System.Drawing.Size(30, 23);
+            this.labelSubScore.TabIndex = 47;
+            this.labelSubScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelLowerTotal
+            // 
+            this.labelLowerTotal.BackColor = System.Drawing.Color.White;
+            this.labelLowerTotal.Location = new System.Drawing.Point(293, 523);
+            this.labelLowerTotal.Name = "labelLowerTotal";
+            this.labelLowerTotal.Size = new System.Drawing.Size(75, 25);
+            this.labelLowerTotal.TabIndex = 46;
+            this.labelLowerTotal.Text = "Lower Total";
+            this.labelLowerTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelYahtzeeBonus
+            // 
+            this.labelYahtzeeBonus.BackColor = System.Drawing.Color.White;
+            this.labelYahtzeeBonus.Location = new System.Drawing.Point(287, 488);
+            this.labelYahtzeeBonus.Name = "labelYahtzeeBonus";
+            this.labelYahtzeeBonus.Size = new System.Drawing.Size(81, 25);
+            this.labelYahtzeeBonus.TabIndex = 45;
+            this.labelYahtzeeBonus.Text = "Yahtzee Bonus";
+            this.labelYahtzeeBonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelUpperTotal
+            // 
+            this.labelUpperTotal.BackColor = System.Drawing.Color.White;
+            this.labelUpperTotal.Location = new System.Drawing.Point(28, 523);
+            this.labelUpperTotal.Name = "labelUpperTotal";
+            this.labelUpperTotal.Size = new System.Drawing.Size(75, 25);
+            this.labelUpperTotal.TabIndex = 44;
+            this.labelUpperTotal.Text = "Upper Total";
+            this.labelUpperTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label63Bonus
+            // 
+            this.label63Bonus.BackColor = System.Drawing.Color.White;
+            this.label63Bonus.Location = new System.Drawing.Point(28, 488);
+            this.label63Bonus.Name = "label63Bonus";
+            this.label63Bonus.Size = new System.Drawing.Size(75, 25);
+            this.label63Bonus.TabIndex = 43;
+            this.label63Bonus.Text = "Bonus for 63+";
+            this.label63Bonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSubTotal
+            // 
+            this.labelSubTotal.BackColor = System.Drawing.Color.White;
+            this.labelSubTotal.Location = new System.Drawing.Point(28, 452);
+            this.labelSubTotal.Name = "labelSubTotal";
+            this.labelSubTotal.Size = new System.Drawing.Size(75, 25);
+            this.labelSubTotal.TabIndex = 42;
+            this.labelSubTotal.Text = "Sub-Total";
+            this.labelSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel7
+            // 
+            this.scoreLabel7.BackColor = System.Drawing.Color.White;
+            this.scoreLabel7.Location = new System.Drawing.Point(383, 267);
+            this.scoreLabel7.Name = "scoreLabel7";
+            this.scoreLabel7.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel7.TabIndex = 41;
+            this.scoreLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel8
+            // 
+            this.scoreLabel8.BackColor = System.Drawing.Color.White;
+            this.scoreLabel8.Location = new System.Drawing.Point(383, 300);
+            this.scoreLabel8.Name = "scoreLabel8";
+            this.scoreLabel8.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel8.TabIndex = 40;
+            this.scoreLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel9
+            // 
+            this.scoreLabel9.BackColor = System.Drawing.Color.White;
+            this.scoreLabel9.Location = new System.Drawing.Point(383, 331);
+            this.scoreLabel9.Name = "scoreLabel9";
+            this.scoreLabel9.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel9.TabIndex = 39;
+            this.scoreLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel10
+            // 
+            this.scoreLabel10.BackColor = System.Drawing.Color.White;
+            this.scoreLabel10.Location = new System.Drawing.Point(383, 362);
+            this.scoreLabel10.Name = "scoreLabel10";
+            this.scoreLabel10.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel10.TabIndex = 38;
+            this.scoreLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel11
+            // 
+            this.scoreLabel11.BackColor = System.Drawing.Color.White;
+            this.scoreLabel11.Location = new System.Drawing.Point(383, 393);
+            this.scoreLabel11.Name = "scoreLabel11";
+            this.scoreLabel11.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel11.TabIndex = 37;
+            this.scoreLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel12
+            // 
+            this.scoreLabel12.BackColor = System.Drawing.Color.White;
+            this.scoreLabel12.Location = new System.Drawing.Point(383, 424);
+            this.scoreLabel12.Name = "scoreLabel12";
+            this.scoreLabel12.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel12.TabIndex = 36;
+            this.scoreLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel13
+            // 
+            this.scoreLabel13.BackColor = System.Drawing.Color.White;
+            this.scoreLabel13.Location = new System.Drawing.Point(383, 455);
+            this.scoreLabel13.Name = "scoreLabel13";
+            this.scoreLabel13.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel13.TabIndex = 35;
+            this.scoreLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonTriple
+            // 
+            this.buttonTriple.AutoSize = true;
+            this.buttonTriple.Location = new System.Drawing.Point(293, 265);
+            this.buttonTriple.Name = "buttonTriple";
+            this.buttonTriple.Size = new System.Drawing.Size(75, 25);
+            this.buttonTriple.TabIndex = 34;
+            this.buttonTriple.Text = "3 of a Kind";
+            this.buttonTriple.UseVisualStyleBackColor = true;
+            // 
+            // buttonQuadruple
+            // 
+            this.buttonQuadruple.AutoSize = true;
+            this.buttonQuadruple.Location = new System.Drawing.Point(293, 298);
+            this.buttonQuadruple.Name = "buttonQuadruple";
+            this.buttonQuadruple.Size = new System.Drawing.Size(75, 25);
+            this.buttonQuadruple.TabIndex = 33;
+            this.buttonQuadruple.Text = "4 of a Kind";
+            this.buttonQuadruple.UseVisualStyleBackColor = true;
+            // 
+            // buttonFullHouse
+            // 
+            this.buttonFullHouse.AutoSize = true;
+            this.buttonFullHouse.Location = new System.Drawing.Point(293, 329);
+            this.buttonFullHouse.Name = "buttonFullHouse";
+            this.buttonFullHouse.Size = new System.Drawing.Size(75, 25);
+            this.buttonFullHouse.TabIndex = 32;
+            this.buttonFullHouse.Text = "Full House";
+            this.buttonFullHouse.UseVisualStyleBackColor = true;
+            // 
+            // buttonYahtzee
+            // 
+            this.buttonYahtzee.AutoSize = true;
+            this.buttonYahtzee.Location = new System.Drawing.Point(293, 453);
+            this.buttonYahtzee.Name = "buttonYahtzee";
+            this.buttonYahtzee.Size = new System.Drawing.Size(75, 25);
+            this.buttonYahtzee.TabIndex = 31;
+            this.buttonYahtzee.Text = "Yahtzee";
+            this.buttonYahtzee.UseVisualStyleBackColor = true;
+            // 
+            // buttonSmallStraight
+            // 
+            this.buttonSmallStraight.AutoSize = true;
+            this.buttonSmallStraight.Location = new System.Drawing.Point(287, 360);
+            this.buttonSmallStraight.Name = "buttonSmallStraight";
+            this.buttonSmallStraight.Size = new System.Drawing.Size(81, 25);
+            this.buttonSmallStraight.TabIndex = 30;
+            this.buttonSmallStraight.Text = "Small Straight";
+            this.buttonSmallStraight.UseVisualStyleBackColor = true;
+            // 
+            // buttonLargeStraight
+            // 
+            this.buttonLargeStraight.AutoSize = true;
+            this.buttonLargeStraight.Location = new System.Drawing.Point(285, 391);
+            this.buttonLargeStraight.Name = "buttonLargeStraight";
+            this.buttonLargeStraight.Size = new System.Drawing.Size(83, 25);
+            this.buttonLargeStraight.TabIndex = 29;
+            this.buttonLargeStraight.Text = "Large Straight";
+            this.buttonLargeStraight.UseVisualStyleBackColor = true;
+            // 
+            // buttonChance
+            // 
+            this.buttonChance.AutoSize = true;
+            this.buttonChance.Location = new System.Drawing.Point(293, 422);
+            this.buttonChance.Name = "buttonChance";
+            this.buttonChance.Size = new System.Drawing.Size(75, 25);
+            this.buttonChance.TabIndex = 28;
+            this.buttonChance.Text = "Chance";
+            this.buttonChance.UseVisualStyleBackColor = true;
+            // 
+            // scoreLabel6
+            // 
+            this.scoreLabel6.BackColor = System.Drawing.Color.White;
+            this.scoreLabel6.Location = new System.Drawing.Point(121, 422);
+            this.scoreLabel6.Name = "scoreLabel6";
+            this.scoreLabel6.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel6.TabIndex = 27;
+            this.scoreLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scoreLabel5
+            // 
+            this.scoreLabel5.BackColor = System.Drawing.Color.White;
+            this.scoreLabel5.Location = new System.Drawing.Point(121, 391);
+            this.scoreLabel5.Name = "scoreLabel5";
+            this.scoreLabel5.Size = new System.Drawing.Size(30, 23);
+            this.scoreLabel5.TabIndex = 26;
+            this.scoreLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonSixes
+            // 
+            this.buttonSixes.AutoSize = true;
+            this.buttonSixes.Location = new System.Drawing.Point(28, 420);
+            this.buttonSixes.Name = "buttonSixes";
+            this.buttonSixes.Size = new System.Drawing.Size(75, 25);
+            this.buttonSixes.TabIndex = 25;
+            this.buttonSixes.Text = "Sixes";
+            this.buttonSixes.UseVisualStyleBackColor = true;
+            // 
+            // buttonFives
+            // 
+            this.buttonFives.AutoSize = true;
+            this.buttonFives.Location = new System.Drawing.Point(28, 389);
+            this.buttonFives.Name = "buttonFives";
+            this.buttonFives.Size = new System.Drawing.Size(75, 25);
+            this.buttonFives.TabIndex = 24;
+            this.buttonFives.Text = "Fives";
+            this.buttonFives.UseVisualStyleBackColor = true;
             // 
             // scoreLabel4
             // 
@@ -377,292 +663,6 @@
             this.labelDie1.Size = new System.Drawing.Size(40, 40);
             this.labelDie1.TabIndex = 0;
             this.labelDie1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonFives
-            // 
-            this.buttonFives.AutoSize = true;
-            this.buttonFives.Location = new System.Drawing.Point(28, 389);
-            this.buttonFives.Name = "buttonFives";
-            this.buttonFives.Size = new System.Drawing.Size(75, 25);
-            this.buttonFives.TabIndex = 24;
-            this.buttonFives.Text = "Fives";
-            this.buttonFives.UseVisualStyleBackColor = true;
-            // 
-            // buttonSixes
-            // 
-            this.buttonSixes.AutoSize = true;
-            this.buttonSixes.Location = new System.Drawing.Point(28, 420);
-            this.buttonSixes.Name = "buttonSixes";
-            this.buttonSixes.Size = new System.Drawing.Size(75, 25);
-            this.buttonSixes.TabIndex = 25;
-            this.buttonSixes.Text = "Sixes";
-            this.buttonSixes.UseVisualStyleBackColor = true;
-            // 
-            // scoreLabel5
-            // 
-            this.scoreLabel5.BackColor = System.Drawing.Color.White;
-            this.scoreLabel5.Location = new System.Drawing.Point(121, 391);
-            this.scoreLabel5.Name = "scoreLabel5";
-            this.scoreLabel5.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel5.TabIndex = 26;
-            this.scoreLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel6
-            // 
-            this.scoreLabel6.BackColor = System.Drawing.Color.White;
-            this.scoreLabel6.Location = new System.Drawing.Point(121, 422);
-            this.scoreLabel6.Name = "scoreLabel6";
-            this.scoreLabel6.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel6.TabIndex = 27;
-            this.scoreLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonChance
-            // 
-            this.buttonChance.AutoSize = true;
-            this.buttonChance.Location = new System.Drawing.Point(293, 422);
-            this.buttonChance.Name = "buttonChance";
-            this.buttonChance.Size = new System.Drawing.Size(75, 25);
-            this.buttonChance.TabIndex = 28;
-            this.buttonChance.Text = "Chance";
-            this.buttonChance.UseVisualStyleBackColor = true;
-            // 
-            // buttonLargeStraight
-            // 
-            this.buttonLargeStraight.AutoSize = true;
-            this.buttonLargeStraight.Location = new System.Drawing.Point(285, 391);
-            this.buttonLargeStraight.Name = "buttonLargeStraight";
-            this.buttonLargeStraight.Size = new System.Drawing.Size(83, 25);
-            this.buttonLargeStraight.TabIndex = 29;
-            this.buttonLargeStraight.Text = "Large Straight";
-            this.buttonLargeStraight.UseVisualStyleBackColor = true;
-            // 
-            // buttonSmallStraight
-            // 
-            this.buttonSmallStraight.AutoSize = true;
-            this.buttonSmallStraight.Location = new System.Drawing.Point(287, 360);
-            this.buttonSmallStraight.Name = "buttonSmallStraight";
-            this.buttonSmallStraight.Size = new System.Drawing.Size(81, 25);
-            this.buttonSmallStraight.TabIndex = 30;
-            this.buttonSmallStraight.Text = "Small Straight";
-            this.buttonSmallStraight.UseVisualStyleBackColor = true;
-            // 
-            // buttonYahtzee
-            // 
-            this.buttonYahtzee.AutoSize = true;
-            this.buttonYahtzee.Location = new System.Drawing.Point(293, 453);
-            this.buttonYahtzee.Name = "buttonYahtzee";
-            this.buttonYahtzee.Size = new System.Drawing.Size(75, 25);
-            this.buttonYahtzee.TabIndex = 31;
-            this.buttonYahtzee.Text = "Yahtzee";
-            this.buttonYahtzee.UseVisualStyleBackColor = true;
-            // 
-            // buttonFullHouse
-            // 
-            this.buttonFullHouse.AutoSize = true;
-            this.buttonFullHouse.Location = new System.Drawing.Point(293, 329);
-            this.buttonFullHouse.Name = "buttonFullHouse";
-            this.buttonFullHouse.Size = new System.Drawing.Size(75, 25);
-            this.buttonFullHouse.TabIndex = 32;
-            this.buttonFullHouse.Text = "Full House";
-            this.buttonFullHouse.UseVisualStyleBackColor = true;
-            // 
-            // buttonQuadruple
-            // 
-            this.buttonQuadruple.AutoSize = true;
-            this.buttonQuadruple.Location = new System.Drawing.Point(293, 298);
-            this.buttonQuadruple.Name = "buttonQuadruple";
-            this.buttonQuadruple.Size = new System.Drawing.Size(75, 25);
-            this.buttonQuadruple.TabIndex = 33;
-            this.buttonQuadruple.Text = "4 of a Kind";
-            this.buttonQuadruple.UseVisualStyleBackColor = true;
-            // 
-            // buttonTriple
-            // 
-            this.buttonTriple.AutoSize = true;
-            this.buttonTriple.Location = new System.Drawing.Point(293, 265);
-            this.buttonTriple.Name = "buttonTriple";
-            this.buttonTriple.Size = new System.Drawing.Size(75, 25);
-            this.buttonTriple.TabIndex = 34;
-            this.buttonTriple.Text = "3 of a Kind";
-            this.buttonTriple.UseVisualStyleBackColor = true;
-            // 
-            // scoreLabel13
-            // 
-            this.scoreLabel13.BackColor = System.Drawing.Color.White;
-            this.scoreLabel13.Location = new System.Drawing.Point(383, 455);
-            this.scoreLabel13.Name = "scoreLabel13";
-            this.scoreLabel13.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel13.TabIndex = 35;
-            this.scoreLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel12
-            // 
-            this.scoreLabel12.BackColor = System.Drawing.Color.White;
-            this.scoreLabel12.Location = new System.Drawing.Point(383, 424);
-            this.scoreLabel12.Name = "scoreLabel12";
-            this.scoreLabel12.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel12.TabIndex = 36;
-            this.scoreLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel11
-            // 
-            this.scoreLabel11.BackColor = System.Drawing.Color.White;
-            this.scoreLabel11.Location = new System.Drawing.Point(383, 393);
-            this.scoreLabel11.Name = "scoreLabel11";
-            this.scoreLabel11.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel11.TabIndex = 37;
-            this.scoreLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel10
-            // 
-            this.scoreLabel10.BackColor = System.Drawing.Color.White;
-            this.scoreLabel10.Location = new System.Drawing.Point(383, 362);
-            this.scoreLabel10.Name = "scoreLabel10";
-            this.scoreLabel10.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel10.TabIndex = 38;
-            this.scoreLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel9
-            // 
-            this.scoreLabel9.BackColor = System.Drawing.Color.White;
-            this.scoreLabel9.Location = new System.Drawing.Point(383, 331);
-            this.scoreLabel9.Name = "scoreLabel9";
-            this.scoreLabel9.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel9.TabIndex = 39;
-            this.scoreLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel8
-            // 
-            this.scoreLabel8.BackColor = System.Drawing.Color.White;
-            this.scoreLabel8.Location = new System.Drawing.Point(383, 300);
-            this.scoreLabel8.Name = "scoreLabel8";
-            this.scoreLabel8.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel8.TabIndex = 40;
-            this.scoreLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scoreLabel7
-            // 
-            this.scoreLabel7.BackColor = System.Drawing.Color.White;
-            this.scoreLabel7.Location = new System.Drawing.Point(383, 267);
-            this.scoreLabel7.Name = "scoreLabel7";
-            this.scoreLabel7.Size = new System.Drawing.Size(30, 23);
-            this.scoreLabel7.TabIndex = 41;
-            this.scoreLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSubTotal
-            // 
-            this.labelSubTotal.BackColor = System.Drawing.Color.White;
-            this.labelSubTotal.Location = new System.Drawing.Point(28, 452);
-            this.labelSubTotal.Name = "labelSubTotal";
-            this.labelSubTotal.Size = new System.Drawing.Size(75, 25);
-            this.labelSubTotal.TabIndex = 42;
-            this.labelSubTotal.Text = "Sub-Total";
-            this.labelSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label63Bonus
-            // 
-            this.label63Bonus.BackColor = System.Drawing.Color.White;
-            this.label63Bonus.Location = new System.Drawing.Point(28, 488);
-            this.label63Bonus.Name = "label63Bonus";
-            this.label63Bonus.Size = new System.Drawing.Size(75, 25);
-            this.label63Bonus.TabIndex = 43;
-            this.label63Bonus.Text = "Bonus for 63+";
-            this.label63Bonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelUpperTotal
-            // 
-            this.labelUpperTotal.BackColor = System.Drawing.Color.White;
-            this.labelUpperTotal.Location = new System.Drawing.Point(28, 523);
-            this.labelUpperTotal.Name = "labelUpperTotal";
-            this.labelUpperTotal.Size = new System.Drawing.Size(75, 25);
-            this.labelUpperTotal.TabIndex = 44;
-            this.labelUpperTotal.Text = "Upper Total";
-            this.labelUpperTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelYahtzeeBonus
-            // 
-            this.labelYahtzeeBonus.BackColor = System.Drawing.Color.White;
-            this.labelYahtzeeBonus.Location = new System.Drawing.Point(287, 488);
-            this.labelYahtzeeBonus.Name = "labelYahtzeeBonus";
-            this.labelYahtzeeBonus.Size = new System.Drawing.Size(81, 25);
-            this.labelYahtzeeBonus.TabIndex = 45;
-            this.labelYahtzeeBonus.Text = "Yahtzee Bonus";
-            this.labelYahtzeeBonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelLowerTotal
-            // 
-            this.labelLowerTotal.BackColor = System.Drawing.Color.White;
-            this.labelLowerTotal.Location = new System.Drawing.Point(293, 523);
-            this.labelLowerTotal.Name = "labelLowerTotal";
-            this.labelLowerTotal.Size = new System.Drawing.Size(75, 25);
-            this.labelLowerTotal.TabIndex = 46;
-            this.labelLowerTotal.Text = "Lower Total";
-            this.labelLowerTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSubScore
-            // 
-            this.labelSubScore.BackColor = System.Drawing.Color.White;
-            this.labelSubScore.Location = new System.Drawing.Point(121, 454);
-            this.labelSubScore.Name = "labelSubScore";
-            this.labelSubScore.Size = new System.Drawing.Size(30, 23);
-            this.labelSubScore.TabIndex = 47;
-            this.labelSubScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelLowerScore
-            // 
-            this.labelLowerScore.BackColor = System.Drawing.Color.White;
-            this.labelLowerScore.Location = new System.Drawing.Point(383, 523);
-            this.labelLowerScore.Name = "labelLowerScore";
-            this.labelLowerScore.Size = new System.Drawing.Size(30, 23);
-            this.labelLowerScore.TabIndex = 48;
-            this.labelLowerScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelBonusYatzeeScore
-            // 
-            this.labelBonusYatzeeScore.BackColor = System.Drawing.Color.White;
-            this.labelBonusYatzeeScore.Location = new System.Drawing.Point(383, 488);
-            this.labelBonusYatzeeScore.Name = "labelBonusYatzeeScore";
-            this.labelBonusYatzeeScore.Size = new System.Drawing.Size(30, 23);
-            this.labelBonusYatzeeScore.TabIndex = 49;
-            this.labelBonusYatzeeScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelUpperScore
-            // 
-            this.labelUpperScore.BackColor = System.Drawing.Color.White;
-            this.labelUpperScore.Location = new System.Drawing.Point(121, 525);
-            this.labelUpperScore.Name = "labelUpperScore";
-            this.labelUpperScore.Size = new System.Drawing.Size(30, 23);
-            this.labelUpperScore.TabIndex = 50;
-            this.labelUpperScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelBonus63Score
-            // 
-            this.labelBonus63Score.BackColor = System.Drawing.Color.White;
-            this.labelBonus63Score.Location = new System.Drawing.Point(121, 490);
-            this.labelBonus63Score.Name = "labelBonus63Score";
-            this.labelBonus63Score.Size = new System.Drawing.Size(30, 23);
-            this.labelBonus63Score.TabIndex = 51;
-            this.labelBonus63Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGrandTotal
-            // 
-            this.labelGrandTotal.AutoSize = true;
-            this.labelGrandTotal.BackColor = System.Drawing.Color.White;
-            this.labelGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
-            this.labelGrandTotal.Location = new System.Drawing.Point(42, 559);
-            this.labelGrandTotal.Name = "labelGrandTotal";
-            this.labelGrandTotal.Size = new System.Drawing.Size(207, 39);
-            this.labelGrandTotal.TabIndex = 52;
-            this.labelGrandTotal.Text = "Grand Total";
-            // 
-            // labelGrandScore
-            // 
-            this.labelGrandScore.BackColor = System.Drawing.Color.White;
-            this.labelGrandScore.Location = new System.Drawing.Point(269, 559);
-            this.labelGrandScore.Name = "labelGrandScore";
-            this.labelGrandScore.Size = new System.Drawing.Size(100, 39);
-            this.labelGrandScore.TabIndex = 53;
-            this.labelGrandScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
