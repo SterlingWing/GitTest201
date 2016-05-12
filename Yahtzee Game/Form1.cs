@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Yahtzee_Game {
     public partial class Form1 : Form {
-        private Label[] dice;
+        private Label[] dice = {};
         private Button[] scoreButtons;
         private Label[] scoreTotals;
         private CheckBox[] checkBoxes;
@@ -53,13 +53,25 @@ namespace Yahtzee_Game {
         }
 
         public void EnableCheckBoxes() {
-            for (int i = 0; i < 5; i++) {
-                checkBoxes[i].Enabled = false;
-            }
+            checkBoxDie1.Enabled = true;
+            checkBoxDie2.Enabled = true;
+            checkBoxDie3.Enabled = true;
+            checkBoxDie4.Enabled = true;
+            checkBoxDie5.Enabled = true;
         }
 
         public void DisableAndClearCheckBoxes() {
+            checkBoxDie1.Enabled = false;
+            checkBoxDie2.Enabled = false;
+            checkBoxDie3.Enabled = false;
+            checkBoxDie4.Enabled = false;
+            checkBoxDie5.Enabled = false;
 
+            checkBoxDie1.Checked = false;
+            checkBoxDie2.Checked = false;
+            checkBoxDie3.Checked = false;
+            checkBoxDie4.Checked = false;
+            checkBoxDie5.Checked = false;
         }
 
         public void EnableScoreButton(ScoreType combo) {
@@ -75,15 +87,15 @@ namespace Yahtzee_Game {
         }
 
         public void ShowMessage(string message) {
-
+            labelMessage.Text = message;
         }
 
         public void ShowOKButton() {
-
+            //Enter code from part C
         }
 
         public void StartNewGame() {
-
+            //game = new Game();
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
