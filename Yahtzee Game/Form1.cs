@@ -75,6 +75,8 @@ namespace Yahtzee_Game {
 
         public void EnableScoreButton(ScoreType combo) {
 
+
+
         }
 
         public void DisableScoreButton(ScoreType combo) {

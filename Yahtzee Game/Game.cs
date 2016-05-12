@@ -15,5 +15,6 @@ namespace Yahtzee_Game {
     }
 
     class Game {
+
     }
 }
