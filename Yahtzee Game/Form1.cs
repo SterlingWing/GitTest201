@@ -17,6 +17,7 @@ namespace Yahtzee_Game {
 
         public Form1() {
             InitializeComponent();
+            InitialiseLabelsAndButtons();
         }
 
         private void InitialiseLabelsAndButtons() {
