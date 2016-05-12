@@ -43,25 +43,25 @@
             this.scoreLabel11 = new System.Windows.Forms.Label();
             this.scoreLabel12 = new System.Windows.Forms.Label();
             this.scoreLabel13 = new System.Windows.Forms.Label();
-            this.buttonTriple = new System.Windows.Forms.Button();
-            this.buttonQuadruple = new System.Windows.Forms.Button();
-            this.buttonFullHouse = new System.Windows.Forms.Button();
-            this.buttonYahtzee = new System.Windows.Forms.Button();
-            this.buttonSmallStraight = new System.Windows.Forms.Button();
-            this.buttonLargeStraight = new System.Windows.Forms.Button();
-            this.buttonChance = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.scoreLabel6 = new System.Windows.Forms.Label();
             this.scoreLabel5 = new System.Windows.Forms.Label();
-            this.buttonSixes = new System.Windows.Forms.Button();
-            this.buttonFives = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.scoreLabel4 = new System.Windows.Forms.Label();
-            this.buttonFours = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.scoreLabel3 = new System.Windows.Forms.Label();
-            this.buttonThrees = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.scoreLabel2 = new System.Windows.Forms.Label();
-            this.buttonTwos = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.scoreLabel1 = new System.Windows.Forms.Label();
-            this.buttonOnes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.labelLowerSection = new System.Windows.Forms.Label();
             this.labelUpperSection = new System.Windows.Forms.Label();
             this.labelPlayer = new System.Windows.Forms.Label();
@@ -73,11 +73,11 @@
             this.checkBoxDie3 = new System.Windows.Forms.CheckBox();
             this.checkBoxDie2 = new System.Windows.Forms.CheckBox();
             this.checkBoxDie1 = new System.Windows.Forms.CheckBox();
-            this.labelDie5 = new System.Windows.Forms.Label();
-            this.labelDie4 = new System.Windows.Forms.Label();
-            this.labelDie3 = new System.Windows.Forms.Label();
-            this.labelDie2 = new System.Windows.Forms.Label();
-            this.labelDie1 = new System.Windows.Forms.Label();
+            this.die5 = new System.Windows.Forms.Label();
+            this.die4 = new System.Windows.Forms.Label();
+            this.die3 = new System.Windows.Forms.Label();
+            this.die2 = new System.Windows.Forms.Label();
+            this.die1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -111,25 +111,25 @@
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel11);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel12);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel13);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonTriple);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonQuadruple);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonFullHouse);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonYahtzee);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonSmallStraight);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonLargeStraight);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonChance);
+            this.splitContainer1.Panel1.Controls.Add(this.button7);
+            this.splitContainer1.Panel1.Controls.Add(this.button8);
+            this.splitContainer1.Panel1.Controls.Add(this.button9);
+            this.splitContainer1.Panel1.Controls.Add(this.button13);
+            this.splitContainer1.Panel1.Controls.Add(this.button10);
+            this.splitContainer1.Panel1.Controls.Add(this.button11);
+            this.splitContainer1.Panel1.Controls.Add(this.button12);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel6);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel5);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonSixes);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonFives);
+            this.splitContainer1.Panel1.Controls.Add(this.button6);
+            this.splitContainer1.Panel1.Controls.Add(this.button5);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel4);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonFours);
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel3);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonThrees);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel2);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonTwos);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.scoreLabel1);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonOnes);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.labelLowerSection);
             this.splitContainer1.Panel1.Controls.Add(this.labelUpperSection);
             this.splitContainer1.Panel1.Controls.Add(this.labelPlayer);
@@ -141,11 +141,11 @@
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxDie3);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxDie2);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxDie1);
-            this.splitContainer1.Panel1.Controls.Add(this.labelDie5);
-            this.splitContainer1.Panel1.Controls.Add(this.labelDie4);
-            this.splitContainer1.Panel1.Controls.Add(this.labelDie3);
-            this.splitContainer1.Panel1.Controls.Add(this.labelDie2);
-            this.splitContainer1.Panel1.Controls.Add(this.labelDie1);
+            this.splitContainer1.Panel1.Controls.Add(this.die5);
+            this.splitContainer1.Panel1.Controls.Add(this.die4);
+            this.splitContainer1.Panel1.Controls.Add(this.die3);
+            this.splitContainer1.Panel1.Controls.Add(this.die2);
+            this.splitContainer1.Panel1.Controls.Add(this.die1);
             this.splitContainer1.Size = new System.Drawing.Size(1066, 934);
             this.splitContainer1.SplitterDistance = 710;
             this.splitContainer1.SplitterWidth = 6;
@@ -348,82 +348,82 @@
             this.scoreLabel13.TabIndex = 35;
             this.scoreLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonTriple
+            // button7
             // 
-            this.buttonTriple.AutoSize = true;
-            this.buttonTriple.Location = new System.Drawing.Point(440, 408);
-            this.buttonTriple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonTriple.Name = "buttonTriple";
-            this.buttonTriple.Size = new System.Drawing.Size(141, 46);
-            this.buttonTriple.TabIndex = 34;
-            this.buttonTriple.Text = "3 of a Kind";
-            this.buttonTriple.UseVisualStyleBackColor = true;
+            this.button7.AutoSize = true;
+            this.button7.Location = new System.Drawing.Point(440, 408);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(141, 46);
+            this.button7.TabIndex = 34;
+            this.button7.Text = "3 of a Kind";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // buttonQuadruple
+            // button8
             // 
-            this.buttonQuadruple.AutoSize = true;
-            this.buttonQuadruple.Location = new System.Drawing.Point(440, 458);
-            this.buttonQuadruple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonQuadruple.Name = "buttonQuadruple";
-            this.buttonQuadruple.Size = new System.Drawing.Size(141, 46);
-            this.buttonQuadruple.TabIndex = 33;
-            this.buttonQuadruple.Text = "4 of a Kind";
-            this.buttonQuadruple.UseVisualStyleBackColor = true;
+            this.button8.AutoSize = true;
+            this.button8.Location = new System.Drawing.Point(440, 458);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(141, 46);
+            this.button8.TabIndex = 33;
+            this.button8.Text = "4 of a Kind";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // buttonFullHouse
+            // button9
             // 
-            this.buttonFullHouse.AutoSize = true;
-            this.buttonFullHouse.Location = new System.Drawing.Point(440, 506);
-            this.buttonFullHouse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonFullHouse.Name = "buttonFullHouse";
-            this.buttonFullHouse.Size = new System.Drawing.Size(142, 46);
-            this.buttonFullHouse.TabIndex = 32;
-            this.buttonFullHouse.Text = "Full House";
-            this.buttonFullHouse.UseVisualStyleBackColor = true;
+            this.button9.AutoSize = true;
+            this.button9.Location = new System.Drawing.Point(440, 506);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(142, 46);
+            this.button9.TabIndex = 32;
+            this.button9.Text = "Full House";
+            this.button9.UseVisualStyleBackColor = true;
             // 
-            // buttonYahtzee
+            // button13
             // 
-            this.buttonYahtzee.AutoSize = true;
-            this.buttonYahtzee.Location = new System.Drawing.Point(440, 697);
-            this.buttonYahtzee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonYahtzee.Name = "buttonYahtzee";
-            this.buttonYahtzee.Size = new System.Drawing.Size(118, 46);
-            this.buttonYahtzee.TabIndex = 31;
-            this.buttonYahtzee.Text = "Yahtzee";
-            this.buttonYahtzee.UseVisualStyleBackColor = true;
+            this.button13.AutoSize = true;
+            this.button13.Location = new System.Drawing.Point(440, 697);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(118, 46);
+            this.button13.TabIndex = 31;
+            this.button13.Text = "Yahtzee";
+            this.button13.UseVisualStyleBackColor = true;
             // 
-            // buttonSmallStraight
+            // button10
             // 
-            this.buttonSmallStraight.AutoSize = true;
-            this.buttonSmallStraight.Location = new System.Drawing.Point(430, 554);
-            this.buttonSmallStraight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonSmallStraight.Name = "buttonSmallStraight";
-            this.buttonSmallStraight.Size = new System.Drawing.Size(177, 46);
-            this.buttonSmallStraight.TabIndex = 30;
-            this.buttonSmallStraight.Text = "Small Straight";
-            this.buttonSmallStraight.UseVisualStyleBackColor = true;
+            this.button10.AutoSize = true;
+            this.button10.Location = new System.Drawing.Point(430, 554);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(177, 46);
+            this.button10.TabIndex = 30;
+            this.button10.Text = "Small Straight";
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // buttonLargeStraight
+            // button11
             // 
-            this.buttonLargeStraight.AutoSize = true;
-            this.buttonLargeStraight.Location = new System.Drawing.Point(428, 602);
-            this.buttonLargeStraight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonLargeStraight.Name = "buttonLargeStraight";
-            this.buttonLargeStraight.Size = new System.Drawing.Size(180, 46);
-            this.buttonLargeStraight.TabIndex = 29;
-            this.buttonLargeStraight.Text = "Large Straight";
-            this.buttonLargeStraight.UseVisualStyleBackColor = true;
+            this.button11.AutoSize = true;
+            this.button11.Location = new System.Drawing.Point(428, 602);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(180, 46);
+            this.button11.TabIndex = 29;
+            this.button11.Text = "Large Straight";
+            this.button11.UseVisualStyleBackColor = true;
             // 
-            // buttonChance
+            // button12
             // 
-            this.buttonChance.AutoSize = true;
-            this.buttonChance.Location = new System.Drawing.Point(440, 649);
-            this.buttonChance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonChance.Name = "buttonChance";
-            this.buttonChance.Size = new System.Drawing.Size(112, 46);
-            this.buttonChance.TabIndex = 28;
-            this.buttonChance.Text = "Chance";
-            this.buttonChance.UseVisualStyleBackColor = true;
+            this.button12.AutoSize = true;
+            this.button12.Location = new System.Drawing.Point(440, 649);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(112, 46);
+            this.button12.TabIndex = 28;
+            this.button12.Text = "Chance";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // scoreLabel6
             // 
@@ -445,27 +445,27 @@
             this.scoreLabel5.TabIndex = 26;
             this.scoreLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonSixes
+            // button6
             // 
-            this.buttonSixes.AutoSize = true;
-            this.buttonSixes.Location = new System.Drawing.Point(42, 646);
-            this.buttonSixes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonSixes.Name = "buttonSixes";
-            this.buttonSixes.Size = new System.Drawing.Size(112, 46);
-            this.buttonSixes.TabIndex = 25;
-            this.buttonSixes.Text = "Sixes";
-            this.buttonSixes.UseVisualStyleBackColor = true;
+            this.button6.AutoSize = true;
+            this.button6.Location = new System.Drawing.Point(42, 646);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 46);
+            this.button6.TabIndex = 25;
+            this.button6.Text = "Sixes";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // buttonFives
+            // button5
             // 
-            this.buttonFives.AutoSize = true;
-            this.buttonFives.Location = new System.Drawing.Point(42, 598);
-            this.buttonFives.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonFives.Name = "buttonFives";
-            this.buttonFives.Size = new System.Drawing.Size(112, 46);
-            this.buttonFives.TabIndex = 24;
-            this.buttonFives.Text = "Fives";
-            this.buttonFives.UseVisualStyleBackColor = true;
+            this.button5.AutoSize = true;
+            this.button5.Location = new System.Drawing.Point(42, 598);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 46);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Fives";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // scoreLabel4
             // 
@@ -477,16 +477,16 @@
             this.scoreLabel4.TabIndex = 23;
             this.scoreLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonFours
+            // button4
             // 
-            this.buttonFours.AutoSize = true;
-            this.buttonFours.Location = new System.Drawing.Point(42, 551);
-            this.buttonFours.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonFours.Name = "buttonFours";
-            this.buttonFours.Size = new System.Drawing.Size(112, 46);
-            this.buttonFours.TabIndex = 22;
-            this.buttonFours.Text = "Fours";
-            this.buttonFours.UseVisualStyleBackColor = true;
+            this.button4.AutoSize = true;
+            this.button4.Location = new System.Drawing.Point(42, 551);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 46);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Fours";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // scoreLabel3
             // 
@@ -498,16 +498,16 @@
             this.scoreLabel3.TabIndex = 21;
             this.scoreLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonThrees
+            // button3
             // 
-            this.buttonThrees.AutoSize = true;
-            this.buttonThrees.Location = new System.Drawing.Point(42, 503);
-            this.buttonThrees.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonThrees.Name = "buttonThrees";
-            this.buttonThrees.Size = new System.Drawing.Size(112, 46);
-            this.buttonThrees.TabIndex = 20;
-            this.buttonThrees.Text = "Threes";
-            this.buttonThrees.UseVisualStyleBackColor = true;
+            this.button3.AutoSize = true;
+            this.button3.Location = new System.Drawing.Point(42, 503);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 46);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Threes";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // scoreLabel2
             // 
@@ -519,16 +519,16 @@
             this.scoreLabel2.TabIndex = 19;
             this.scoreLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonTwos
+            // button2
             // 
-            this.buttonTwos.AutoSize = true;
-            this.buttonTwos.Location = new System.Drawing.Point(42, 455);
-            this.buttonTwos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonTwos.Name = "buttonTwos";
-            this.buttonTwos.Size = new System.Drawing.Size(112, 46);
-            this.buttonTwos.TabIndex = 18;
-            this.buttonTwos.Text = "Twos";
-            this.buttonTwos.UseVisualStyleBackColor = true;
+            this.button2.AutoSize = true;
+            this.button2.Location = new System.Drawing.Point(42, 455);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 46);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Twos";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // scoreLabel1
             // 
@@ -540,16 +540,16 @@
             this.scoreLabel1.TabIndex = 17;
             this.scoreLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonOnes
+            // button1
             // 
-            this.buttonOnes.AutoSize = true;
-            this.buttonOnes.Location = new System.Drawing.Point(42, 408);
-            this.buttonOnes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonOnes.Name = "buttonOnes";
-            this.buttonOnes.Size = new System.Drawing.Size(112, 46);
-            this.buttonOnes.TabIndex = 16;
-            this.buttonOnes.Text = "Ones";
-            this.buttonOnes.UseVisualStyleBackColor = true;
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(42, 408);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 46);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Ones";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // labelLowerSection
             // 
@@ -671,55 +671,55 @@
             this.checkBoxDie1.TabIndex = 5;
             this.checkBoxDie1.UseVisualStyleBackColor = true;
             // 
-            // labelDie5
+            // die5
             // 
-            this.labelDie5.BackColor = System.Drawing.Color.White;
-            this.labelDie5.Location = new System.Drawing.Point(420, 42);
-            this.labelDie5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDie5.Name = "labelDie5";
-            this.labelDie5.Size = new System.Drawing.Size(60, 62);
-            this.labelDie5.TabIndex = 4;
-            this.labelDie5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.die5.BackColor = System.Drawing.Color.White;
+            this.die5.Location = new System.Drawing.Point(420, 42);
+            this.die5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.die5.Name = "die5";
+            this.die5.Size = new System.Drawing.Size(60, 62);
+            this.die5.TabIndex = 4;
+            this.die5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelDie4
+            // die4
             // 
-            this.labelDie4.BackColor = System.Drawing.Color.White;
-            this.labelDie4.Location = new System.Drawing.Point(330, 42);
-            this.labelDie4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDie4.Name = "labelDie4";
-            this.labelDie4.Size = new System.Drawing.Size(60, 62);
-            this.labelDie4.TabIndex = 3;
-            this.labelDie4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.die4.BackColor = System.Drawing.Color.White;
+            this.die4.Location = new System.Drawing.Point(330, 42);
+            this.die4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.die4.Name = "die4";
+            this.die4.Size = new System.Drawing.Size(60, 62);
+            this.die4.TabIndex = 3;
+            this.die4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelDie3
+            // die3
             // 
-            this.labelDie3.BackColor = System.Drawing.Color.White;
-            this.labelDie3.Location = new System.Drawing.Point(240, 42);
-            this.labelDie3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDie3.Name = "labelDie3";
-            this.labelDie3.Size = new System.Drawing.Size(60, 62);
-            this.labelDie3.TabIndex = 2;
-            this.labelDie3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.die3.BackColor = System.Drawing.Color.White;
+            this.die3.Location = new System.Drawing.Point(240, 42);
+            this.die3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.die3.Name = "die3";
+            this.die3.Size = new System.Drawing.Size(60, 62);
+            this.die3.TabIndex = 2;
+            this.die3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelDie2
+            // die2
             // 
-            this.labelDie2.BackColor = System.Drawing.Color.White;
-            this.labelDie2.Location = new System.Drawing.Point(150, 42);
-            this.labelDie2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDie2.Name = "labelDie2";
-            this.labelDie2.Size = new System.Drawing.Size(60, 62);
-            this.labelDie2.TabIndex = 1;
-            this.labelDie2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.die2.BackColor = System.Drawing.Color.White;
+            this.die2.Location = new System.Drawing.Point(150, 42);
+            this.die2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.die2.Name = "die2";
+            this.die2.Size = new System.Drawing.Size(60, 62);
+            this.die2.TabIndex = 1;
+            this.die2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelDie1
+            // die1
             // 
-            this.labelDie1.BackColor = System.Drawing.Color.White;
-            this.labelDie1.Location = new System.Drawing.Point(60, 42);
-            this.labelDie1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDie1.Name = "labelDie1";
-            this.labelDie1.Size = new System.Drawing.Size(60, 62);
-            this.labelDie1.TabIndex = 0;
-            this.labelDie1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.die1.BackColor = System.Drawing.Color.White;
+            this.die1.Location = new System.Drawing.Point(60, 42);
+            this.die1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.die1.Name = "die1";
+            this.die1.Size = new System.Drawing.Size(60, 62);
+            this.die1.TabIndex = 0;
+            this.die1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -742,11 +742,11 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label labelDie3;
-        private System.Windows.Forms.Label labelDie2;
-        private System.Windows.Forms.Label labelDie1;
-        private System.Windows.Forms.Label labelDie5;
-        private System.Windows.Forms.Label labelDie4;
+        private System.Windows.Forms.Label die3;
+        private System.Windows.Forms.Label die2;
+        private System.Windows.Forms.Label die1;
+        private System.Windows.Forms.Label die5;
+        private System.Windows.Forms.Label die4;
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Label labelHoldValueMessage;
         private System.Windows.Forms.CheckBox checkBoxDie5;
@@ -759,12 +759,12 @@
         private System.Windows.Forms.Label labelLowerSection;
         private System.Windows.Forms.Label labelUpperSection;
         private System.Windows.Forms.Label scoreLabel3;
-        private System.Windows.Forms.Button buttonThrees;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label scoreLabel2;
-        private System.Windows.Forms.Button buttonTwos;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label scoreLabel1;
-        private System.Windows.Forms.Button buttonOnes;
-        private System.Windows.Forms.Button buttonFours;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label scoreLabel4;
         private System.Windows.Forms.Label labelBonus63Score;
         private System.Windows.Forms.Label labelUpperScore;
@@ -783,17 +783,17 @@
         private System.Windows.Forms.Label scoreLabel11;
         private System.Windows.Forms.Label scoreLabel12;
         private System.Windows.Forms.Label scoreLabel13;
-        private System.Windows.Forms.Button buttonTriple;
-        private System.Windows.Forms.Button buttonQuadruple;
-        private System.Windows.Forms.Button buttonFullHouse;
-        private System.Windows.Forms.Button buttonYahtzee;
-        private System.Windows.Forms.Button buttonSmallStraight;
-        private System.Windows.Forms.Button buttonLargeStraight;
-        private System.Windows.Forms.Button buttonChance;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label scoreLabel6;
         private System.Windows.Forms.Label scoreLabel5;
-        private System.Windows.Forms.Button buttonSixes;
-        private System.Windows.Forms.Button buttonFives;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label labelGrandScore;
         private System.Windows.Forms.Label labelGrandTotal;
     }
