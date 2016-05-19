@@ -33,7 +33,25 @@ namespace Yahtzee_Game {
             scoreTotals[(int)ScoreType.SectionATotal] = labelUpperScore;
             scoreTotals[(int)ScoreType.SectionBTotal] = labelLowerScore;
 
+            scoreButtons[(int)ScoreType.Ones] = button1;
+            scoreButtons[(int)ScoreType.Twos] = button2;
+            scoreButtons[(int)ScoreType.Threes] = button3;
+            scoreButtons[(int)ScoreType.Fours] = button4;
+            scoreButtons[(int)ScoreType.Fives] = button5;
+            scoreButtons[(int)ScoreType.Sixes] = button6;
+            scoreButtons[(int)ScoreType.ThreeOfAKind] = button7;
+            scoreButtons[(int)ScoreType.FourOfAKind] = button8;
+            scoreButtons[(int)ScoreType.FullHouse] = button9;
+            scoreButtons[(int)ScoreType.SmallStraight] = button10;
+            scoreButtons[(int)ScoreType.LargeStraight] = button11;
+            scoreButtons[(int)ScoreType.Chance] = button12;
+            scoreButtons[(int)ScoreType.Yahtzee] = button13;
 
+            checkBoxes[0] = checkBoxDie1;
+            checkBoxes[1] = checkBoxDie2;
+            checkBoxes[2] = checkBoxDie3;
+            checkBoxes[3] = checkBoxDie4;
+            checkBoxes[4] = checkBoxDie5;
 
         }
 
