@@ -26,7 +26,20 @@ namespace Yahtzee_Game {
             dice[2] = die1;
             dice[3] = die1;
             dice[4] = die1;
-            
+
+            scoreTotals[(int)ScoreType.Ones] = scoreLabel1;
+            scoreTotals[(int)ScoreType.Twos] = scoreLabel2;
+            scoreTotals[(int)ScoreType.Threes] = scoreLabel3;
+            scoreTotals[(int)ScoreType.Fours] = scoreLabel4;
+            scoreTotals[(int)ScoreType.Fives] = scoreLabel5;
+            scoreTotals[(int)ScoreType.Sixes] = scoreLabel6;
+            scoreTotals[(int)ScoreType.ThreeOfAKind] = scoreLabel7;
+            scoreTotals[(int)ScoreType.FourOfAKind] = scoreLabel8;
+            scoreTotals[(int)ScoreType.FullHouse] = scoreLabel9;
+            scoreTotals[(int)ScoreType.SmallStraight] = scoreLabel10;
+            scoreTotals[(int)ScoreType.LargeStraight] = scoreLabel11;
+            scoreTotals[(int)ScoreType.Chance] = scoreLabel12;
+            scoreTotals[(int)ScoreType.Yahtzee] = scoreLabel13;
             scoreTotals[(int)ScoreType.SubTotal] = labelSubScore;
             scoreTotals[(int)ScoreType.BonusFor63Plus] = labelBonus63Score;
             scoreTotals[(int)ScoreType.YahtzeeBonus] = labelBonusYatzeeScore;
@@ -59,9 +72,9 @@ namespace Yahtzee_Game {
             return dice;
         }
 
-        //public Label[] GetScoresTotals() {
-
-        //}
+        public Label[] GetScoresTotals() {
+            return scoreTotals;
+        }
 
         public void ShowPlayerName(string name) {
             labelPlayer.Text = name;
@@ -76,33 +89,29 @@ namespace Yahtzee_Game {
         }
 
         public void EnableCheckBoxes() {
-            checkBoxDie1.Enabled = true;
-            checkBoxDie2.Enabled = true;
-            checkBoxDie3.Enabled = true;
-            checkBoxDie4.Enabled = true;
-            checkBoxDie5.Enabled = true;
+            for (int i = 0; i < 5; i++)
+            {
+                checkBoxes[i].Enabled = true;
+            }
         }
 
         public void DisableAndClearCheckBoxes() {
-            checkBoxDie1.Enabled = false;
-            checkBoxDie2.Enabled = false;
-            checkBoxDie3.Enabled = false;
-            checkBoxDie4.Enabled = false;
-            checkBoxDie5.Enabled = false;
-
-            checkBoxDie1.Checked = false;
-            checkBoxDie2.Checked = false;
-            checkBoxDie3.Checked = false;
-            checkBoxDie4.Checked = false;
-            checkBoxDie5.Checked = false;
+            for (int i = 0; i < 5; i++)
+            {
+                checkBoxes[i].Enabled = false;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                checkBoxes[i].Checked = false;
+            }
         }
 
         public void EnableScoreButton(ScoreType combo) {
-            //wait until more information on ScoreType combo
+            scoreButtons[(int)combo].Enabled = true;
         }
 
         public void DisableScoreButton(ScoreType combo) {
-            //wait until more information on ScoreType combo
+            scoreButtons[(int)combo].Enabled = false;
         }
 
         public void CheckCheckBox(int index) {
@@ -114,7 +123,7 @@ namespace Yahtzee_Game {
         }
 
         public void ShowOKButton() {
-            //Enter code from part C
+            // enter once ok button has been made
         }
 
         public void StartNewGame() {
