@@ -26,7 +26,20 @@ namespace Yahtzee_Game {
             dice[2] = die1;
             dice[3] = die1;
             dice[4] = die1;
-            
+
+            scoreTotals[(int)ScoreType.Ones] = scoreLabel1;
+            scoreTotals[(int)ScoreType.Twos] = scoreLabel2;
+            scoreTotals[(int)ScoreType.Threes] = scoreLabel3;
+            scoreTotals[(int)ScoreType.Fours] = scoreLabel4;
+            scoreTotals[(int)ScoreType.Fives] = scoreLabel5;
+            scoreTotals[(int)ScoreType.Sixes] = scoreLabel6;
+            scoreTotals[(int)ScoreType.ThreeOfAKind] = scoreLabel7;
+            scoreTotals[(int)ScoreType.FourOfAKind] = scoreLabel8;
+            scoreTotals[(int)ScoreType.FullHouse] = scoreLabel9;
+            scoreTotals[(int)ScoreType.SmallStraight] = scoreLabel10;
+            scoreTotals[(int)ScoreType.LargeStraight] = scoreLabel11;
+            scoreTotals[(int)ScoreType.Chance] = scoreLabel12;
+            scoreTotals[(int)ScoreType.Yahtzee] = scoreLabel13;
             scoreTotals[(int)ScoreType.SubTotal] = labelSubScore;
             scoreTotals[(int)ScoreType.BonusFor63Plus] = labelBonus63Score;
             scoreTotals[(int)ScoreType.YahtzeeBonus] = labelBonusYatzeeScore;
