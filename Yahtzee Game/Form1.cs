@@ -12,7 +12,7 @@ namespace Yahtzee_Game {
     public partial class Form1 : Form {
         Label[] dice = new Label[5];
         Button[] scoreButtons = new Button[(int)ScoreType.Yahtzee + 1];
-        Button[] scoreTotals = new Button[(int)ScoreType.GrandTotal + 1];
+        Label[] scoreTotals = new Label[(int)ScoreType.GrandTotal + 1];
         CheckBox[] checkBoxes = new CheckBox[5];
         Game game;
 
@@ -21,16 +21,29 @@ namespace Yahtzee_Game {
         }
 
         private void InitialiseLabelsAndButtons() {
-           
+            dice[0] = die1;
+            dice[1] = die1;
+            dice[2] = die1;
+            dice[3] = die1;
+            dice[4] = die1;
+
+            scoreTotals[(int)ScoreType.SubTotal] = labelSubScore;
+            scoreTotals[(int)ScoreType.BonusFor63Plus] = labelBonus63Score;
+            scoreTotals[(int)ScoreType.YahtzeeBonus] = labelBonusYatzeeScore;
+            scoreTotals[(int)ScoreType.SectionATotal] = labelUpperScore;
+            scoreTotals[(int)ScoreType.SectionBTotal] = labelLowerScore;
+
+
+
         }
 
         public Label[] GetDice() {
             return dice;
         }
 
-        public Label[] GetScoresTotals() {
-            return scoreTotals;
-        }
+        //public Label[] GetScoresTotals() {
+
+        //}
 
         public void ShowPlayerName(string name) {
             labelPlayer.Text = name;
