@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace Yahtzee_Game {
     public partial class Form1 : Form {
-        private Label[] dice;
-        private Button[] scoreButtons;
-        private Label[] scoreTotals;
-        private CheckBox[] checkBoxes;
+        Label[] dice = new Label[5];
+        Button[] scoreButtons = new Button[(int)ScoreType.Yahtzee + 1];
+        Button[] scoreTotals = new Button[(int)ScoreType.GrandTotal + 1];
+        CheckBox[] checkBoxes = new CheckBox[5];
+        Game game;
 
         public Form1() {
             InitializeComponent();
-            InitialiseLabelsAndButtons();
         }
 
         private void InitialiseLabelsAndButtons() {
-            Label[] dice = { die1, die2, die3, die4, die5 };
-            Button[] scoreButtons = {button1, button2, button3, button4, button5, button6,
-                                    button7, button8, button9, button10, button11, button12, button13};
-            Label[] scoreTotals = {scoreLabel1, scoreLabel2, scoreLabel3, scoreLabel4, scoreLabel5, scoreLabel6,
-                                   scoreLabel7, scoreLabel8, scoreLabel9, scoreLabel10, scoreLabel11, scoreLabel12,
-                                    scoreLabel13, labelBonus63Score, labelBonusYatzeeScore, labelUpperScore, labelLowerScore,
-                                    labelSubScore};
-            CheckBox[] checkBoxes = { checkBoxDie1, checkBoxDie2, checkBoxDie3, checkBoxDie4, checkBoxDie5 };
-            //Needs game variable
+           
         }
 
         public Label[] GetDice() {
