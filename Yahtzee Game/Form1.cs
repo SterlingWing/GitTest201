@@ -26,7 +26,7 @@ namespace Yahtzee_Game {
             dice[2] = die1;
             dice[3] = die1;
             dice[4] = die1;
-
+            
             scoreTotals[(int)ScoreType.SubTotal] = labelSubScore;
             scoreTotals[(int)ScoreType.BonusFor63Plus] = labelBonus63Score;
             scoreTotals[(int)ScoreType.YahtzeeBonus] = labelBonusYatzeeScore;
