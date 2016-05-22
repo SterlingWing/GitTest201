@@ -23,10 +23,10 @@ namespace Yahtzee_Game {
 
         private void InitialiseLabelsAndButtons() {
             dice[0] = die1;
-            dice[1] = die1;
-            dice[2] = die1;
-            dice[3] = die1;
-            dice[4] = die1;
+            dice[1] = die2;
+            dice[2] = die3;
+            dice[3] = die4;
+            dice[4] = die5;
 
             scoreTotals[(int)ScoreType.Ones] = scoreLabel1;
             scoreTotals[(int)ScoreType.Twos] = scoreLabel2;
@@ -66,7 +66,6 @@ namespace Yahtzee_Game {
             checkBoxes[2] = checkBoxDie3;
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
-
         }
 
         public Label[] GetDice() {

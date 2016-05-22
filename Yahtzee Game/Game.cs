@@ -19,36 +19,44 @@ namespace Yahtzee_Game {
         private Player[] players;
         private int currentPlayerIndex;
         private Player currentPlayer;
-        private Die[] dice;
         private int playersFinished;
         private int numRolls;
         private Form1 form;
         private Label[] dieLabels;
 
+        private Die[] dice = new Die[5];
+
         public Game(Form1 form) {
-            //
+            
         }
         public void NextTurn() {
             //
         }
         public void RollDice() {
-            //if (numRolls == 0) {
-            //    //labelMessage.Text = "Roll 1";
-            //}
-            //else if (numRolls == 1) {
-            //    //labelMessage.Text = "Roll 2 or choose a combination to score";
-            //}
-            //else if (numRolls == 2) {
-            //    //labelMessage.Text = "Roll 3 or choose a combination to score";
-            //}
-            //else if (numRolls == 3) {
-            //    //labelMessage.Text = "Choose a combination to score";
-            //}
-            //else{
-            //    //labelMessage.Text = "Your turn has ended - click OK"
-            //    //Enable OK button
-            //}
-            //numRolls++;
+
+            //     for (int i = 0; i < 6; i++) {
+            //        if (dice[i] == Die.active) {
+            //            Die.Roll();
+            //       }
+            //   }
+
+            for (numRolls = 0; numRolls < 5; numRolls++) {
+                if (numRolls == 0){
+                    //labelMessage.Text = "Roll 1";
+                    //Need to link Form1
+                }
+                if (numRolls == 1 || numRolls == 2) {
+                    //labelMessage.Text = "Roll" + numRolls + "or choose a combination to score";
+                }
+
+                if (numRolls == 3) {
+                    //labelMessage.Text = "Choose a combination to score";
+                }
+                else {
+                    //labelMessage.Text = "Your turn has ended - click OK"
+                    //Enable OK button
+                }
+            }
         }
         public void HoldDie(int dice) {
             //
