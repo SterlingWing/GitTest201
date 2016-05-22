@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Yahtzee_Game {
 
@@ -22,29 +23,42 @@ namespace Yahtzee_Game {
         private int playersFinished;
         private int numRolls;
         private Form1 form;
-        //private Label[] dieLabels;
+        private Label[] dieLabels;
 
-        public Game() {
-            /*
-            * Game(Form1) is the constructor which will initialize all instance variables of Game in
-            * preparation for a game to begin in the correct state. [Recall from Part B that this constructor
-            * is called from StartNewGame() of Form1.]
-            */
+        public Game(Form1 form) {
+            //
         }
         public void NextTurn() {
-
+            //
         }
-        public void HoldDice() {
-
+        public void RollDice() {
+            //if (numRolls == 0) {
+            //    //labelMessage.Text = "Roll 1";
+            //}
+            //else if (numRolls == 1) {
+            //    //labelMessage.Text = "Roll 2 or choose a combination to score";
+            //}
+            //else if (numRolls == 2) {
+            //    //labelMessage.Text = "Roll 3 or choose a combination to score";
+            //}
+            //else if (numRolls == 3) {
+            //    //labelMessage.Text = "Choose a combination to score";
+            //}
+            //else{
+            //    //labelMessage.Text = "Your turn has ended - click OK"
+            //    //Enable OK button
+            //}
+            //numRolls++;
         }
         public void HoldDie(int dice) {
-
+            //
         }
         public void ReleaseDie(int dice) {
-
+            //
         }
         public void ScoreCombination(ScoreType combination) {
-
+            //Waiting for subclasses of score to be implemented
+            form.ShowOKButton();
         }
         public static void Load(Form1 form) {
             //Needs to be implemented
