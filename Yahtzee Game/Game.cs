@@ -39,23 +39,20 @@ namespace Yahtzee_Game {
             //            Die.Roll();
             //       }
             //   }
+            if (numRolls == 0){
+                //labelMessage.Text = "Roll 1";
+                //Need to link Form1
+            }
+            if (numRolls == 1 || numRolls == 2) {
+                //labelMessage.Text = "Roll" + numRolls + 1 + "or choose a combination to score";
+            }
 
-            for (numRolls = 0; numRolls < 5; numRolls++) {
-                if (numRolls == 0){
-                    //labelMessage.Text = "Roll 1";
-                    //Need to link Form1
-                }
-                if (numRolls == 1 || numRolls == 2) {
-                    //labelMessage.Text = "Roll" + numRolls + "or choose a combination to score";
-                }
-
-                if (numRolls == 3) {
-                    //labelMessage.Text = "Choose a combination to score";
-                }
-                else {
-                    //labelMessage.Text = "Your turn has ended - click OK"
-                    //Enable OK button
-                }
+            if (numRolls == 3) {
+                //labelMessage.Text = "Choose a combination to score";
+            }
+            else {
+                //labelMessage.Text = "Your turn has ended - click OK"
+                //Enable OK button
             }
         }
         public void HoldDie(int dice) {
