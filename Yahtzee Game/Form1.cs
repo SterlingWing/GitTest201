@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Yahtzee_Game {
     public partial class Form1 : Form {
+
         private Label[] dice;
         private Button[] scoreButtons;
         private Label[] scoreTotals;
@@ -18,6 +19,7 @@ namespace Yahtzee_Game {
         public Form1() {
             InitializeComponent();
         }
+
 
         private void InitialiseLabelsAndButtons() {
             Label[] dice = { die1, die2, die3, die4, die5 };
@@ -74,7 +76,7 @@ namespace Yahtzee_Game {
         }
 
         public void EnableScoreButton(ScoreType combo) {
-            //wait until more information on ScoreType combo
+
         }
 
         public void DisableScoreButton(ScoreType combo) {
