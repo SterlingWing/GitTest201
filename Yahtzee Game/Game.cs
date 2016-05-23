@@ -20,18 +20,24 @@ namespace Yahtzee_Game {
         private BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;
+        private Die[] dice;
         private int playersFinished;
         private int numRolls;
         private Form1 form;
         private Label[] dieLabels;
 
-        private Die[] dice = new Die[5];
+        
 
         public Game(Form1 form) {
-            
+            players = new BindingList<Player>();
+            dice = new Die[5];
+            numRolls = 0;
+
         }
         public void NextTurn() {
-            //
+            //updates currentPlyer and currentPlayerIndex to be the next player t play their turn
+            //updates the GUI so that this player can start their turn.
+            //This method involves setting GUI to change player's name and display their corresponding scores etc.
         }
         public void RollDice() {
 
@@ -59,10 +65,17 @@ namespace Yahtzee_Game {
             numRolls++;
         }
         public void HoldDie(int dice) {
-            //
+            for(int i = 0; i < 6;)
+            {
+                //  if (dice[i].activated == true) {
+                //  
+                //
+                //
+                //
+            }
         }
         public void ReleaseDie(int dice) {
-            //
+            //AS ABOVE, although make die inactive instead
         }
         public void ScoreCombination(ScoreType combination) {
             //Waiting for subclasses of score to be implemented
