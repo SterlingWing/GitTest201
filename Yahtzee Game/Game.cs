@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Yahtzee_Game {
 
@@ -16,21 +17,35 @@ namespace Yahtzee_Game {
     }
 
     class Game {
-        private Player[] players;
+        private BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;
+        private Die[] dice;
         private int playersFinished;
         private int numRolls;
         private Form1 form;
         private Label[] dieLabels;
 
-        private Die[] dice = new Die[5];
+
 
         public Game(Form1 form) {
+            //this.form = form;
+            players = new BindingList<Player>();
+            for (int i = 0; i < 7; i++){
+                //players.Add();
+                
+            }
+
+            //form.playerSetCount.Value = form;
+            dice = new Die[5];
+            numRolls = 0;
+            playersFinished = 0;
             
         }
         public void NextTurn() {
-            //
+            //updates currentPlyer and currentPlayerIndex to be the next player to play their turn
+            //updates the GUI so that this player can start their turn.
+            //This method involves setting GUI to change player's name and display their corresponding scores etc.
         }
         public void RollDice() {
 
@@ -40,8 +55,7 @@ namespace Yahtzee_Game {
             //       }
             //   }
 
-
-            if (numRolls == 0) {
+            if (numRolls == 0){
                 //labelMessage.Text = "Roll 1";
                 //Need to link Form1
             }
@@ -55,14 +69,23 @@ namespace Yahtzee_Game {
             else {
                 //labelMessage.Text = "Your turn has ended - click OK"
                 //Enable OK button
-                numRolls++;
             }
+            numRolls++;
         }
         public void HoldDie(int dice) {
-            //
+            for (int i = 0; dice < 6;)
+            {
+                //this.dice[dice].active = true;
+                //  if (dice.activated == true) {
+                //  
+                //
+                //
+                //
+
+        }
         }
         public void ReleaseDie(int dice) {
-            //
+            //AS ABOVE, although make die inactive instead
         }
         public void ScoreCombination(ScoreType combination) {
             //Waiting for subclasses of score to be implemented

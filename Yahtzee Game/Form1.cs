@@ -127,7 +127,7 @@ namespace Yahtzee_Game {
         }
 
         public void StartNewGame() {
-            //game = new Game();
+            game = new Game(this);
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {

@@ -83,10 +83,18 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridPlayerBoard = new System.Windows.Forms.DataGridView();
+            this.lablePlayersTitle = new System.Windows.Forms.Label();
+            this.playerSetCount = new System.Windows.Forms.NumericUpDown();
+            this.labelPlayerCount = new System.Windows.Forms.Label();
+            this.labelYahtzeeTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -152,8 +160,16 @@
             this.splitContainer1.Panel1.Controls.Add(this.die2);
             this.splitContainer1.Panel1.Controls.Add(this.die1);
             this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gridPlayerBoard);
+            this.splitContainer1.Panel2.Controls.Add(this.lablePlayersTitle);
+            this.splitContainer1.Panel2.Controls.Add(this.playerSetCount);
+            this.splitContainer1.Panel2.Controls.Add(this.labelPlayerCount);
+            this.splitContainer1.Panel2.Controls.Add(this.labelYahtzeeTitle);
             this.splitContainer1.Size = new System.Drawing.Size(711, 607);
-            this.splitContainer1.SplitterDistance = 473;
+            this.splitContainer1.SplitterDistance = 472;
             this.splitContainer1.TabIndex = 0;
             // 
             // labelGrandScore
@@ -674,11 +690,12 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(473, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(472, 24);
             this.menuStrip1.TabIndex = 54;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -695,21 +712,90 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // gridPlayerBoard
+            // 
+            this.gridPlayerBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPlayerBoard.Location = new System.Drawing.Point(43, 254);
+            this.gridPlayerBoard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridPlayerBoard.Name = "gridPlayerBoard";
+            this.gridPlayerBoard.RowTemplate.Height = 28;
+            this.gridPlayerBoard.Size = new System.Drawing.Size(160, 97);
+            this.gridPlayerBoard.TabIndex = 4;
+            // 
+            // lablePlayersTitle
+            // 
+            this.lablePlayersTitle.AutoSize = true;
+            this.lablePlayersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lablePlayersTitle.ForeColor = System.Drawing.Color.White;
+            this.lablePlayersTitle.Location = new System.Drawing.Point(72, 206);
+            this.lablePlayersTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lablePlayersTitle.Name = "lablePlayersTitle";
+            this.lablePlayersTitle.Size = new System.Drawing.Size(105, 31);
+            this.lablePlayersTitle.TabIndex = 3;
+            this.lablePlayersTitle.Text = "Players";
+            // 
+            // playerSetCount
+            // 
+            this.playerSetCount.Location = new System.Drawing.Point(171, 122);
+            this.playerSetCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerSetCount.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.playerSetCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.playerSetCount.Name = "playerSetCount";
+            this.playerSetCount.Size = new System.Drawing.Size(33, 20);
+            this.playerSetCount.TabIndex = 2;
+            this.playerSetCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // labelPlayerCount
+            // 
+            this.labelPlayerCount.AutoSize = true;
+            this.labelPlayerCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelPlayerCount.ForeColor = System.Drawing.Color.White;
+            this.labelPlayerCount.Location = new System.Drawing.Point(9, 118);
+            this.labelPlayerCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPlayerCount.Name = "labelPlayerCount";
+            this.labelPlayerCount.Size = new System.Drawing.Size(138, 20);
+            this.labelPlayerCount.TabIndex = 1;
+            this.labelPlayerCount.Text = "Number of Players";
+            // 
+            // labelYahtzeeTitle
+            // 
+            this.labelYahtzeeTitle.AutoSize = true;
+            this.labelYahtzeeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelYahtzeeTitle.ForeColor = System.Drawing.Color.White;
+            this.labelYahtzeeTitle.Location = new System.Drawing.Point(63, 21);
+            this.labelYahtzeeTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelYahtzeeTitle.Name = "labelYahtzeeTitle";
+            this.labelYahtzeeTitle.Size = new System.Drawing.Size(123, 36);
+            this.labelYahtzeeTitle.TabIndex = 0;
+            this.labelYahtzeeTitle.Text = "Yahtzee";
             // 
             // Form1
             // 
@@ -723,10 +809,14 @@
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -793,6 +883,11 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.Label lablePlayersTitle;
+        private System.Windows.Forms.NumericUpDown playerSetCount;
+        private System.Windows.Forms.Label labelPlayerCount;
+        private System.Windows.Forms.Label labelYahtzeeTitle;
+        private System.Windows.Forms.DataGridView gridPlayerBoard;
     }
 }
 

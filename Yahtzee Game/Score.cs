@@ -31,7 +31,7 @@ namespace Yahtzee_Game {
         }
 
         public void ShowScore() {
-            if (done == true) {
+            if (done) {
                 label.Text = Convert.ToString(points);
             } else {
                 label.Text = null;
