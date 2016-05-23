@@ -39,6 +39,7 @@ namespace Yahtzee_Game {
             //            Die.Roll();
             //       }
             //   }
+
             if (numRolls == 0){
                 //labelMessage.Text = "Roll 1";
                 //Need to link Form1
@@ -54,6 +55,7 @@ namespace Yahtzee_Game {
                 //labelMessage.Text = "Your turn has ended - click OK"
                 //Enable OK button
             }
+            numRolls++;
         }
         public void HoldDie(int dice) {
             //
