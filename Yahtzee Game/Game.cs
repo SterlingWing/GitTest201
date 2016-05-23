@@ -58,7 +58,10 @@ namespace Yahtzee_Game {
             numRolls++;
         }
         public void HoldDie(int dice) {
-            //
+            for(int i = 0; i < 6;)
+            {
+                if (dice[i].activated == )
+            }
         }
         public void ReleaseDie(int dice) {
             //
