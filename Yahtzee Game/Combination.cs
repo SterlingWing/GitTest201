@@ -14,10 +14,10 @@ namespace Yahtzee_Game {
 
         }
 
-        public abstract void CalculateScore(int[] temp);
+        public abstract void CalculateScore(int[] diceValues);
 
-        public void Sort(int[] temp) {
-
+        public void Sort(int[] values) {
+            Array.Sort(values);
         }
 
         public bool IsYahtzee {
