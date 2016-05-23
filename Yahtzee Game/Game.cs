@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Yahtzee_Game {
 
@@ -16,7 +17,7 @@ namespace Yahtzee_Game {
     }
 
     class Game {
-        private Player[] players;
+        private BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;
         private int playersFinished;
