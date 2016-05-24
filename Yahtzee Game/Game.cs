@@ -29,17 +29,16 @@ namespace Yahtzee_Game {
 
 
         public Game(Form1 form) {
-            //this.form = form;
+            dice = new Die[5];
+            form = new Form1();
+            dieLabels = new Label[5];
             players = new BindingList<Player>();
             for (int i = 0; i < 7; i++){
                 //players.Add();
-                
             }
 
-            //form.playerSetCount.Value = form;
-            dice = new Die[5];
-            numRolls = 0;
-            playersFinished = 0;
+            //form.playerSetCount.Value;
+            
             
         }
         public void NextTurn() {
@@ -49,26 +48,29 @@ namespace Yahtzee_Game {
         }
         public void RollDice() {
 
-            //     for (int i = 0; i < 6; i++) {
-            //        if (dice[i] == Die.active) {
-            //            Die.Roll();
-            //       }
-            //   }
+            for (int i = 0; i < 6; i++) {
+                if (dice[i].Active == true) {
+                        dice[i].Roll();
+                }
+            }
 
             if (numRolls == 0){
-                //labelMessage.Text = "Roll 1";
-                //Need to link Form1
+                string firstRoll = "roll 1";
+                form.ShowMessage(firstRoll);
             }
             if (numRolls == 1 || numRolls == 2) {
-                //labelMessage.Text = "Roll" + numRolls + 1 + "or choose a combination to score";
+                string secondAndThirdRoll = ("Roll" + numRolls + 1 + "or choose a combination to score");
+                form.ShowMessage(secondAndThirdRoll);
             }
 
             if (numRolls == 3) {
-                //labelMessage.Text = "Choose a combination to score";
+                string afterThirdRoll = "Choose a combination to score";
+                form.ShowMessage(afterThirdRoll);
             }
             else {
-                //labelMessage.Text = "Your turn has ended - click OK"
-                //Enable OK button
+                string endTurn = "Your turn has ended - click OK";
+                form.ShowMessage(endTurn);
+                //form.ShowOKButton();
             }
             numRolls++;
         }
@@ -79,7 +81,7 @@ namespace Yahtzee_Game {
                 //  if (dice.activated == true) {
                 //  
                 //
-                //
+                // Try to use above method in RollDice();
                 //
 
         }

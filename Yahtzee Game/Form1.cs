@@ -123,7 +123,7 @@ namespace Yahtzee_Game {
         }
 
         public void ShowOKButton() {
-            // enter once ok button has been made
+            buttonOk.Visible = true;
         }
 
         public void StartNewGame() {

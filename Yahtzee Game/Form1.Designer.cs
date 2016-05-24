@@ -88,6 +88,7 @@
             this.playerSetCount = new System.Windows.Forms.NumericUpDown();
             this.labelPlayerCount = new System.Windows.Forms.Label();
             this.labelYahtzeeTitle = new System.Windows.Forms.Label();
+            this.buttonOk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -105,6 +106,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.buttonOk);
             this.splitContainer1.Panel1.Controls.Add(this.labelGrandScore);
             this.splitContainer1.Panel1.Controls.Add(this.labelGrandTotal);
             this.splitContainer1.Panel1.Controls.Add(this.labelBonus63Score);
@@ -169,7 +171,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.labelPlayerCount);
             this.splitContainer1.Panel2.Controls.Add(this.labelYahtzeeTitle);
             this.splitContainer1.Size = new System.Drawing.Size(711, 607);
-            this.splitContainer1.SplitterDistance = 472;
+            this.splitContainer1.SplitterDistance = 471;
             this.splitContainer1.TabIndex = 0;
             // 
             // labelGrandScore
@@ -695,7 +697,7 @@
             this.gameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(472, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
             this.menuStrip1.TabIndex = 54;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -732,7 +734,7 @@
             // 
             this.gridPlayerBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPlayerBoard.Location = new System.Drawing.Point(43, 254);
-            this.gridPlayerBoard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridPlayerBoard.Margin = new System.Windows.Forms.Padding(2);
             this.gridPlayerBoard.Name = "gridPlayerBoard";
             this.gridPlayerBoard.RowTemplate.Height = 28;
             this.gridPlayerBoard.Size = new System.Drawing.Size(160, 97);
@@ -753,7 +755,7 @@
             // playerSetCount
             // 
             this.playerSetCount.Location = new System.Drawing.Point(171, 122);
-            this.playerSetCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerSetCount.Margin = new System.Windows.Forms.Padding(2);
             this.playerSetCount.Maximum = new decimal(new int[] {
             6,
             0,
@@ -796,6 +798,16 @@
             this.labelYahtzeeTitle.Size = new System.Drawing.Size(123, 36);
             this.labelYahtzeeTitle.TabIndex = 0;
             this.labelYahtzeeTitle.Text = "Yahtzee";
+            // 
+            // buttonOk
+            // 
+            this.buttonOk.Location = new System.Drawing.Point(37, 156);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(31, 28);
+            this.buttonOk.TabIndex = 55;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Visible = false;
             // 
             // Form1
             // 
@@ -888,6 +900,7 @@
         private System.Windows.Forms.Label labelPlayerCount;
         private System.Windows.Forms.Label labelYahtzeeTitle;
         private System.Windows.Forms.DataGridView gridPlayerBoard;
+        private System.Windows.Forms.Button buttonOk;
     }
 }
 
