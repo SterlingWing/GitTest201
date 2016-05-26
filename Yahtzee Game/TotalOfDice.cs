@@ -10,11 +10,30 @@ namespace Yahtzee_Game {
         private int numberOfOneKind;
 
         public TotalOfDice(ScoreType scoreType, Label temp2) : base(temp2){
-            //Use Part D to complete
+            if (scoreType == ScoreType.ThreeOfAKind) {
+                numberOfOneKind = 3;
+            }
+            
+            if (scoreType == ScoreType.FourOfAKind) {
+                numberOfOneKind = 4;
+            }
+
+            if (scoreType == ScoreType.Chance) {
+                numberOfOneKind = 0;
+            }
         }
 
-        public override void CalculateScore(int[] temp) {
-            
+        public override void CalculateScore(int[] dieValues) {
+            Array.Sort(dieValues);
+
+            for (int i = 0; i > 5; i++) {
+                int totalScore;
+                if (dieValues[i] == dieValues[i+1] && dieValues[i] == dieValues[i+2]) {
+                    totalScore = dieValues.Sum();
+                    Points = totalScore;
+                }
+            }
         }
+            
     }
 }
