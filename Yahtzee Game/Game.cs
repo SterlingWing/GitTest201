@@ -34,13 +34,16 @@ namespace Yahtzee_Game {
             dieLabels = new Label[5];
 
             players = new BindingList<Player>();
-            for (int i = 0; i < 7; i++){
-                //players.Add(new Player("player" + i, ));
-            }
-                        
+            //for (int i = 0; i < 7; i++) {
+            //players.Add(new Player("player" + i, )); 
+            //Good code, just need to workout how many players there are by extracting the information formthe numeric up and down box
+            //}
+
         }
         public void NextTurn() {
-
+            for (int i = 0; i < players.Count; i++) {
+                form.ShowPlayerName("player" + i);
+        }
             //updates currentPlyer and currentPlayerIndex to be the next player to play their turn
             //updates the GUI so that this player can start their turn.
             //This method involves setting GUI to change player's name and display their corresponding scores etc.
@@ -53,7 +56,7 @@ namespace Yahtzee_Game {
                 }
             }
 
-            if (numRolls == 0){
+            if (numRolls == 0) {
                 string firstRoll = "roll 1";
                 form.ShowMessage(firstRoll);
             }
