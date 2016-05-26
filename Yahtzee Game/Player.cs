@@ -13,7 +13,8 @@ namespace Yahtzee_Game {
         private int grandTotal;
 
         public Player(string name, Score score) {
-            //Need to implement
+            this.Name = name;
+            //Need to implement scores
         }
 
         public string Name { 
