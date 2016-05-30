@@ -9,11 +9,11 @@ namespace Yahtzee_Game {
     class TotalOfDice : Combination {
         private int numberOfOneKind;
 
-        public TotalOfDice(ScoreType scoreType, Label temp2) : base(temp2){
+        public TotalOfDice(ScoreType scoreType, Label temp2) : base(temp2) {
             if (scoreType == ScoreType.ThreeOfAKind) {
                 numberOfOneKind = 3;
             }
-            
+
             if (scoreType == ScoreType.FourOfAKind) {
                 numberOfOneKind = 4;
             }
@@ -27,13 +27,28 @@ namespace Yahtzee_Game {
             Array.Sort(dieValues);
 
             for (int i = 0; i > 5; i++) {
-                int totalScore;
-                if (dieValues[i] == dieValues[i+1] && dieValues[i] == dieValues[i+2]) {
-                    totalScore = dieValues.Sum();
-                    Points = totalScore;
+                if (numberOfOneKind == 3) {
+                    if (dieValues[i] == dieValues[i + 1] && 
+                        dieValues[i] == dieValues[i + 2]) {
+
+                        Points = dieValues.Sum();
+                    } else {
+                        Points = 0;
+                    }
+                    
+                } else if (numberOfOneKind == 4) {
+                    if (dieValues[i] == dieValues[i+1] && 
+                        dieValues[i] == dieValues[i+2] &&
+                        dieValues[i] == dieValues[i+3]) {
+
+                        Points = dieValues.Sum();
+                    } else {
+                        Points = 0;
+                    }
+                } else if (numberOfOneKind == 0) {
+                    Points = dieValues.Sum();
                 }
             }
         }
-            
     }
 }
