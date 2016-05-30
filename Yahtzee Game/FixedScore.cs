@@ -7,17 +7,14 @@ using System.Windows.Forms;
 
 namespace Yahtzee_Game {
     class FixedScore : Combination {
-
         private ScoreType scoreType;
 
-        public FixedScore(ScoreType scoreType, Label scoreLabel) : base(scoreLabel) {
+        public FixedScore(ScoreType selectedScoreType, Label temp) : base(temp) {
 
         }
 
         public override void CalculateScore(int[] dieValues) {
-            Array.Sort(dieValues);
-
-            //Implement from Part D
+            
         }
     }
 }
