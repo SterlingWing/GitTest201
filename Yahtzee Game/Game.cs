@@ -32,21 +32,29 @@ namespace Yahtzee_Game {
             dice = new Die[5];
             form = new Form1();
             dieLabels = new Label[5];
+
+            
+
             players = new BindingList<Player>();
-            for (int i = 0; i < 7; i++){
-                //players.Add();
-            }
+            //for (int i = 0; i < 7; i++) {
+            //players.Add(new Player("player" + i, )); 
+            //Good code, just need to workout how many players there are by extracting the information formthe numeric up and down box
+            //}
 
-
-            
-            //form.playerSetCount.Value;
-            
-            
         }
         public void NextTurn() {
+            for (int i = 0; i < players.Count; i++) {
+                form.ShowPlayerName("player" + i);
+                currentPlayerIndex = i;
+                currentPlayer = players[i];
+                form.EnableCheckBoxes();
+                //player.showScores();
+            }
+            
             //updates currentPlyer and currentPlayerIndex to be the next player to play their turn
             //updates the GUI so that this player can start their turn.
             //This method involves setting GUI to change player's name and display their corresponding scores etc.
+
         }
         public void RollDice() {
 
@@ -56,7 +64,7 @@ namespace Yahtzee_Game {
                 }
             }
 
-            if (numRolls == 0){
+            if (numRolls == 0) {
                 string firstRoll = "roll 1";
                 form.ShowMessage(firstRoll);
             }
@@ -72,24 +80,15 @@ namespace Yahtzee_Game {
             else {
                 string endTurn = "Your turn has ended - click OK";
                 form.ShowMessage(endTurn);
-                //form.ShowOKButton();
+                form.ShowOKButton();
             }
             numRolls++;
         }
-        public void HoldDie(int dice) {
-            for (int i = 0; dice < 6;)
-            {
-                //this.dice[dice].active = true;
-                //  if (dice.activated == true) {
-                //  
-                //
-                // Try to use above method in RollDice();
-                //
-
+        public void HoldDie(int index) {
+            dice[index].Active = false;
         }
-        }
-        public void ReleaseDie(int dice) {
-            //AS ABOVE, although make die inactive instead
+        public void ReleaseDie(int index) {
+            dice[index].Active = true;
         }
         public void ScoreCombination(ScoreType combination) {
             //Waiting for subclasses of score to be implemented

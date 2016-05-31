@@ -16,6 +16,7 @@ namespace Yahtzee_Game {
         CheckBox[] checkBoxes = new CheckBox[5];
         Game game;
 
+
         public Form1() {
             InitializeComponent();
         }

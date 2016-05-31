@@ -9,21 +9,30 @@ namespace Yahtzee_Game {
     class CountingCombination : Combination{
         private int dieValue;
 
-        public CountingCombination(ScoreType combination, Label temp2) : base(temp2) {
-            //Needs to be implemented from Part D
+        public CountingCombination(ScoreType selectedScoreType, Label temp2) : base(temp2) {
+            if (selectedScoreType == ScoreType.Ones) {
+                dieValue = 1;
+            } else if (selectedScoreType == ScoreType.Twos) {
+                dieValue = 2;
+            } else if (selectedScoreType == ScoreType.Threes) {
+                dieValue = 3;
+            } else if (selectedScoreType == ScoreType.Fours) {
+                dieValue = 4;
+            } else if (selectedScoreType == ScoreType.Fives) {
+                dieValue = 5;
+            } else if (selectedScoreType == ScoreType.Sixes) {
+                dieValue = 6;
+            }
         }
 
         public override void CalculateScore(int[] diceValues) {
             int dieCount = 0;
-            int score;
-
             for (int i = 0; i < 6; i++) {
                 if (diceValues[i] == dieValue) {
                     dieCount++;
                 }
             }
-
-            score = dieCount * dieValue;
+            Points = dieCount * dieValue;
         }
     }
 }
