@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.labelGrandScore = new System.Windows.Forms.Label();
             this.labelGrandTotal = new System.Windows.Forms.Label();
             this.labelBonus63Score = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@
             this.playerSetCount = new System.Windows.Forms.NumericUpDown();
             this.labelPlayerCount = new System.Windows.Forms.Label();
             this.labelYahtzeeTitle = new System.Windows.Forms.Label();
-            this.buttonOk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -171,8 +171,18 @@
             this.splitContainer1.Panel2.Controls.Add(this.labelPlayerCount);
             this.splitContainer1.Panel2.Controls.Add(this.labelYahtzeeTitle);
             this.splitContainer1.Size = new System.Drawing.Size(711, 607);
-            this.splitContainer1.SplitterDistance = 471;
+            this.splitContainer1.SplitterDistance = 470;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // buttonOk
+            // 
+            this.buttonOk.Location = new System.Drawing.Point(37, 156);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(31, 28);
+            this.buttonOk.TabIndex = 55;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Visible = false;
             // 
             // labelGrandScore
             // 
@@ -697,7 +707,7 @@
             this.gameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(470, 24);
             this.menuStrip1.TabIndex = 54;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -798,16 +808,6 @@
             this.labelYahtzeeTitle.Size = new System.Drawing.Size(123, 36);
             this.labelYahtzeeTitle.TabIndex = 0;
             this.labelYahtzeeTitle.Text = "Yahtzee";
-            // 
-            // buttonOk
-            // 
-            this.buttonOk.Location = new System.Drawing.Point(37, 156);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(31, 28);
-            this.buttonOk.TabIndex = 55;
-            this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = true;
-            this.buttonOk.Visible = false;
             // 
             // Form1
             // 

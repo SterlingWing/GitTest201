@@ -89,10 +89,15 @@ namespace Yahtzee_Game {
         }
 
         public void EnableCheckBoxes() {
-            for (int i = 0; i < 5; i++)
-            {
-                checkBoxes[i].Enabled = true;
-            }
+            checkBoxes[0].Enabled = true;
+            checkBoxes[1].Enabled = true;
+            checkBoxes[2].Enabled = true;
+            checkBoxes[3].Enabled = true;
+            checkBoxes[4].Enabled = true;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    checkBoxes[i].Enabled = true;
+            //}
         }
 
         public void DisableAndClearCheckBoxes() {
@@ -127,11 +132,13 @@ namespace Yahtzee_Game {
         }
 
         public void StartNewGame() {
+            InitialiseLabelsAndButtons();
             game = new Game(this);
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
+            game.RollDice();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {

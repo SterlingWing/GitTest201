@@ -37,6 +37,8 @@ namespace Yahtzee_Game {
                 //players.Add();
             }
 
+
+            
             //form.playerSetCount.Value;
             
             
