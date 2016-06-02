@@ -23,6 +23,7 @@ namespace Yahtzee_Game {
 
 
         private void InitialiseLabelsAndButtons() {
+
             dice[0] = die1;
             dice[1] = die2;
             dice[2] = die3;
@@ -90,15 +91,10 @@ namespace Yahtzee_Game {
         }
 
         public void EnableCheckBoxes() {
-            checkBoxes[0].Enabled = true;
-            checkBoxes[1].Enabled = true;
-            checkBoxes[2].Enabled = true;
-            checkBoxes[3].Enabled = true;
-            checkBoxes[4].Enabled = true;
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    checkBoxes[i].Enabled = true;
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                checkBoxes[i].Enabled = true;
+            }
         }
 
         public void DisableAndClearCheckBoxes() {
@@ -135,11 +131,13 @@ namespace Yahtzee_Game {
         public void StartNewGame() {
             InitialiseLabelsAndButtons();
             game = new Game(this);
+            EnableRollButton();
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
             game.RollDice();
+
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
