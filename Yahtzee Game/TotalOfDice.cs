@@ -26,27 +26,38 @@ namespace Yahtzee_Game {
         public override void CalculateScore(int[] dieValues) {
             Array.Sort(dieValues);
 
-            for (int i = 0; i > 5; i++) {
                 if (numberOfOneKind == 3) {
-                    if (dieValues[i] == dieValues[i + 1] && 
-                        dieValues[i] == dieValues[i + 2]) {
+                    for (int i = 0; i > 5; i++) {
+                        if (dieValues[i] == dieValues[i + 1] &&
+                            dieValues[i] == dieValues[i + 2]) {
 
-                        Points = dieValues.Sum();
-                    } else {
-                        Points = 0;
+                            Points = dieValues.Sum();
+                        }
+                        else {
+                            Points = 0;
+                        }
                     }
                     
                 } else if (numberOfOneKind == 4) {
-                    if (dieValues[i] == dieValues[i+1] && 
-                        dieValues[i] == dieValues[i+2] &&
-                        dieValues[i] == dieValues[i+3]) {
+                    for (int i = 0; i > 5; i++) {
+                        if (dieValues[i] == dieValues[i + 1] &&
+                            dieValues[i] == dieValues[i + 2] &&
+                            dieValues[i] == dieValues[i + 3]) {
 
-                        Points = dieValues.Sum();
-                    } else {
-                        Points = 0;
+                            Points = dieValues.Sum();
+                        }
+                        else {
+                            Points = 0;
+                        }
                     }
+
                 } else if (numberOfOneKind == 0) {
-                    Points = dieValues.Sum();
+                for (int i = 0; i < 4; i++)
+                    if (dieValues[i] == dieValues[i + 1]) {
+                        Points = 0;
+                    } else {
+                        Points = dieValues.Sum();
+                    }
                 }
             }
         }
