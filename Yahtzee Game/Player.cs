@@ -14,7 +14,7 @@ namespace Yahtzee_Game {
 
         public Player(string name, Score score) {
             this.Name = name;
-            //Need to implement scores
+            //grandTotal = score;
         }
 
         public string Name { 

@@ -602,6 +602,7 @@
             // 
             // buttonRollDice
             // 
+            this.buttonRollDice.Enabled = false;
             this.buttonRollDice.Location = new System.Drawing.Point(340, 36);
             this.buttonRollDice.Name = "buttonRollDice";
             this.buttonRollDice.Size = new System.Drawing.Size(90, 23);
