@@ -26,6 +26,7 @@ namespace Yahtzee_Game {
         private int currentRoll = 1;
         private Form1 form;
         private Label[] dieLabels;
+        private int[] dieValuesArray;
 
 
 
@@ -38,6 +39,10 @@ namespace Yahtzee_Game {
            {
                dice[i] = new Die(dieLabels[i]);
            }
+           
+           for (int i = 0; i < 5; i++) {
+                dieValuesArray[i] = dice[i].FaceValue;
+            }
 
             players = new BindingList<Player>();
             for (int i = 0; i < 7; i++) {
@@ -96,6 +101,7 @@ namespace Yahtzee_Game {
         }
         public void ScoreCombination(ScoreType combination) {
             //Waiting for subclasses of score to be implemented
+            currentPlayer.ScoreCombination(combination, dieValuesArray);
             form.ShowOKButton();
         }
         public static void Load(Form1 form) {

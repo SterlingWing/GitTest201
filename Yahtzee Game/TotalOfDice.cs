@@ -59,7 +59,6 @@ namespace Yahtzee_Game {
                         Points = dieValues.Sum();
                     }
                 }
-            }
         }
     }
 }
