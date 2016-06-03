@@ -9,12 +9,16 @@ namespace Yahtzee_Game {
     class Player {
         private string name;
         private int combinationsToDo;
-        private Score[] scores;
+        private Score[] scores = new Score[19];
         private int grandTotal;
 
         public Player(string name, Score score) {
             this.Name = name;
             //grandTotal = score;
+            
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
+
+            }
         }
 
         public string Name { 
@@ -27,7 +31,6 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-
         }
 
         public int GrandTotal {
