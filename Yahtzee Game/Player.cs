@@ -17,7 +17,14 @@ namespace Yahtzee_Game {
             //grandTotal = score;
             
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
+                switch (scoreCombo) {
+                    case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
+                    case ScoreType.Fives: case ScoreType.Sixes:
 
+                        break;
+                        
+
+                }
             }
         }
 
