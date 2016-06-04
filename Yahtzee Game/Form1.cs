@@ -23,6 +23,7 @@ namespace Yahtzee_Game {
 
 
         private void InitialiseLabelsAndButtons() {
+
             dice[0] = die1;
             dice[1] = die2;
             dice[2] = die3;
@@ -130,15 +131,20 @@ namespace Yahtzee_Game {
         public void StartNewGame() {
             InitialiseLabelsAndButtons();
             game = new Game(this);
+            EnableRollButton();
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
             game.RollDice();
+
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
             StartNewGame();
+        }
+
+        private void button1_Click(object sender, EventArgs e) { 
         }
     }
 

@@ -22,25 +22,32 @@ namespace Yahtzee_Game {
         private Player currentPlayer;
         private Die[] dice;
         private int playersFinished;
-        private int numRolls;
+        private int numRolls = 0;
+        private int currentRoll = 1;
         private Form1 form;
         private Label[] dieLabels;
+        private int[] dieValuesArray;
 
 
 
         public Game(Form1 form) {
             dice = new Die[5];
-            form = new Form1();
-            dieLabels = new Label[5];
+            this.form = form;
+            dieLabels = form.GetDice();
 
-            
-            
+           for (int i = 0; i < 5; i++)
+           {
+               dice[i] = new Die(dieLabels[i]);
+           }
+           
+           for (int i = 0; i < 5; i++) {
+                dieValuesArray[i] = dice[i].FaceValue;
+            }
 
             players = new BindingList<Player>();
-            //for (int i = 0; i < 7; i++) {
-            //players.Add(new Player("player" + i, )); 
-            //Good code, just need to workout how many players there are by extracting the information formthe numeric up and down box
-            //}
+            for (int i = 0; i < 7; i++) {
+                //players.Add(new Player("player" + i, ));
+            }
 
         }
         public void NextTurn() {
@@ -59,7 +66,7 @@ namespace Yahtzee_Game {
         }
         public void RollDice() {
 
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 5; i++) {
                 if (dice[i].Active == true) {
                         dice[i].Roll();
                 }
@@ -69,12 +76,12 @@ namespace Yahtzee_Game {
                 string firstRoll = "roll 1";
                 form.ShowMessage(firstRoll);
             }
-            if (numRolls == 1 || numRolls == 2) {
-                string secondAndThirdRoll = ("Roll" + numRolls + 1 + "or choose a combination to score");
+            else if (numRolls == 1 || numRolls == 2) {
+                string secondAndThirdRoll = ("Roll " + currentRoll + " or choose a combination to score");
                 form.ShowMessage(secondAndThirdRoll);
             }
 
-            if (numRolls == 3) {
+            else if (numRolls == 3) {
                 string afterThirdRoll = "Choose a combination to score";
                 form.ShowMessage(afterThirdRoll);
             }
@@ -84,6 +91,7 @@ namespace Yahtzee_Game {
                 form.ShowOKButton();
             }
             numRolls++;
+            currentRoll++;
         }
         public void HoldDie(int index) {
             dice[index].Active = false;
@@ -93,6 +101,7 @@ namespace Yahtzee_Game {
         }
         public void ScoreCombination(ScoreType combination) {
             //Waiting for subclasses of score to be implemented
+            currentPlayer.ScoreCombination(combination, dieValuesArray);
             form.ShowOKButton();
         }
         public static void Load(Form1 form) {

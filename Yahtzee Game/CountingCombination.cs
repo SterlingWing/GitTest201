@@ -27,7 +27,7 @@ namespace Yahtzee_Game {
 
         public override void CalculateScore(int[] diceValues) {
             int dieCount = 0;
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 5; i++) {
                 if (diceValues[i] == dieValue) {
                     dieCount++;
                 }
