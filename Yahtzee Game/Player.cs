@@ -12,7 +12,7 @@ namespace Yahtzee_Game {
         private Score[] scores = new Score[19];
         private int grandTotal;
 
-        public Player(string name, Label scoreTotals) {
+        public Player(string name, Label[] scoreTotals) {
             this.Name = name;
             //this.scores = score;
                         

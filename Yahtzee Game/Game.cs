@@ -17,8 +17,8 @@ namespace Yahtzee_Game {
     }
 
     class Game {
-        //private BindingList<Player> players;
-        private Player[] players = new Player[2];
+        private BindingList<Player> players;
+        //private Player[] players = new Player[2];
         private int currentPlayerIndex;
         private Player currentPlayer;
         private Die[] dice;
@@ -51,9 +51,9 @@ namespace Yahtzee_Game {
                //dieValuesArray[i] = dice[i].FaceValue;
             }
 
-            //players = new BindingList<Player>();
-            for (int i = 0; i < 7; i++) {
-                //players.Add(new Player("player" + i, ));
+            players = new BindingList<Player>();
+            for (int i = 0; i < form.PlayerSetCountReturn(); i++) {
+                players.Add(new Player(("player" + i), form.GetScoresTotals()));
             }
 
             currentPlayerIndex = 1;
@@ -70,7 +70,7 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex+1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayerIndex++;
-            if (currentPlayerIndex == players.Length) {
+            if (currentPlayerIndex == players.Count) {
                 currentPlayerIndex = 0;
             }
             

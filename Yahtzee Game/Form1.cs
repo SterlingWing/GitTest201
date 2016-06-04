@@ -264,6 +264,9 @@ namespace Yahtzee_Game {
             ShowOKButton();
             ShowMessage("Your turn has ended - click OK");
         }
+        public decimal PlayerSetCountReturn() {
+            return playerSetCount.Value;
+        }
     }
 
 }
