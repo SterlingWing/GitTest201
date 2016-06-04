@@ -12,7 +12,7 @@ namespace Yahtzee_Game {
         private Score[] scores = new Score[19];
         private int grandTotal;
 
-        public Player(string name, Score score) {
+        public Player(string name, Label scoreTotals) {
             this.Name = name;
             //this.scores = score;
                         
@@ -20,10 +20,7 @@ namespace Yahtzee_Game {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
                     case ScoreType.Fives: case ScoreType.Sixes:
-
                         break;
-                        
-
                 }
             }
         }
@@ -69,5 +66,11 @@ namespace Yahtzee_Game {
         public void Load(Label[] temp) {
 
         }
+
+        /*public BindingList<Player> players {
+            get {
+                return Players;
+            }
+        }*/
     }
 }

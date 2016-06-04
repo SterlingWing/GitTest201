@@ -24,7 +24,7 @@ namespace Yahtzee_Game {
         }
 
         public override void CalculateScore(int[] dieValues) {
-            Array.Sort(dieValues);
+            Sort(dieValues);
 
                 if (numberOfOneKind == 3) {
                     for (int i = 0; i > 5; i++) {

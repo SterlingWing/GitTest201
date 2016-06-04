@@ -14,7 +14,7 @@ namespace Yahtzee_Game {
         }
 
         public override void CalculateScore(int[] dieValues) {
-            Array.Sort(dieValues);
+            Sort(dieValues);
 
                 for (int i = 0; i < 5; i++) {
                     if (scoreType == ScoreType.SmallStraight) {
