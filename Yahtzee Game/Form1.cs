@@ -68,6 +68,9 @@ namespace Yahtzee_Game {
             checkBoxes[2] = checkBoxDie3;
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
+
+            labelPlayer.Text = "Player 1";
+            labelMessage.Text = "Roll 1";
         }
 
         public Label[] GetDice() {
@@ -144,7 +147,60 @@ namespace Yahtzee_Game {
             StartNewGame();
         }
 
-        private void button1_Click(object sender, EventArgs e) { 
+
+
+        private void buttonOk_Click(object sender, EventArgs e) {
+            game.NextTurn();
+            buttonOk.Visible = false;
+        }
+
+        private void checkBoxDie1_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxDie1.Checked == true) {
+                game.HoldDie(0);
+            }
+            if (checkBoxDie1.Checked == false) {
+                game.ReleaseDie(0);
+            }
+        }
+
+        private void checkBoxDie2_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxDie2.Checked == true) {
+                game.HoldDie(1);
+            }
+            if (checkBoxDie2.Checked == false) {
+                game.ReleaseDie(1);
+            }
+        }
+
+        private void checkBoxDie3_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxDie3.Checked == true) {
+                game.HoldDie(2);
+            }
+            if (checkBoxDie3.Checked == false) {
+                game.ReleaseDie(2);
+            }
+        }
+
+        private void checkBoxDie4_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxDie4.Checked == true) {
+                game.HoldDie(3);
+            }
+            if (checkBoxDie4.Checked == false) {
+                game.ReleaseDie(3);
+            }
+        }
+
+        private void checkBoxDie5_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxDie5.Checked == true) {
+                game.HoldDie(4);
+            }
+            if (checkBoxDie5.Checked == false) {
+                game.ReleaseDie(4);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            ShowOKButton();
         }
     }
 

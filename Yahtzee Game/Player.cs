@@ -14,8 +14,8 @@ namespace Yahtzee_Game {
 
         public Player(string name, Score score) {
             this.Name = name;
-            //grandTotal = score;
-            
+            //this.scores = score;
+                        
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
