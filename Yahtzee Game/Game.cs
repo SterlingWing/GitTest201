@@ -57,6 +57,7 @@ namespace Yahtzee_Game {
             }
 
             currentPlayerIndex = 1;
+            currentPlayer = players[0];
 
 
         }
