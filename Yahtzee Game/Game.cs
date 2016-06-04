@@ -34,6 +34,7 @@ namespace Yahtzee_Game {
             dieLabels = new Label[5];
 
             
+            
 
             players = new BindingList<Player>();
             //for (int i = 0; i < 7; i++) {

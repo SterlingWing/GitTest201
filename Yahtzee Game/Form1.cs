@@ -90,15 +90,10 @@ namespace Yahtzee_Game {
         }
 
         public void EnableCheckBoxes() {
-            checkBoxes[0].Enabled = true;
-            checkBoxes[1].Enabled = true;
-            checkBoxes[2].Enabled = true;
-            checkBoxes[3].Enabled = true;
-            checkBoxes[4].Enabled = true;
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    checkBoxes[i].Enabled = true;
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                checkBoxes[i].Enabled = true;
+            }
         }
 
         public void DisableAndClearCheckBoxes() {
