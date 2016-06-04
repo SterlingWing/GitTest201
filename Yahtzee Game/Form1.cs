@@ -262,6 +262,7 @@ namespace Yahtzee_Game {
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
             ShowOKButton();
+            ShowMessage("Your turn has ended - click OK");
         }
     }
 
