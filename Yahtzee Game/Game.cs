@@ -56,21 +56,37 @@ namespace Yahtzee_Game {
                 //players.Add(new Player("player" + i, ));
             }
 
+            currentPlayerIndex = 1;
+
 
         }
         public void NextTurn() {
-            for (int i = resetPlayerIndex; i < 2; i++) {
-                form.ShowPlayerName("Player " + (i+1));
-                currentPlayerIndex = i;
-                currentPlayer = players[i];
-                form.DisableAndClearCheckBoxes();
-                form.EnableCheckBoxes();
-                form.EnableRollButton();
-                form.ShowMessage(labelMessages[0]);
-                numRolls = 1;
-                //player.showScores();
+            
+            numRolls = 1;
+            form.DisableAndClearCheckBoxes();
+            form.EnableCheckBoxes();
+            form.EnableRollButton();
+            form.ShowPlayerName("Player " + (currentPlayerIndex+1));
+            currentPlayer = players[currentPlayerIndex];
+            currentPlayerIndex++;
+            if (currentPlayerIndex == players.Length) {
+                currentPlayerIndex = 0;
             }
             
+
+
+            //for (int i = 0; i < 2; i++) {
+            //    form.ShowPlayerName("Player " + (i+1));
+            //    currentPlayerIndex = i;
+            //    currentPlayer = players[i];
+            //    form.DisableAndClearCheckBoxes();
+            //    form.EnableCheckBoxes();
+            //    form.EnableRollButton();
+            //    form.ShowMessage(labelMessages[0]);
+            //    numRolls = 1;
+            //    //player.showScores();
+            //}
+
             //updates currentPlyer and currentPlayerIndex to be the next player to play their turn
             //updates the GUI so that this player can start their turn.
             //This method involves setting GUI to change player's name and display their corresponding scores etc.
