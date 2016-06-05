@@ -20,18 +20,11 @@ namespace Yahtzee_Game {
             this.name = name;
             //this.grandTotal;
 
-            for (int i = 0; i < 19; i++) {
-
-                scores[i] = new CountingCombination(ScoreType.Ones, scoreTotals[(int)ScoreType.Ones]);
-
-            }
-
-
-
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
                     case ScoreType.Fives: case ScoreType.Sixes:
+                        scores[(int)scoreCombo] = new CountingCombination(scoreCombo, scoreTotals[(int)scoreCombo]);
                         break;
                 }
             }
