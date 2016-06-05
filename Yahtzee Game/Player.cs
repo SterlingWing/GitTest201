@@ -48,9 +48,10 @@ namespace Yahtzee_Game {
             }
         }
 
-        public void ScoreCombination(ScoreType scoreCombo) {
-            scores[(int)scoreCombo] 
-            }
+        public void ScoreCombination(ScoreType combination, int[] dice) {
+            //scores[(int)combination].CountingCombination.CalculateScore(dice);
+            //(scores[(int)combination]).
+        }
 
         public int GrandTotal {
             get {
