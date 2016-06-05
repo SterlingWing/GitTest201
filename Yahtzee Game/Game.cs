@@ -56,23 +56,23 @@ namespace Yahtzee_Game {
                 players.Add(new Player(("player" + i), form.GetScoresTotals()));
             }
 
-            currentPlayerIndex = 1;
-            currentPlayer = players[0];
+            currentPlayerIndex = 0;
+            currentPlayer = players[currentPlayerIndex];
 
 
         }
         public void NextTurn() {
-            
+            currentPlayerIndex++;
+            if (currentPlayerIndex == players.Count) {
+                currentPlayerIndex = 0;
+            }
             numRolls = 1;
             form.DisableAndClearCheckBoxes();
             form.EnableCheckBoxes();
             form.EnableRollButton();
             form.ShowPlayerName("Player " + (currentPlayerIndex+1));
             currentPlayer = players[currentPlayerIndex];
-            currentPlayerIndex++;
-            if (currentPlayerIndex == players.Count) {
-                currentPlayerIndex = 0;
-            }
+
             
 
 

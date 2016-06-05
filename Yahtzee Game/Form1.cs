@@ -152,6 +152,7 @@ namespace Yahtzee_Game {
         private void buttonOk_Click(object sender, EventArgs e) {
             game.NextTurn();
             buttonOk.Visible = false;
+            ShowMessage("");
         }
 
         private void checkBoxDie1_CheckedChanged(object sender, EventArgs e) {
@@ -202,6 +203,7 @@ namespace Yahtzee_Game {
         private void button1_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Ones);
             ShowOKButton();
+            ShowMessage("Your turn has ended - click OK");
         }
 
         private void button2_Click(object sender, EventArgs e) {
@@ -262,7 +264,6 @@ namespace Yahtzee_Game {
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
             ShowOKButton();
-            ShowMessage("Your turn has ended - click OK");
         }
         public decimal PlayerSetCountReturn() {
             return playerSetCount.Value;
