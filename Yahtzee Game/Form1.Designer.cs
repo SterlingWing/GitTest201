@@ -86,13 +86,11 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridPlayerBoard = new System.Windows.Forms.DataGridView();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lablePlayersTitle = new System.Windows.Forms.Label();
             this.playerSetCount = new System.Windows.Forms.NumericUpDown();
             this.labelPlayerCount = new System.Windows.Forms.Label();
             this.labelYahtzeeTitle = new System.Windows.Forms.Label();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grandTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -101,10 +99,8 @@
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -781,26 +777,32 @@
             // 
             // gridPlayerBoard
             // 
+            this.gridPlayerBoard.AllowUserToAddRows = false;
+            this.gridPlayerBoard.AllowUserToDeleteRows = false;
             this.gridPlayerBoard.AutoGenerateColumns = false;
             this.gridPlayerBoard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPlayerBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.grandTotalDataGridViewTextBoxColumn});
             this.gridPlayerBoard.DataSource = this.playerBindingSource;
-            this.gridPlayerBoard.Location = new System.Drawing.Point(22, 263);
+            this.gridPlayerBoard.Location = new System.Drawing.Point(13, 260);
             this.gridPlayerBoard.Margin = new System.Windows.Forms.Padding(2);
             this.gridPlayerBoard.Name = "gridPlayerBoard";
             this.gridPlayerBoard.RowHeadersVisible = false;
             this.gridPlayerBoard.RowTemplate.Height = 28;
-            this.gridPlayerBoard.Size = new System.Drawing.Size(206, 130);
+            this.gridPlayerBoard.Size = new System.Drawing.Size(215, 169);
             this.gridPlayerBoard.TabIndex = 4;
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
             // 
             // lablePlayersTitle
             // 
             this.lablePlayersTitle.AutoSize = true;
             this.lablePlayersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lablePlayersTitle.ForeColor = System.Drawing.Color.White;
-            this.lablePlayersTitle.Location = new System.Drawing.Point(72, 206);
+            this.lablePlayersTitle.Location = new System.Drawing.Point(63, 206);
             this.lablePlayersTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lablePlayersTitle.Name = "lablePlayersTitle";
             this.lablePlayersTitle.Size = new System.Drawing.Size(105, 31);
@@ -854,31 +856,19 @@
             this.labelYahtzeeTitle.TabIndex = 0;
             this.labelYahtzeeTitle.Text = "Yahtzee";
             // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "players";
-            this.playersBindingSource.DataSource = this.playerBindingSource;
-            // 
-            // playersBindingSource1
-            // 
-            this.playersBindingSource1.DataMember = "players";
-            this.playersBindingSource1.DataSource = this.playerBindingSource;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 80;
             // 
             // grandTotalDataGridViewTextBoxColumn
             // 
             this.grandTotalDataGridViewTextBoxColumn.DataPropertyName = "GrandTotal";
             this.grandTotalDataGridViewTextBoxColumn.HeaderText = "GrandTotal";
             this.grandTotalDataGridViewTextBoxColumn.Name = "grandTotalDataGridViewTextBoxColumn";
+            this.grandTotalDataGridViewTextBoxColumn.Width = 130;
             // 
             // Form1
             // 
@@ -899,10 +889,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -974,12 +962,10 @@
         private System.Windows.Forms.Label labelPlayerCount;
         private System.Windows.Forms.Label labelYahtzeeTitle;
         private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.DataGridView gridPlayerBoard;
+        public System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grandTotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource playersBindingSource;
-        private System.Windows.Forms.BindingSource playersBindingSource1;
     }
 }
 

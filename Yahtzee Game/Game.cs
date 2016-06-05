@@ -48,13 +48,13 @@ namespace Yahtzee_Game {
 
             players = new BindingList<Player>();
             for (int i = 0; i < form.PlayerSetCountReturn(); i++) {
-                players.Add(new Player(("player" + i), form.GetScoresTotals()));
+                players.Add(new Player(("player " + (i+1)), form.GetScoresTotals()));
             }
 
             currentPlayerIndex = 0;
             currentPlayer = players[currentPlayerIndex];
 
-            //form.playerBindingSource.DataSource = players;
+            form.playerBindingSource.DataSource = players;
 
 
         }
