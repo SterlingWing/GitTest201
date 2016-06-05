@@ -131,7 +131,7 @@ namespace Yahtzee_Game {
             dice[index].Active = true;
         }
         public void ScoreCombination(ScoreType combination) {
-            currentPlayer.ScoreCombination(combination, dice[4].FaceValue);
+            //currentPlayer.ScoreCombination(combination, dice[xxxx].FaceValue);
             form.ShowOKButton();
             form.ShowMessage("Your turn has ended - click OK");
         }
