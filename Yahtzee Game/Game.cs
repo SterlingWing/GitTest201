@@ -26,9 +26,8 @@ namespace Yahtzee_Game {
         private Form1 form;
         private Label[] dieLabels;
         private const int resetPlayerIndex = 0;
-        private string[] labelMessages = { "Roll 1",
-                                                   };
-        //private int[] dieValuesArray;
+        private string[] labelMessages = {"Roll 1"};
+       // private int[] dieValuesArray;
 
 
 
@@ -43,7 +42,7 @@ namespace Yahtzee_Game {
            }
            
            for (int i = 0; i < 5; i++) {
-               //dieValuesArray[i] = dice[i].FaceValue;
+              // dieValuesArray[i] = dice[i].FaceValue;
             }
 
             players = new BindingList<Player>();
@@ -59,6 +58,7 @@ namespace Yahtzee_Game {
 
         }
         public void NextTurn() {
+            form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
             if (currentPlayerIndex == players.Count) {
                 currentPlayerIndex = 0;
@@ -131,9 +131,9 @@ namespace Yahtzee_Game {
             dice[index].Active = true;
         }
         public void ScoreCombination(ScoreType combination) {
-            //Waiting for subclasses of score to be implemented
-            //currentPlayer.ScoreCombination(combination, dieValuesArray);
+            //currentPlayer.ScoreCombination(combination, dice[xxxx].FaceValue);
             form.ShowOKButton();
+            form.ShowMessage("Your turn has ended - click OK");
         }
         public static void Load(Form1 form) {
             //Needs to be implemented
@@ -143,3 +143,4 @@ namespace Yahtzee_Game {
         }
     }
 }
+

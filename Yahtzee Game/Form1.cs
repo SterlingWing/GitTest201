@@ -19,7 +19,6 @@ namespace Yahtzee_Game {
 
         public Form1() {
             InitializeComponent();
-            //playerBindingSource.DataSource = players;
         }
 
 
@@ -153,7 +152,6 @@ namespace Yahtzee_Game {
         private void buttonOk_Click(object sender, EventArgs e) {
             game.NextTurn();
             buttonOk.Visible = false;
-            ShowMessage("");
         }
 
         private void checkBoxDie1_CheckedChanged(object sender, EventArgs e) {
@@ -203,68 +201,54 @@ namespace Yahtzee_Game {
 
         private void button1_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Ones);
-            ShowOKButton();
-            ShowMessage("Your turn has ended - click OK");
         }
 
         private void button2_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Twos);
-            ShowOKButton();
         }
 
         private void button3_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Threes);
-            ShowOKButton();
         }
 
         private void button4_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fours);
-            ShowOKButton();
         }
 
         private void button5_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fives);
-            ShowOKButton();
         }
 
         private void button6_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Sixes);
-            ShowOKButton();
         }
 
         private void button7_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.ThreeOfAKind);
-            ShowOKButton();
         }
 
         private void button8_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FourOfAKind);
-            ShowOKButton();
         }
 
         private void button9_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FullHouse);
-            ShowOKButton();
         }
 
         private void button10_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.SmallStraight);
-            ShowOKButton();
         }
 
         private void button11_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.LargeStraight);
-            ShowOKButton();
         }
 
         private void button12_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Chance);
-            ShowOKButton();
         }
 
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
-            ShowOKButton();
         }
         public decimal PlayerSetCountReturn() {
             return playerSetCount.Value;

@@ -49,6 +49,7 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
+
         }
 
         public int GrandTotal {
