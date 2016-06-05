@@ -26,6 +26,15 @@ namespace Yahtzee_Game {
                     case ScoreType.Fives: case ScoreType.Sixes:
                         scores[(int)scoreCombo] = new CountingCombination(scoreCombo, scoreTotals[(int)scoreCombo]);
                         break;
+
+                    case ScoreType.SmallStraight: case ScoreType.LargeStraight: case ScoreType.FullHouse:
+                    case ScoreType.Yahtzee:
+                        scores[(int)scoreCombo] = new FixedScore(scoreCombo, scoreTotals[(int)scoreCombo]);
+                        break;
+
+                    case ScoreType.ThreeOfAKind: case ScoreType.FourOfAKind: case ScoreType.Chance:
+                        scores[(int)scoreCombo] = new TotalOfDice(scoreCombo, scoreTotals[(int)scoreCombo]);
+                        break;
                 }
             }
         }
