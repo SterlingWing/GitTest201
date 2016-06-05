@@ -144,8 +144,8 @@ namespace Yahtzee_Game {
             //Needs to be implemented
         }
 
-        public int[] intDiceArray(ScoreType combination) {
-            int[] dieValuesArray = new int[4];
+        private int[] intDiceArray(ScoreType combination) {
+            int[] dieValuesArray = new int[5];
 
             for (int i = 0; i < 5; i++) {
                 dieValuesArray[i] = dice[i].FaceValue;
