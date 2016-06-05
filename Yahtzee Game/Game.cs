@@ -26,8 +26,8 @@ namespace Yahtzee_Game {
         private Form1 form;
         private Label[] dieLabels;
         private const int resetPlayerIndex = 0;
-        private string[] labelMessages = {"Roll 1"};
-       // private int[] dieValuesArray;
+        private string[] labelMessages = { "Roll 1" };
+        // private int[] dieValuesArray;
 
 
 
@@ -36,18 +36,17 @@ namespace Yahtzee_Game {
             this.form = form;
             dieLabels = form.GetDice();
 
-           for (int i = 0; i < 5; i++)
-           {
-               dice[i] = new Die(dieLabels[i]);
-           }
-           
-           for (int i = 0; i < 5; i++) {
-              // dieValuesArray[i] = dice[i].FaceValue;
+            for (int i = 0; i < 5; i++) {
+                dice[i] = new Die(dieLabels[i]);
+            }
+
+            for (int i = 0; i < 5; i++) {
+                // dieValuesArray[i] = dice[i].FaceValue;
             }
 
             players = new BindingList<Player>();
             for (int i = 0; i < form.PlayerSetCountReturn(); i++) {
-                players.Add(new Player(("player " + (i+1)), form.GetScoresTotals()));
+                players.Add(new Player(("player " + (i + 1)), form.GetScoresTotals()));
             }
 
             currentPlayerIndex = 0;
@@ -67,10 +66,10 @@ namespace Yahtzee_Game {
             form.DisableAndClearCheckBoxes();
             form.EnableCheckBoxes();
             form.EnableRollButton();
-            form.ShowPlayerName("Player " + (currentPlayerIndex+1));
+            form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
 
-            
+
 
 
             //for (int i = 0; i < 2; i++) {
@@ -94,7 +93,7 @@ namespace Yahtzee_Game {
 
             for (int i = 0; i < 5; i++) {
                 if (dice[i].Active == true) {
-                        dice[i].Roll();
+                    dice[i].Roll();
                 }
             }
 
@@ -104,7 +103,7 @@ namespace Yahtzee_Game {
             //}
 
             if (numRolls == 1 || numRolls == 2) {
-                string secondAndThirdRoll = ("Roll " + (numRolls+1) + " or choose a combination to score");
+                string secondAndThirdRoll = ("Roll " + (numRolls + 1) + " or choose a combination to score");
                 form.ShowMessage(secondAndThirdRoll);
             }
 
@@ -131,7 +130,10 @@ namespace Yahtzee_Game {
             dice[index].Active = true;
         }
         public void ScoreCombination(ScoreType combination) {
-            //currentPlayer.ScoreCombination(combination, dice[xxxx].FaceValue);
+            int[] dieValuesArray;
+
+            dieValuesArray = intDiceArray(combination);
+            currentPlayer.ScoreCombination(combination, dieValuesArray);
             form.ShowOKButton();
             form.ShowMessage("Your turn has ended - click OK");
         }
@@ -140,6 +142,16 @@ namespace Yahtzee_Game {
         }
         public void Save() {
             //Needs to be implemented
+        }
+
+        public int[] intDiceArray(ScoreType combination) {
+            int[] dieValuesArray = new int[4];
+
+            for (int i = 0; i < 5; i++) {
+                dieValuesArray[i] = dice[i].FaceValue;
+            }
+
+            return dieValuesArray;
         }
     }
 }
