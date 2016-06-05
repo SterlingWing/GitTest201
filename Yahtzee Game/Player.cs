@@ -10,13 +10,24 @@ namespace Yahtzee_Game {
     class Player {
         private string name;
         private int combinationsToDo;
-        private Score[] scores = new Score[19];
+        private Score[] scores = new Score[18];
         private int grandTotal;
 
+        
+
+
         public Player(string name, Label[] scoreTotals) {
-            this.Name = name;
-            //this.scores = score;
-                        
+            this.name = name;
+            //this.grandTotal;
+
+            for (int i = 0; i < 19; i++) {
+
+                scores[i] = new CountingCombination(ScoreType.Ones, scoreTotals[(int)ScoreType.Ones]);
+
+            }
+
+
+
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:

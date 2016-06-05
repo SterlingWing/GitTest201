@@ -12,7 +12,7 @@ namespace Yahtzee_Game {
         protected bool done;
 
         public Score(Label label) {
-
+            this.label = label;
         }
 
         public int Points {
