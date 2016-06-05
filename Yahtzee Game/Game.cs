@@ -131,7 +131,6 @@ namespace Yahtzee_Game {
         }
         public void ScoreCombination(ScoreType combination) {
             int[] dieValuesArray;
-
             dieValuesArray = intDiceArray(combination);
             currentPlayer.ScoreCombination(combination, dieValuesArray);
             form.ShowOKButton();
@@ -145,7 +144,7 @@ namespace Yahtzee_Game {
         }
 
         public int[] intDiceArray(ScoreType combination) {
-            int[] dieValuesArray = new int[4];
+            int[] dieValuesArray = new int[5];
 
             for (int i = 0; i < 5; i++) {
                 dieValuesArray[i] = dice[i].FaceValue;
