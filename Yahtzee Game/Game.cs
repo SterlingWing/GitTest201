@@ -18,7 +18,6 @@ namespace Yahtzee_Game {
 
     class Game {
         private BindingList<Player> players;
-        //private Player[] players = new Player[2];
         private int currentPlayerIndex;
         private Player currentPlayer;
         private Die[] dice;
@@ -42,10 +41,6 @@ namespace Yahtzee_Game {
            {
                dice[i] = new Die(dieLabels[i]);
            }
-
-           for (int i = 0; i < 3; i++) {
-
-            }
            
            for (int i = 0; i < 5; i++) {
                //dieValuesArray[i] = dice[i].FaceValue;
@@ -58,6 +53,8 @@ namespace Yahtzee_Game {
 
             currentPlayerIndex = 0;
             currentPlayer = players[currentPlayerIndex];
+
+            //form.playerBindingSource.DataSource = players;
 
 
         }

@@ -19,6 +19,7 @@ namespace Yahtzee_Game {
 
         public Form1() {
             InitializeComponent();
+            //playerBindingSource.DataSource = player.players;
         }
 
 

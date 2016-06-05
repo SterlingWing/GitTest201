@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Yahtzee_Game {
     class Player {
@@ -67,10 +68,10 @@ namespace Yahtzee_Game {
 
         }
 
-        /*public BindingList<Player> players {
+        public BindingList<Player> players {
             get {
-                return Players;
+                return players;
             }
-        }*/
+        }
     }
 }
