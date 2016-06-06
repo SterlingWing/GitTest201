@@ -48,6 +48,7 @@ namespace Yahtzee_Game {
             scoreTotals[(int)ScoreType.YahtzeeBonus] = labelBonusYatzeeScore;
             scoreTotals[(int)ScoreType.SectionATotal] = labelUpperScore;
             scoreTotals[(int)ScoreType.SectionBTotal] = labelLowerScore;
+            scoreTotals[(int)ScoreType.GrandTotal] = labelGrandScore;
 
             scoreButtons[(int)ScoreType.Ones] = button1;
             scoreButtons[(int)ScoreType.Twos] = button2;

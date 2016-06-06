@@ -50,7 +50,6 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            
                 Score score = scores[(int)combination];
                 ((Combination)(score)).CalculateScore(dice);
                 UpdateScoreTotals(score, combination);
