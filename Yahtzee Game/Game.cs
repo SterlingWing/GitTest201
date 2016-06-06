@@ -134,9 +134,9 @@ namespace Yahtzee_Game {
             int[] dieValuesArray;
             dieValuesArray = intDiceArray(combination);
             currentPlayer.ScoreCombination(combination, dieValuesArray);
-            currentPlayer.ShowScores();
             form.ShowOKButton();
             form.ShowMessage("Your turn has ended - click OK");
+            currentPlayer.ShowScores();
         }
         public static void Load(Form1 form) {
             //Needs to be implemented

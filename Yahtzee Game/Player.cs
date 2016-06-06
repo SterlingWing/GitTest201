@@ -11,12 +11,12 @@ namespace Yahtzee_Game {
         private string name;
         private int combinationsToDo = 13;
         private Score[] scores = new Score[19];
-        private int grandTotal;
+        private int grandTotal = 0;
 
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
 
-            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo < ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
                     case ScoreType.Fives: case ScoreType.Sixes:
@@ -32,10 +32,10 @@ namespace Yahtzee_Game {
                         scores[(int)scoreCombo] = new TotalOfDice(scoreCombo, scoreTotals[(int)scoreCombo]);
                         break;
 
-                  //  case ScoreType.BonusFor63Plus: case ScoreType.GrandTotal: case ScoreType.SectionATotal:
-                  //  case ScoreType.SectionBTotal: case ScoreType.SubTotal: case ScoreType.YahtzeeBonus:
-                  //      scores[(int)scoreCombo] = new BonusOrTotal(scoreTotals[(int)scoreCombo]);
-                  //      break;
+                    case ScoreType.BonusFor63Plus: case ScoreType.GrandTotal: case ScoreType.SectionATotal:
+                    case ScoreType.SectionBTotal: case ScoreType.SubTotal: case ScoreType.YahtzeeBonus:
+                        scores[(int)scoreCombo] = new BonusOrTotal(scoreTotals[(int)scoreCombo]);
+                        break;
                 }
             }
         }
@@ -52,15 +52,15 @@ namespace Yahtzee_Game {
         public void ScoreCombination(ScoreType combination, int[] dice) {
             Score score = scores[(int)combination];
             ((Combination)(score)).CalculateScore(dice);
-            combinationsToDo--;
             UpdateScoreTotals(score);
+            combinationsToDo--;
         }
 
-        private void UpdateScoreTotals(Score score) {
+        public void UpdateScoreTotals(Score score) {
             scores[6].Points = scores[6].Points + score.Points;
             scores[8].Points = scores[8].Points + score.Points;
             scores[17].Points = scores[17].Points + score.Points;
-            scores[18].Points = scores[18].Points + score.Points;
+            //scores[18].Points = scores[18].Points + score.Points;
         }
 
         public int GrandTotal {
@@ -78,10 +78,8 @@ namespace Yahtzee_Game {
             }
             else {
                 return true;
-            }
         }
-
-
+    }
 
         public void ShowScores() {
             foreach (Score i in scores) {
