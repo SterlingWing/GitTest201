@@ -16,10 +16,14 @@ namespace Yahtzee_Game {
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
             if (scoreType == ScoreType.SmallStraight) {
+                int duplicateValues = dieValues.Distinct().Count();
 
-                int[] uniqueDieValues = dieValues.Distinct().ToArray();
-
-                Sort(uniqueDieValues);
+                if (duplicateValues >= 3) {
+                    Points = 30;
+                } else {
+                    Points = 0;
+                }
+                /*int[] uniqueDieValues = dieValues.Distinct().ToArray();
 
                 string toDisplay = string.Join(Environment.NewLine, uniqueDieValues);
                 MessageBox.Show(toDisplay);
@@ -32,7 +36,7 @@ namespace Yahtzee_Game {
                     else {
                         Points = 1;
                     }
-                }
+                }*/
             }
 
             else if (scoreType == ScoreType.LargeStraight) {
@@ -102,6 +106,7 @@ namespace Yahtzee_Game {
 
             else if (scoreType == ScoreType.FullHouse) {
                 int duplicateValues = dieValues.Distinct().Count();
+
                 if (duplicateValues < 3) {
                     Points = 25;
                 } else {
