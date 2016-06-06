@@ -42,6 +42,15 @@ namespace Yahtzee_Game {
                     Points = 30;
                 }
             }
+            
+            //for (int i = 0; i < (dieValues.Length - 1); i++) {
+            //        if (scoreType == ScoreType.SmallStraight) {
+            //            if (dieValues[i] == (dieValues[i + 1] + 1) &&
+            //                dieValues[i + 1] == dieValues[i + 2] + 1) {
+            //                Points = 30;
+            //            }
+            //        }
+            //    }
 
             else if (scoreType == ScoreType.LargeStraight) {
                     if ((dieValues[0] == 1 &&
@@ -60,47 +69,7 @@ namespace Yahtzee_Game {
                         }
                 }
 
-            //for (int i = 0; i < (dieValues.Length - 1); i++) {
-            //        if (scoreType == ScoreType.SmallStraight) {
-            //            if (dieValues[i] == (dieValues[i + 1] + 1) &&
-            //                dieValues[i + 1] == dieValues[i + 2] + 1) {
-            //                Points = 30;
-            //            }
-            //        }
-            //    }
-            //    else if (scoreType == ScoreType.LargeStraight) {
-            //        if (dieValues[i] == dieValues[i + 1] &&
-            //            dieValues[i + 1] == dieValues[i + 2] &&
-            //            dieValues[i + 2] == dieValues[i + 3]) {
-            //            Points = 40;
-            //        }
-            //        else {
-            //            Points = 0;
-            //        }
-            //    }
 
-            //Full House
-            /*else if (scoreType == ScoreType.FullHouse) {
-                    int repeatValue = 1;
-                    int tempValue = 0;
-
-                    for (int j = 0; j < 5; j++) {
-
-                        while (j < 4) {
-                            tempValue = dieValues[j + 1];
-                        }
-
-                        if (dieValues[j] == tempValue) {
-                            repeatValue++;
-                        }
-                    }
-                    if (repeatValue == 5) {
-                        Points = 25;
-                    }
-                    else {
-                        Points = 0;
-                    }
-                }*/
 
             else if (scoreType == ScoreType.FullHouse) {
                 int duplicateValues = dieValues.Distinct().Count();
