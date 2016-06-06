@@ -15,12 +15,18 @@ namespace Yahtzee_Game {
 
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
-
-
             if (scoreType == ScoreType.SmallStraight) {
-                for (int i = 0; i < (dieValues.Length - 1); i++) {
-                    if (dieValues[i] == (dieValues[i + 1] + 1) &&
-                        dieValues[i + 1] == dieValues[i + 2] + 1) {
+
+                int[] uniqueDieValues = dieValues.Distinct().ToArray();
+
+                Sort(uniqueDieValues);
+
+                string toDisplay = string.Join(Environment.NewLine, uniqueDieValues);
+                MessageBox.Show(toDisplay);
+
+                for (int i = 0; i < (uniqueDieValues.Length - 1); i++) {
+                    if (uniqueDieValues[i] == (uniqueDieValues[i + 1] + 1) &&
+                        uniqueDieValues[i + 1] == uniqueDieValues[i + 2] + 1) {
                         Points = 30;
                     }
                     else {
@@ -45,7 +51,7 @@ namespace Yahtzee_Game {
 
                         } else {
 
-                            Points = 1;
+                            Points = 0;
 
                         }
                 }
