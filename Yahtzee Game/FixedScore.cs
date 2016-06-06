@@ -45,7 +45,7 @@ namespace Yahtzee_Game {
 
                         } else {
 
-                            Points = 1;
+                            Points = 0;
 
                         }
                 }
@@ -72,7 +72,7 @@ namespace Yahtzee_Game {
             //    }
 
             //Full House
-            else if (scoreType == ScoreType.FullHouse) {
+            /*else if (scoreType == ScoreType.FullHouse) {
                     int repeatValue = 1;
                     int tempValue = 0;
 
@@ -92,7 +92,16 @@ namespace Yahtzee_Game {
                     else {
                         Points = 0;
                     }
+                }*/
+
+            else if (scoreType == ScoreType.FullHouse) {
+                int duplicateValues = dieValues.Distinct().Count();
+                if (duplicateValues < 3) {
+                    Points = 25;
+                } else {
+                    Points = 0;
                 }
+            }
           }
     }
 }
