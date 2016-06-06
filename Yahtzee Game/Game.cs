@@ -68,6 +68,7 @@ namespace Yahtzee_Game {
             form.EnableRollButton();
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
+            currentPlayer.ShowScores();
 
 
 
@@ -133,6 +134,7 @@ namespace Yahtzee_Game {
             int[] dieValuesArray;
             dieValuesArray = intDiceArray(combination);
             currentPlayer.ScoreCombination(combination, dieValuesArray);
+            currentPlayer.ShowScores();
             form.ShowOKButton();
             form.ShowMessage("Your turn has ended - click OK");
         }

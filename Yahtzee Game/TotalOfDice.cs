@@ -27,6 +27,8 @@ namespace Yahtzee_Game {
             Sort(dieValues);
 
                 if (numberOfOneKind == 3) {
+                    
+
                     for (int i = 0; i > 5; i++) {
                         if (dieValues[i] == dieValues[i + 1] &&
                             dieValues[i] == dieValues[i + 2]) {
@@ -52,13 +54,8 @@ namespace Yahtzee_Game {
                     }
 
                 } else if (numberOfOneKind == 0) {
-                for (int i = 0; i < 4; i++)
-                    if (dieValues[i] == dieValues[i + 1]) {
-                        Points = 0;
-                    } else {
                         Points = dieValues.Sum();
                     }
                 }
         }
     }
-}
