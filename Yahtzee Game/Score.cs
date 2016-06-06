@@ -9,7 +9,7 @@ namespace Yahtzee_Game {
     abstract class Score {
         private int points;
         private Label label;
-        protected bool done;
+        protected bool done = true;
 
         public Score(Label label) {
             this.label = label;
