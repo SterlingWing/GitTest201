@@ -50,10 +50,15 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            Score score = scores[(int)combination];
-            ((Combination)(score)).CalculateScore(dice);
-            UpdateScoreTotals(score);
-            combinationsToDo--;
+            if (IsAvailable(combination) == true) {
+                Score score = scores[(int)combination];
+                ((Combination)(score)).CalculateScore(dice);
+                UpdateScoreTotals(score);
+                combinationsToDo--;
+            }
+            else {
+                
+            }
         }
 
         public void UpdateScoreTotals(Score score) {
