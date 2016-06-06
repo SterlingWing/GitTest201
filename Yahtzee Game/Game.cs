@@ -54,7 +54,6 @@ namespace Yahtzee_Game {
 
         }
         public void NextTurn() {
-
             form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
             if (currentPlayerIndex == players.Count) {

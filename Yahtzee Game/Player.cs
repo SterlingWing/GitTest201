@@ -67,7 +67,7 @@ namespace Yahtzee_Game {
                 scores[7].Points = scores[7].Points + 35;
                 scores[8].Points = scores[6].Points + scores[7].Points;
             }
-            //scores[18].Points = scores[18].Points + score.Points;
+            scores[18].Points = scores[18].Points + score.Points;
         }
 
         public int GrandTotal {
