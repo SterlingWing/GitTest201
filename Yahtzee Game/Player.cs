@@ -13,9 +13,6 @@ namespace Yahtzee_Game {
         private Score[] scores = new Score[18];
         private int grandTotal;
 
-        
-
-
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
             //this.grandTotal;
@@ -54,11 +51,10 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            //scores[(int)combination].CountingCombination.CalculateScore(dice);
-            //(scores[(int)combination]).
             Score score = scores[(int)combination];
-
             ((Combination)(score)).CalculateScore(dice);
+
+            combinationsToDo--;
         }
 
         public int GrandTotal {

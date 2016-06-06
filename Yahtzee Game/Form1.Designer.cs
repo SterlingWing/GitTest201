@@ -90,9 +90,9 @@
             this.playerSetCount = new System.Windows.Forms.NumericUpDown();
             this.labelPlayerCount = new System.Windows.Forms.Label();
             this.labelYahtzeeTitle = new System.Windows.Forms.Label();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grandTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -852,11 +852,16 @@
             this.labelYahtzeeTitle.TabIndex = 0;
             this.labelYahtzeeTitle.Text = "Yahtzee";
             // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nameDataGridViewTextBoxColumn.Width = 80;
             // 
             // grandTotalDataGridViewTextBoxColumn
@@ -865,11 +870,8 @@
             this.grandTotalDataGridViewTextBoxColumn.HeaderText = "GrandTotal";
             this.grandTotalDataGridViewTextBoxColumn.Name = "grandTotalDataGridViewTextBoxColumn";
             this.grandTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.grandTotalDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grandTotalDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
             // 
             // Form1
             // 

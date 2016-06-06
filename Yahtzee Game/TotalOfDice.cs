@@ -26,15 +26,15 @@ namespace Yahtzee_Game {
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
 
-                if (numberOfOneKind == 3) {
+            if (numberOfOneKind == 3) {
                 int duplicateValues = dieValues.Distinct().Count();
 
                 if (duplicateValues <= 3) {
                     Points = dieValues.Sum();
-                }
-                else {
-                    Points = 0;
-                }
+                    }
+                 else {
+                     Points = 0;
+                 }
 
             } else if (numberOfOneKind == 4) {
                 int duplicateValues = dieValues.Distinct().Count();
