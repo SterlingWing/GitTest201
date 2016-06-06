@@ -26,36 +26,26 @@ namespace Yahtzee_Game {
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
 
-                if (numberOfOneKind == 3) {
-                    
+            if (numberOfOneKind == 3) {
+                int duplicateValues = dieValues.Distinct().Count();
 
-
-                    for (int i = 0; i > 5; i++) {
-                        if (dieValues[i] == dieValues[i + 1] &&
-                            dieValues[i] == dieValues[i + 2]) {
-
-                            Points = dieValues.Sum();
-                        }
-                        else {
-                            Points = 0;
-                        }
+                if (duplicateValues <= 3) {
+                    Points = dieValues.Sum();
                     }
-                    
-                } else if (numberOfOneKind == 4) {
+                 else {
+                     Points = 0;
+                 }
 
-                for (int i = 0; i > 5; i++) {
-                        if (dieValues[i] == dieValues[i + 1] &&
-                            dieValues[i] == dieValues[i + 2] &&
-                            dieValues[i] == dieValues[i + 3]) {
+            } else if (numberOfOneKind == 4) {
+                int duplicateValues = dieValues.Distinct().Count();
+                if (duplicateValues <= 2) {
+                    Points = dieValues.Sum();
+                }
+                else {
+                    Points = 0;
+                }
 
-                            Points = dieValues.Sum();
-                        }
-                        else {
-                            Points = 0;
-                        }
-                    }
-
-                } else if (numberOfOneKind == 0) {
+            } else if (numberOfOneKind == 0) {
                         Points = dieValues.Sum();
                     }
                 }

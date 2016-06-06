@@ -254,6 +254,5 @@ namespace Yahtzee_Game {
             return playerSetCount.Value;
         }
     }
-
 }
 
