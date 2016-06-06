@@ -21,6 +21,7 @@ namespace Yahtzee_Game {
             }
             set {
                 points = value;
+                done = true;
             }
         }
 

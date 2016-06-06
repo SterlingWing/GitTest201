@@ -10,12 +10,11 @@ namespace Yahtzee_Game {
     class Player {
         private string name;
         private int combinationsToDo = 13;
-        private Score[] scores = new Score[18];
-        private int grandTotal;
+        private Score[] scores = new Score[19];
+        private int grandTotal = 0;
 
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
-            //this.grandTotal;
 
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
@@ -53,8 +52,16 @@ namespace Yahtzee_Game {
         public void ScoreCombination(ScoreType combination, int[] dice) {
             Score score = scores[(int)combination];
             ((Combination)(score)).CalculateScore(dice);
+            UpdateScoreTotals(score);
 
             combinationsToDo--;
+        }
+
+        public void UpdateScoreTotals(Score score) {
+            scores[6].Points = scores[6].Points + score.Points;
+            scores[8].Points = scores[8].Points + score.Points;
+            scores[17].Points = scores[17].Points + score.Points;
+            scores[18].Points = scores[18].Points + score.Points;
         }
 
         public int GrandTotal {
