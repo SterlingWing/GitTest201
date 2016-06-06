@@ -22,19 +22,26 @@ namespace Yahtzee_Game {
                 string toDisplay = string.Join(Environment.NewLine, uniqueDieValues);
                 MessageBox.Show(toDisplay);
 
-                for (int i = 0; i < (uniqueDieValues.Length - 1); i++) {
-                    if(((uniqueDieValues[0] == 1) && (uniqueDieValues[1] == 2) && (uniqueDieValues[2] == 3) && (uniqueDieValues[3] == 4)) ||
-                       ((uniqueDieValues[0] == 2) && (uniqueDieValues[1] == 3) && (uniqueDieValues[2] == 4) && (uniqueDieValues[3] == 5)) ||
-                       ((uniqueDieValues[0] == 3) && (uniqueDieValues[1] == 4) && (uniqueDieValues[2] == 5) && (uniqueDieValues[3] == 6)) ||
-                       ((uniqueDieValues[1] == 1) && (uniqueDieValues[2] == 2) && (uniqueDieValues[3] == 3) && (uniqueDieValues[4] == 4)) ||
-                       ((uniqueDieValues[1] == 2) && (uniqueDieValues[2] == 3) && (uniqueDieValues[3] == 4) && (uniqueDieValues[4] == 5)) ||
-                       ((uniqueDieValues[1] == 3) && (uniqueDieValues[2] == 4) && (uniqueDieValues[3] == 5) && (uniqueDieValues[4] == 6))) 
-                       {
-                            Points = 30;
-                       }
-                    else {
-                        Points = 1;
+                if (uniqueDieValues.Length <= 2) {
+                    Points = 0;
+                }
+                if (uniqueDieValues.Length == 3) {
+                    if (uniqueDieValues[0] == uniqueDieValues[1] - 1 && uniqueDieValues[1] == uniqueDieValues[2] - 1) {
+                        Points = 30;
+                    } else {
+                        Points = 0;
                     }
+                }
+                if (uniqueDieValues.Length == 4) {
+                    if (uniqueDieValues[0] == uniqueDieValues[1] - 1 && uniqueDieValues[1] == uniqueDieValues[2] - 1 ||
+                        uniqueDieValues[1] == uniqueDieValues[2] - 1 && uniqueDieValues[2] == uniqueDieValues[3] - 1) {
+                        Points = 30;
+                    } else {
+                        Points = 0;
+                    }
+                }
+                if (uniqueDieValues.Length == 5) {
+                    Points = 30;
                 }
             }
 
@@ -49,13 +56,9 @@ namespace Yahtzee_Game {
                         dieValues[2] == 4 &&
                         dieValues[3] == 5 &&
                         dieValues[4] == 6)) {
-
                             Points = 40;
-
                         } else {
-
                             Points = 0;
-
                         }
                 }
 
@@ -66,9 +69,7 @@ namespace Yahtzee_Game {
             //                Points = 30;
             //            }
             //        }
-
             //    }
-
             //    else if (scoreType == ScoreType.LargeStraight) {
             //        if (dieValues[i] == dieValues[i + 1] &&
             //            dieValues[i + 1] == dieValues[i + 2] &&
