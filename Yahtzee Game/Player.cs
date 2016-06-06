@@ -16,7 +16,7 @@ namespace Yahtzee_Game {
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
 
-            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo < ScoreType.GrandTotal; scoreCombo++) {
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.GrandTotal; scoreCombo++) {
                 switch (scoreCombo) {
                     case ScoreType.Ones: case ScoreType.Twos: case ScoreType.Threes: case ScoreType.Fours:
                     case ScoreType.Fives: case ScoreType.Sixes:
@@ -50,7 +50,6 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            
                 Score score = scores[(int)combination];
                 ((Combination)(score)).CalculateScore(dice);
                 UpdateScoreTotals(score, combination);
