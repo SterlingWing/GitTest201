@@ -55,7 +55,7 @@ namespace Yahtzee_Game {
 
             ((Combination)(score)).CalculateScore(dice);
 
-            scores[(int)combination].Points = scores[(int)combination].Points + score.Points;
+            ShowScores();
         }
 
         public int GrandTotal {
