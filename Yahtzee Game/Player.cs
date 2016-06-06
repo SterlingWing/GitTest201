@@ -50,12 +50,11 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            if (IsAvailable(combination) == true) {
+            
                 Score score = scores[(int)combination];
                 ((Combination)(score)).CalculateScore(dice);
                 UpdateScoreTotals(score, combination);
                 combinationsToDo--;
-            }
         }
 
         public void UpdateScoreTotals(Score score, ScoreType combination) {
@@ -69,7 +68,6 @@ namespace Yahtzee_Game {
                 scores[7].Points = scores[7].Points + 35;
                 scores[8].Points = scores[6].Points + scores[7].Points;
             }
-
             //scores[18].Points = scores[18].Points + score.Points;
         }
 

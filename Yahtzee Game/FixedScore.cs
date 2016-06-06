@@ -53,16 +53,17 @@ namespace Yahtzee_Game {
             //    }
 
             else if (scoreType == ScoreType.LargeStraight) {
-                    if ((dieValues[0] == 1 &&
-                        dieValues[1] == 2 &&
-                        dieValues[2] == 3 &&
-                        dieValues[3] == 4 &&
-                        dieValues[4] == 5) ||
-                       (dieValues[0] == 2 &&
-                        dieValues[1] == 3 &&
-                        dieValues[2] == 4 &&
-                        dieValues[3] == 5 &&
-                        dieValues[4] == 6)) {
+                int[] uniqueDieValues = dieValues.Distinct().ToArray();
+                if ((uniqueDieValues[0] == 1 &&
+                        uniqueDieValues[1] == 2 &&
+                        uniqueDieValues[2] == 3 &&
+                        uniqueDieValues[3] == 4 &&
+                        uniqueDieValues[4] == 5) ||
+                       (uniqueDieValues[0] == 2 &&
+                        uniqueDieValues[1] == 3 &&
+                        uniqueDieValues[2] == 4 &&
+                        uniqueDieValues[3] == 5 &&
+                        uniqueDieValues[4] == 6)) {
                             Points = 40;
                         } else {
                             Points = 0;

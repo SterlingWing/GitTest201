@@ -26,8 +26,9 @@ namespace Yahtzee_Game {
         private Form1 form;
         private Label[] dieLabels;
         private const int resetPlayerIndex = 0;
-        private string[] labelMessages = { "Roll 1" };
-        // private int[] dieValuesArray;
+        private string[] labelMessages = { "Roll 1",
+                                           "Choose a combination to score",
+                                           "Your turn has ended - click OK" };
 
 
 
@@ -38,10 +39,6 @@ namespace Yahtzee_Game {
 
             for (int i = 0; i < 5; i++) {
                 dice[i] = new Die(dieLabels[i]);
-            }
-
-            for (int i = 0; i < 5; i++) {
-                // dieValuesArray[i] = dice[i].FaceValue;
             }
 
             players = new BindingList<Player>();
@@ -57,6 +54,7 @@ namespace Yahtzee_Game {
 
         }
         public void NextTurn() {
+
             form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
             if (currentPlayerIndex == players.Count) {
@@ -70,38 +68,13 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
 
-
-
-
-            //for (int i = 0; i < 2; i++) {
-            //    form.ShowPlayerName("Player " + (i+1));
-            //    currentPlayerIndex = i;
-            //    currentPlayer = players[i];
-            //    form.DisableAndClearCheckBoxes();
-            //    form.EnableCheckBoxes();
-            //    form.EnableRollButton();
-            //    form.ShowMessage(labelMessages[0]);
-            //    numRolls = 1;
-            //    //player.showScores();
-            //}
-
-            //updates currentPlyer and currentPlayerIndex to be the next player to play their turn
-            //updates the GUI so that this player can start their turn.
-            //This method involves setting GUI to change player's name and display their corresponding scores etc.
-
         }
         public void RollDice() {
-
             for (int i = 0; i < 5; i++) {
                 if (dice[i].Active == true) {
                     dice[i].Roll();
                 }
             }
-
-            //if (numRolls == 0) {
-            //    string firstRoll = "Roll 1";
-            //    form.ShowMessage(firstRoll);
-            //}
 
             if (numRolls == 1 || numRolls == 2) {
                 string secondAndThirdRoll = ("Roll " + (numRolls + 1) + " or choose a combination to score");
@@ -109,12 +82,10 @@ namespace Yahtzee_Game {
             }
 
             else if (numRolls == 3) {
-                string afterThirdRoll = "Choose a combination to score";
-                form.ShowMessage(afterThirdRoll);
+                form.ShowMessage(labelMessages[1]);
             }
             else {
-                string endTurn = "Your turn has ended - click OK";
-                form.ShowMessage(endTurn);
+                form.ShowMessage(labelMessages[2]);
                 form.ShowOKButton();
             }
             numRolls++;
@@ -131,13 +102,16 @@ namespace Yahtzee_Game {
             dice[index].Active = true;
         }
         public void ScoreCombination(ScoreType combination) {
-            int[] dieValuesArray;
-            dieValuesArray = intDiceArray(combination);
-            currentPlayer.ScoreCombination(combination, dieValuesArray);
-            form.ShowOKButton();
-            form.ShowMessage("Your turn has ended - click OK");
-            currentPlayer.ShowScores();
+            if (currentPlayer.IsAvailable(combination) == true) {
+                int[] dieValuesArray;
+                dieValuesArray = intDiceArray(combination);
+                currentPlayer.ScoreCombination(combination, dieValuesArray);
+                form.ShowOKButton();
+                form.ShowMessage("Your turn has ended - click OK");
+                currentPlayer.ShowScores();
+            }
         }
+
         public static void Load(Form1 form) {
             //Needs to be implemented
         }

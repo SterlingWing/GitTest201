@@ -152,6 +152,7 @@ namespace Yahtzee_Game {
         private void buttonOk_Click(object sender, EventArgs e) {
             game.NextTurn();
             buttonOk.Visible = false;
+
         }
 
         private void checkBoxDie1_CheckedChanged(object sender, EventArgs e) {
