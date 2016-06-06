@@ -83,8 +83,8 @@ namespace Yahtzee_Game {
             }
             else {
                 return true;
+            }
         }
-    }
 
         public void ShowScores() {
             foreach (Score i in scores) {
