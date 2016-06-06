@@ -16,25 +16,63 @@ namespace Yahtzee_Game {
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
 
-                for (int i = 0; i < 5; i++) {
-                    if (scoreType == ScoreType.SmallStraight) {
-                        if (dieValues[i] == dieValues[i + 1] &&
-                            dieValues[i + 1] == dieValues[i + 2]) {
-                            Points = 30;
-                        }
-                    } else if (scoreType == ScoreType.LargeStraight) {
-                    if (dieValues[i] == dieValues[i + 1] &&
-                        dieValues[i + 1] == dieValues[i + 2] &&
-                        dieValues[i + 2] == dieValues[i + 3]) {
-                        Points = 40;
+
+            if (scoreType == ScoreType.SmallStraight) {
+                for (int i = 0; i < (dieValues.Length - 1); i++) {
+                    if (dieValues[i] == (dieValues[i + 1] + 1) &&
+                        dieValues[i + 1] == dieValues[i + 2] + 1) {
+                        Points = 30;
                     }
                     else {
-                        Points = 0;
+                        Points = 1;
                     }
                 }
-                
-                //Full House
-                if (scoreType == ScoreType.FullHouse) {
+            }
+
+            else if (scoreType == ScoreType.LargeStraight) {
+                    if ((dieValues[0] == 1 &&
+                        dieValues[1] == 2 &&
+                        dieValues[2] == 3 &&
+                        dieValues[3] == 4 &&
+                        dieValues[4] == 5) ||
+                       (dieValues[0] == 2 &&
+                        dieValues[1] == 3 &&
+                        dieValues[2] == 4 &&
+                        dieValues[3] == 5 &&
+                        dieValues[4] == 6)) {
+
+                            Points = 40;
+
+                        } else {
+
+                            Points = 1;
+
+                        }
+                }
+
+            //for (int i = 0; i < (dieValues.Length - 1); i++) {
+            //        if (scoreType == ScoreType.SmallStraight) {
+            //            if (dieValues[i] == (dieValues[i + 1] + 1) &&
+            //                dieValues[i + 1] == dieValues[i + 2] + 1) {
+            //                Points = 30;
+            //            }
+            //        }
+
+            //    }
+
+            //    else if (scoreType == ScoreType.LargeStraight) {
+            //        if (dieValues[i] == dieValues[i + 1] &&
+            //            dieValues[i + 1] == dieValues[i + 2] &&
+            //            dieValues[i + 2] == dieValues[i + 3]) {
+            //            Points = 40;
+            //        }
+            //        else {
+            //            Points = 0;
+            //        }
+            //    }
+
+            //Full House
+            else if (scoreType == ScoreType.FullHouse) {
                     int repeatValue = 1;
                     int tempValue = 0;
 
@@ -55,7 +93,6 @@ namespace Yahtzee_Game {
                         Points = 0;
                     }
                 }
-            }
-        }
+          }
     }
 }
