@@ -29,15 +29,17 @@ namespace Yahtzee_Game {
             get {
                 return done;
             }
+            set {
+                done = value;
+            }
         }
 
         public void ShowScore() {
             if (done) {
-                label.Text = Convert.ToString(points);
+                label.Text = points.ToString();
             } else {
-                label.Text = null;
+                label.Text = "";
             }
-
         }
 
         public void Load(Label label) {
