@@ -27,34 +27,25 @@ namespace Yahtzee_Game {
             Sort(dieValues);
 
                 if (numberOfOneKind == 3) {
+                int duplicateValues = dieValues.Distinct().Count();
 
+                if (duplicateValues <= 3) {
+                    Points = dieValues.Sum();
+                }
+                else {
+                    Points = 0;
+                }
 
+            } else if (numberOfOneKind == 4) {
+                int duplicateValues = dieValues.Distinct().Count();
+                if (duplicateValues <= 2) {
+                    Points = dieValues.Sum();
+                }
+                else {
+                    Points = 0;
+                }
 
-                    for (int i = 0; i > 5; i++) {
-                        if (dieValues[i] == dieValues[i + 1] &&
-                            dieValues[i] == dieValues[i + 2]) {
-
-                            Points = dieValues.Sum();
-                        }
-                        else {
-                            Points = 0;
-                        }
-                    }
-                    
-                } else if (numberOfOneKind == 4) {
-                    for (int i = 0; i > 5; i++) {
-                        if (dieValues[i] == dieValues[i + 1] &&
-                            dieValues[i] == dieValues[i + 2] &&
-                            dieValues[i] == dieValues[i + 3]) {
-
-                            Points = dieValues.Sum();
-                        }
-                        else {
-                            Points = 0;
-                        }
-                    }
-
-                } else if (numberOfOneKind == 0) {
+            } else if (numberOfOneKind == 0) {
                         Points = dieValues.Sum();
                     }
                 }
