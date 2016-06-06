@@ -8,7 +8,6 @@ using System.Windows.Forms;
 namespace Yahtzee_Game {
     class BonusOrTotal : Score {
         public BonusOrTotal(Label label) : base(label) {
-
         }
     }
 }
