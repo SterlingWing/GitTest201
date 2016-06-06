@@ -27,7 +27,8 @@ namespace Yahtzee_Game {
             Sort(dieValues);
 
                 if (numberOfOneKind == 3) {
-                int count = 0;
+
+
 
                     for (int i = 0; i > 5; i++) {
                         if (dieValues[i] == dieValues[i + 1] &&
