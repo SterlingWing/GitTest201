@@ -32,8 +32,8 @@ namespace Yahtzee_Game {
                         scores[(int)scoreCombo] = new TotalOfDice(scoreCombo, scoreTotals[(int)scoreCombo]);
                         break;
 
-                    case ScoreType.BonusFor63Plus: case ScoreType.GrandTotal: case ScoreType.SectionATotal:
-                    case ScoreType.SectionBTotal: case ScoreType.SubTotal: case ScoreType.YahtzeeBonus:
+                    case ScoreType.SubTotal: case ScoreType.BonusFor63Plus: case ScoreType.SectionATotal:
+                    case ScoreType.YahtzeeBonus: case ScoreType.SectionBTotal: case ScoreType.GrandTotal:
                         scores[(int)scoreCombo] = new BonusOrTotal(scoreTotals[(int)scoreCombo]);
                         break;
                 }
@@ -50,21 +50,24 @@ namespace Yahtzee_Game {
         }
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
-            if (IsAvailable(combination) == true) {
+            
                 Score score = scores[(int)combination];
                 ((Combination)(score)).CalculateScore(dice);
-                UpdateScoreTotals(score);
+                UpdateScoreTotals(score, combination);
                 combinationsToDo--;
-            }
-            else {
-                
-            }
         }
 
-        public void UpdateScoreTotals(Score score) {
-            scores[6].Points = scores[6].Points + score.Points;
-            scores[8].Points = scores[8].Points + score.Points;
-            scores[17].Points = scores[17].Points + score.Points;
+        public void UpdateScoreTotals(Score score, ScoreType combination) {
+            if ((int)combination < 6) {
+                scores[6].Points = scores[6].Points + score.Points;
+            } else if ((int)combination > 8) {
+                scores[17].Points = scores[17].Points + score.Points;
+            }
+
+            if (scores[6].Points >= 63) {
+                scores[7].Points = scores[7].Points + 35;
+                scores[8].Points = scores[6].Points + scores[7].Points;
+            }
             //scores[18].Points = scores[18].Points + score.Points;
         }
 
