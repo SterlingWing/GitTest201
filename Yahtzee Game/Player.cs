@@ -9,7 +9,7 @@ using System.ComponentModel;
 namespace Yahtzee_Game {
     class Player {
         private string name;
-        private int combinationsToDo;
+        private int combinationsToDo = 13;
         private Score[] scores = new Score[18];
         private int grandTotal;
 
@@ -51,6 +51,11 @@ namespace Yahtzee_Game {
         public void ScoreCombination(ScoreType combination, int[] dice) {
             //scores[(int)combination].CountingCombination.CalculateScore(dice);
             //(scores[(int)combination]).
+            Score score = scores[(int)combination];
+
+            ((Combination)(score)).CalculateScore(dice);
+
+            scores[(int)combination].Points = scores[(int)combination].Points + score.Points;
         }
 
         public int GrandTotal {
@@ -67,7 +72,11 @@ namespace Yahtzee_Game {
         }
 
         public void ShowScores() {
-
+            foreach (Score i in scores) {
+                if (i != null) {
+                    i.ShowScore();
+                }
+            }
         }
 
         public bool IsFinished() {

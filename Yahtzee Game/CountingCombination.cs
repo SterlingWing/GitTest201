@@ -10,19 +10,7 @@ namespace Yahtzee_Game {
         private int dieValue;
 
         public CountingCombination(ScoreType selectedScoreType, Label temp2) : base(temp2) {
-            if (selectedScoreType == ScoreType.Ones) {
-                dieValue = 1;
-            } else if (selectedScoreType == ScoreType.Twos) {
-                dieValue = 2;
-            } else if (selectedScoreType == ScoreType.Threes) {
-                dieValue = 3;
-            } else if (selectedScoreType == ScoreType.Fours) {
-                dieValue = 4;
-            } else if (selectedScoreType == ScoreType.Fives) {
-                dieValue = 5;
-            } else if (selectedScoreType == ScoreType.Sixes) {
-                dieValue = 6;
-            }
+            dieValue = (int)selectedScoreType + 1;
         }
 
         public override void CalculateScore(int[] diceValues) {
