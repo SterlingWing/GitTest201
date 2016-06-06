@@ -35,6 +35,11 @@ namespace Yahtzee_Game {
                     case ScoreType.ThreeOfAKind: case ScoreType.FourOfAKind: case ScoreType.Chance:
                         scores[(int)scoreCombo] = new TotalOfDice(scoreCombo, scoreTotals[(int)scoreCombo]);
                         break;
+
+                    case ScoreType.BonusFor63Plus: case ScoreType.GrandTotal: case ScoreType.SectionATotal:
+                    case ScoreType.SectionBTotal: case ScoreType.SubTotal: case ScoreType.YahtzeeBonus:
+                        scores[(int)scoreCombo] = new BonusOrTotal(scoreTotals[(int)scoreCombo]);
+                        break;
                 }
             }
         }
