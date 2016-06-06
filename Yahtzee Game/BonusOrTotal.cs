@@ -10,6 +10,5 @@ namespace Yahtzee_Game {
         public BonusOrTotal(Label label) : base(label) {
 
         }
-
     }
 }
