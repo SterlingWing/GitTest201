@@ -21,8 +21,8 @@ namespace Yahtzee_Game {
     /// Represents a Yahtzee game
     /// </summary>
     class Game {
-        //public static string defaultPath = Environment.CurrentDirectory;
-        //private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
+        public static string defaultPath = Environment.CurrentDirectory;
+        private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
         private BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;
