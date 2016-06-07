@@ -77,9 +77,10 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.GetScoresTotals();
-
+            form.DisableAndClearCheckBoxes();
         }
         public void RollDice() {
+            form.EnableCheckBoxes();
             for (int i = 0; i < 5; i++) {
                 if (dice[i].Active == true) {
                     dice[i].Roll();
