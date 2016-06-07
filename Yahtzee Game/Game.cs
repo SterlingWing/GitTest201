@@ -86,6 +86,7 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
+            form.DisableAndClearCheckBoxes();
             ContinueGame();
         }//end NextTurn
 

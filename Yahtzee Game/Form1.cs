@@ -76,6 +76,20 @@ namespace Yahtzee_Game {
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
 
+            button1.Click += new EventHandler(ButtonClick);
+            button2.Click += new EventHandler(ButtonClick);
+            button3.Click += new EventHandler(ButtonClick);
+            button4.Click += new EventHandler(ButtonClick);
+            button5.Click += new EventHandler(ButtonClick);
+            button6.Click += new EventHandler(ButtonClick);
+            button7.Click += new EventHandler(ButtonClick);
+            button8.Click += new EventHandler(ButtonClick);
+            button9.Click += new EventHandler(ButtonClick);
+            button10.Click += new EventHandler(ButtonClick);
+            button11.Click += new EventHandler(ButtonClick);
+            button12.Click += new EventHandler(ButtonClick);
+            button13.Click += new EventHandler(ButtonClick);
+
         }//end InitialiseLablsAndButtons
 
         public Label[] GetDice() {
@@ -96,7 +110,7 @@ namespace Yahtzee_Game {
 
         public void DisableRollButton() {
             buttonRollDice.Enabled = false;
-        }//end DisbaleRollButton
+        }//end DisableRollButton
 
         public void EnableCheckBoxes() {
             for (int i = 0; i < 5; i++)
@@ -208,7 +222,7 @@ namespace Yahtzee_Game {
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        /*private void button1_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Ones);
             gridPlayerBoard.Refresh();
         }
@@ -270,6 +284,51 @@ namespace Yahtzee_Game {
 
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
+            gridPlayerBoard.Refresh();
+        }*/
+
+        private void ButtonClick(object sender, EventArgs e) {
+            switch ((sender as Button).Name) {
+                case "button1":
+                    game.ScoreCombination(ScoreType.Ones);
+                    break;
+                case "button2":
+                    game.ScoreCombination(ScoreType.Twos);
+                    break;
+                case "button3":
+                    game.ScoreCombination(ScoreType.Threes);
+                    break;
+                case "button4":
+                    game.ScoreCombination(ScoreType.Fours);
+                    break;
+                case "button5":
+                    game.ScoreCombination(ScoreType.Fives);
+                    break;
+                case "button6":
+                    game.ScoreCombination(ScoreType.Sixes);
+                    break;
+                case "button7":
+                    game.ScoreCombination(ScoreType.ThreeOfAKind);
+                    break;
+                case "button8":
+                    game.ScoreCombination(ScoreType.FourOfAKind);
+                    break;
+                case "button9":
+                    game.ScoreCombination(ScoreType.FullHouse);
+                    break;
+                case "button10":
+                    game.ScoreCombination(ScoreType.SmallStraight);
+                    break;
+                case "button11":
+                    game.ScoreCombination(ScoreType.LargeStraight);
+                    break;
+                case "button12":
+                    game.ScoreCombination(ScoreType.Chance);
+                    break;
+                case "button13":
+                    game.ScoreCombination(ScoreType.Yahtzee);
+                    break;
+            }
             gridPlayerBoard.Refresh();
         }
 
