@@ -35,8 +35,8 @@ namespace Yahtzee_Game {
         private Form1 form;
         [NonSerialized]
         private Label[] dieLabels;
-        private const int resetPlayerIndex = 0;
-        private string[] labelMessages = { "Roll 1",
+        private const int resetPlayerIndex = 0; //reset player index to continue looping players for each round
+        private string[] labelMessages = { "Roll 1", //used to hold label messages to show in game
                                            "Choose a combination to score",
                                            "Your turn has ended - click OK",
                                            "Game has ended, check final scores"};
@@ -86,7 +86,7 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
-            ContinueGame();
+
         }//end NextTurn
 
         public void RollDice() {
@@ -134,6 +134,8 @@ namespace Yahtzee_Game {
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
                 DisableAllScoreButtons();
+                
+                form.DisableAndClearCheckBoxes();
                 EndGame();
             }
         }//end ScoreCombination
@@ -168,7 +170,7 @@ namespace Yahtzee_Game {
         /// </summary>
         public void EndGame() {
             PlayersFinished();
-            string showWinner = DetermineWinner();
+            
             
             if (playersFinished == form.playerCount) {
                 if (form.playerCount == 1) {
@@ -185,6 +187,7 @@ namespace Yahtzee_Game {
                 if (form.playerCount >= 2) {
                     form.ShowMessage(labelMessages[3]);
                     form.DisableRollButton();
+                    string showWinner = DetermineWinner();
                     if (MessageBox.Show(showWinner + "\n\nWould you like to play another game?", "Game Over",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                         form.StartNewGame();
@@ -235,7 +238,7 @@ namespace Yahtzee_Game {
                 MessageBox.Show("No current saved game.");
             }
             return null;
-        }
+        }//end Load
 
         /// <summary>
         /// Save the current game to the default save file
@@ -253,7 +256,7 @@ namespace Yahtzee_Game {
                 //   MessageBox.Show(e.ToString());
                 MessageBox.Show("Error saving game.\nNo game saved.");
             }
-        }
+        }//end Save
 
         /// <summary>
         /// Continue the game after loading a saved game
@@ -265,17 +268,17 @@ namespace Yahtzee_Game {
             for (int i = 0; i < dice.Length; i++) {
                 //uncomment one of the following depending how you implmented Active of Die
                 // dice[i].SetActive(true);
-                // dice[i].Active = true;
+                dice[i].Active = true;
             }
-
             form.ShowPlayerName(currentPlayer.Name);
             form.EnableRollButton();
-            form.EnableCheckBoxes();
             // can replace string with whatever you used
             form.ShowMessage("Roll 1");
             currentPlayer.ShowScores();
+            form.playerCount = players.Count();
         }//end ContinueGame
 
+        
         /// <summary>
         /// Link the labels on the GUI form to the dice and players
         /// </summary>
@@ -289,8 +292,13 @@ namespace Yahtzee_Game {
                 players[i].Load(form.GetScoresTotals());
             }
 
-        }
+        }//end LoadLabels
 
+
+        /// <summary>
+        /// Determines the winner of the game and shows their score
+        /// </summary>
+        /// <returns> the winning player </returns>
         private string DetermineWinner() {
             int[] grandTotalsArray = new int[(int)form.playerCount];
             int currentPlayer = 0;
@@ -298,7 +306,7 @@ namespace Yahtzee_Game {
             string showWinner;
 
             foreach (Player player in players) {
-                grandTotalsArray[currentPlayer] = player.GrandTotal;
+                grandTotalsArray[currentPlayerIndex] = player.GrandTotal;
                 currentPlayer++;
             }
             int highestScore = grandTotalsArray.Max();

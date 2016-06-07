@@ -24,7 +24,7 @@ namespace Yahtzee_Game
         private static string rollFileName = Game.defaultPath + "\\basictestrolls.txt";
         [NonSerialized]
         private static StreamReader rollFile = new StreamReader(rollFileName);
-        private static bool DEBUG = true;
+        private static bool DEBUG = false;
 
         public Die(Label dieLabels) {
             this.dieLabels = dieLabels;
