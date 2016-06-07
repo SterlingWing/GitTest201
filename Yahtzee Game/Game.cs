@@ -283,6 +283,19 @@ namespace Yahtzee_Game {
 
         }
 
+        public void DetermineWinner() {
+            int[] grandTotalsArray = new int[(int)form.playerCount];
+            int currentPlayer = 0;
+            int winner;
+
+            foreach (Player player in players) {
+                grandTotalsArray[currentPlayer] = player.GrandTotal;
+                currentPlayer++;
+            }
+            int highestScore = grandTotalsArray.Max();
+            winner = grandTotalsArray.ToList().IndexOf(highestScore) + 1;
+        }
+
 
     }//end Game Class.
 }
