@@ -75,19 +75,17 @@ namespace Yahtzee_Game {
         }//end Game Constructor
 
         public void NextTurn() {
+            form.DisableAndClearCheckBoxes();
             form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
             if (currentPlayerIndex == players.Count) {
                 currentPlayerIndex = 0;
             }
             numRolls = 1;
-            form.DisableAndClearCheckBoxes();
-            form.EnableCheckBoxes();
             form.EnableRollButton();
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
-            form.DisableAndClearCheckBoxes();
             ContinueGame();
         }//end NextTurn
 
@@ -170,11 +168,13 @@ namespace Yahtzee_Game {
         /// </summary>
         public void EndGame() {
             PlayersFinished();
+            string showWinner = DetermineWinner();
+            
             if (playersFinished == form.playerCount) {
                 if (form.playerCount == 1) {
                     form.ShowMessage(labelMessages[3]);
                     form.DisableRollButton();
-                    if (MessageBox.Show("Would you like to start a new game", "Confirm", 
+                    if (MessageBox.Show("Would you like to start a new game", "Game Over",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                         form.StartNewGame();
                     }
@@ -185,7 +185,7 @@ namespace Yahtzee_Game {
                 if (form.playerCount >= 2) {
                     form.ShowMessage(labelMessages[3]);
                     form.DisableRollButton();
-                    if (MessageBox.Show("Would you like to start a new game", "Confirm", 
+                    if (MessageBox.Show(showWinner + "\n\nWould you like to play another game?", "Game Over",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                         form.StartNewGame();
                     }
@@ -291,10 +291,11 @@ namespace Yahtzee_Game {
 
         }
 
-        public void DetermineWinner() {
+        private string DetermineWinner() {
             int[] grandTotalsArray = new int[(int)form.playerCount];
             int currentPlayer = 0;
             int winner;
+            string showWinner;
 
             foreach (Player player in players) {
                 grandTotalsArray[currentPlayer] = player.GrandTotal;
@@ -302,6 +303,7 @@ namespace Yahtzee_Game {
             }
             int highestScore = grandTotalsArray.Max();
             winner = grandTotalsArray.ToList().IndexOf(highestScore) + 1;
+            return showWinner = ("The winner is player " + winner.ToString() + " with a score of " + highestScore.ToString());
         }
 
 

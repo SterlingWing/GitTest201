@@ -147,7 +147,6 @@ namespace Yahtzee_Game {
         }//end StartNewGame
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
-            EnableCheckBoxes();
             game.RollDice();
             EnableAllScoreButtons();
         }
