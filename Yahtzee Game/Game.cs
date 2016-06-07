@@ -113,11 +113,26 @@ namespace Yahtzee_Game {
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
-                for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
-                    if ((int)scoreCombo < 6 && (int)scoreCombo > 8) {
-                        form.DisableScoreButton(scoreCombo);
-                    }
-                }
+
+                form.DisableScoreButton(ScoreType.Ones);
+                form.DisableScoreButton(ScoreType.Twos);
+                form.DisableScoreButton(ScoreType.Threes);
+                form.DisableScoreButton(ScoreType.Fours);
+                form.DisableScoreButton(ScoreType.Fives);
+                form.DisableScoreButton(ScoreType.Sixes);
+                form.DisableScoreButton(ScoreType.ThreeOfAKind);
+                form.DisableScoreButton(ScoreType.FourOfAKind);
+                form.DisableScoreButton(ScoreType.FullHouse);
+                form.DisableScoreButton(ScoreType.SmallStraight);
+                form.DisableScoreButton(ScoreType.LargeStraight);
+                form.DisableScoreButton(ScoreType.Chance);
+                form.DisableScoreButton(ScoreType.Yahtzee);
+
+                //for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                //    if ((int)scoreCombo < 6 && (int)scoreCombo > 8) {
+                //        form.DisableScoreButton(scoreCombo);
+                //    }
+                //}
             }
         }
 

@@ -144,7 +144,7 @@ namespace Yahtzee_Game {
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
             game.RollDice();
-            enableAllScoreButtons();
+            EnableAllScoreButtons();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
