@@ -16,7 +16,7 @@ namespace Yahtzee_Game {
         CheckBox[] checkBoxes = new CheckBox[5];
         Game game;
 
-        public decimal value = 1;
+        public decimal playerCount = 1;
 
         public Form1() {
             InitializeComponent();
@@ -254,24 +254,17 @@ namespace Yahtzee_Game {
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
         }
+
         private void EnableAllScoreButtons() {
-            EnableScoreButton(ScoreType.Ones);
-            EnableScoreButton(ScoreType.Twos);
-            EnableScoreButton(ScoreType.Threes);
-            EnableScoreButton(ScoreType.Fours);
-            EnableScoreButton(ScoreType.Fives);
-            EnableScoreButton(ScoreType.Sixes);
-            EnableScoreButton(ScoreType.ThreeOfAKind);
-            EnableScoreButton(ScoreType.FourOfAKind);
-            EnableScoreButton(ScoreType.FullHouse);
-            EnableScoreButton(ScoreType.SmallStraight);
-            EnableScoreButton(ScoreType.LargeStraight);
-            EnableScoreButton(ScoreType.Chance);
-            EnableScoreButton(ScoreType.Yahtzee);
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
+                    EnableScoreButton(scoreCombo);
+                }
+            }
         }
 
         private void playerSetCount_ValueChanged(object sender, EventArgs e) {
-            value = playerSetCount.Value;
+            playerCount = playerSetCount.Value;
         }
     }
 }
