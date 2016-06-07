@@ -12,6 +12,7 @@ namespace Yahtzee_Game {
     /// the total of the dice face values.
     /// Includes: 3 of a Kind, 4 of a Kind and Chance.
     /// </summary>
+    [Serializable]
     class TotalOfDice : Combination {
         private int numberOfOneKind;
 

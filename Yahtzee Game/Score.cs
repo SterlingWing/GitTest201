@@ -10,8 +10,10 @@ namespace Yahtzee_Game {
     /// <summary>
     /// Represents a single scoring combination (ScoreType) in a yahtzee game. 
     /// </summary>
+    [Serializable]
     abstract class Score {
         private int points;
+        [NonSerialized]
         private Label label;
         protected bool done = false;
 

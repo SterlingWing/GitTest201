@@ -11,6 +11,7 @@ namespace Yahtzee_Game {
     /// <summary>
     /// Represents a player within the game.
     /// </summary>
+    [Serializable]
     class Player {
         private string name;
         private int combinationsToDo = 13;

@@ -10,6 +10,7 @@ namespace Yahtzee_Game {
     /// <summary>
     /// An abstract subclass of Score which represents a single die combination.
     /// </summary>
+    [Serializable]
     abstract class Combination : Score {
         protected bool isYahtzee;
         protected int yahtzeeNumber;

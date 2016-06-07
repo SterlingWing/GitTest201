@@ -21,16 +21,19 @@ namespace Yahtzee_Game {
     /// <summary>
     /// Represents a Yahtzee game
     /// </summary>
+    [Serializable]
     class Game {
         public static string defaultPath = Environment.CurrentDirectory;
         private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
-        private BindingList<Player> players;
+        public BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;
         private Die[] dice;
         private int playersFinished;
         private int numRolls = 1;
+        [NonSerialized]
         private Form1 form;
+        [NonSerialized]
         private Label[] dieLabels;
         private const int resetPlayerIndex = 0;
         private string[] labelMessages = { "Roll 1",
@@ -85,6 +88,7 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.DisableAndClearCheckBoxes();
+            ContinueGame();
         }//end NextTurn
 
         public void RollDice() {
@@ -184,7 +188,9 @@ namespace Yahtzee_Game {
                         form.StartNewGame();
                     }
                     else {
+
                     }
+
                     }
                 }
             }

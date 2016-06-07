@@ -24,6 +24,7 @@ namespace Yahtzee_Game {
 
         public Form1() {
             InitializeComponent();
+            InitialiseLabelsAndButtons();
         }//end Form1 Constructor
 
 
@@ -136,7 +137,6 @@ namespace Yahtzee_Game {
         }//end ShowOKButton
 
         public void StartNewGame() {
-            InitialiseLabelsAndButtons();
             game = new Game(this);
             EnableRollButton();
             labelMessage.Visible = true;
@@ -155,6 +155,8 @@ namespace Yahtzee_Game {
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
             StartNewGame();
             buttonOk.Visible = false;
+            saveToolStripMenuItem.Enabled = true;
+            loadToolStripMenuItem.Enabled = false;
         }
 
         private void buttonOk_Click(object sender, EventArgs e) {
@@ -286,6 +288,16 @@ namespace Yahtzee_Game {
 
         private void playerSetCount_ValueChanged(object sender, EventArgs e) {
             playerCount = playerSetCount.Value;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+            game.Save();
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e) {
+            game = Game.Load(this);
+            playerBindingSource.DataSource = game.players;
+            gridPlayerBoard.Refresh();
         }
     }
 }

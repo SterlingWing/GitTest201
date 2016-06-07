@@ -11,6 +11,7 @@ namespace Yahtzee_Game {
     /// Represents scoring combinations that count the number of a single die value.
     /// Includes: Scoring combinations in Upper Section
     /// </summary>
+    [Serializable]
     class CountingCombination : Combination{
         private int dieValue;
 

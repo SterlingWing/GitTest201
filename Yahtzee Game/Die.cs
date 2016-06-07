@@ -14,12 +14,15 @@ namespace Yahtzee_Game
     /// This class represents a single die object which 
     /// is capable of being rolled.
     /// </summary>
+    [Serializable]
     class Die {
         private int faceValue;
         private bool active = true;
+        [NonSerialized]
         private Label dieLabels;
         private static Random random = new Random();
         private static string rollFileName = Game.defaultPath + "\\basictestrolls.txt";
+        [NonSerialized]
         private static StreamReader rollFile = new StreamReader(rollFileName);
         private static bool DEBUG = true;
 
