@@ -55,8 +55,15 @@ namespace Yahtzee_Game
         }//end Roll
 
         public void Load(Label label) {
-            //Body to be implemented
+            this.dieLabels = label;
+            if (faceValue == 0) {
+                label.Text = string.Empty;
+            }
+            else {
+                label.Text = faceValue.ToString();
+            }
         }//end Load
+
 
     }//end Die Class
 }

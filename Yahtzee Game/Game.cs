@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Yahtzee_Game {
 
@@ -134,14 +135,6 @@ namespace Yahtzee_Game {
                 EndGame();
             }
         }//end ScoreCombination
-        
-        public static void Load(Form1 form) {
-            //Needs to be implemented
-        }//end Load
-
-        public void Save() {
-            //Needs to be implemented
-        }//end Save
 
         /// <summary>
         /// Moves the die facevalues from an array of Die (dice) 
@@ -207,6 +200,90 @@ namespace Yahtzee_Game {
                 }
             }
         }//end DisableAllScoreButtons
+
+
+        /// <summary>
+        /// Load a saved game from the default save game file
+        /// </summary>
+        /// <param name="form">the GUI form</param>
+        /// <returns>the saved game</returns>
+        public static Game Load(Form1 form) {
+            Game game = null;
+            if (File.Exists(savedGameFile)) {
+                try {
+                    Stream bStream = File.Open(savedGameFile, FileMode.Open);
+                    BinaryFormatter bFormatter = new BinaryFormatter();
+                    game = (Game)bFormatter.Deserialize(bStream);
+                    bStream.Close();
+                    game.form = form;
+                    game.ContinueGame();
+                    return game;
+                }
+                catch {
+                    MessageBox.Show("Error reading saved game file.\nCannot load saved game.");
+                }
+            }
+            else {
+                MessageBox.Show("No current saved game.");
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Save the current game to the default save file
+        /// </summary>
+        public void Save() {
+            try {
+                Stream bStream = File.Open(savedGameFile, FileMode.Create);
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                bFormatter.Serialize(bStream, this);
+                bStream.Close();
+                MessageBox.Show("Game saved");
+            }
+            catch (Exception e) {
+
+                //   MessageBox.Show(e.ToString());
+                MessageBox.Show("Error saving game.\nNo game saved.");
+            }
+        }
+
+        /// <summary>
+        /// Continue the game after loading a saved game
+        /// 
+        /// Assumes game was saved at the start of a player's turn before they had rolled dice.
+        /// </summary>
+        private void ContinueGame() {
+            LoadLabels(form);
+            for (int i = 0; i < dice.Length; i++) {
+                //uncomment one of the following depending how you implmented Active of Die
+                // dice[i].SetActive(true);
+                // dice[i].Active = true;
+            }
+
+            form.ShowPlayerName(currentPlayer.Name);
+            form.EnableRollButton();
+            form.EnableCheckBoxes();
+            // can replace string with whatever you used
+            form.ShowMessage("Roll 1");
+            currentPlayer.ShowScores();
+        }//end ContinueGame
+
+        /// <summary>
+        /// Link the labels on the GUI form to the dice and players
+        /// </summary>
+        /// <param name="form"></param>
+        private void LoadLabels(Form1 form) {
+            Label[] diceLabels = form.GetDice();
+            for (int i = 0; i < dice.Length; i++) {
+                dice[i].Load(diceLabels[i]);
+            }
+            for (int i = 0; i < players.Count; i++) {
+                players[i].Load(form.GetScoresTotals());
+            }
+
+        }
+
+
     }//end Game Class.
 }
 

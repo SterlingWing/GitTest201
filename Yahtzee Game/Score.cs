@@ -47,7 +47,7 @@ namespace Yahtzee_Game {
         }//end ShowScore
 
         public void Load(Label label) {
-
-        }//end Load
+            this.label = label;
+        } //end Load
     }//end Score Class
 }

@@ -125,8 +125,11 @@ namespace Yahtzee_Game {
             }
         }//end IsFinished
 
-        public void Load(Label[] temp) {
-
+        public void Load(Label[] scoreTotals) {
+            for (int i = 0; i < scores.Length; i++) {
+                scores[i].Load(scoreTotals[i]);
+            }
         }//end Load
+
     }//end Player Class
 }
