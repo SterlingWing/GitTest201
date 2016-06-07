@@ -42,7 +42,7 @@ namespace Yahtzee_Game {
             }
 
             players = new BindingList<Player>();
-            for (int i = 0; i < form.value; i++) {
+            for (int i = 0; i < form.playerCount; i++) {
                 players.Add(new Player(("player " + (i + 1)), form.GetScoresTotals()));
             }
 
@@ -54,7 +54,7 @@ namespace Yahtzee_Game {
 
             form.playerBindingSource.DataSource = players;
 
-
+            PlayersFinished();
         }
         public void NextTurn() {
             form.ShowMessage(labelMessages[0]);
@@ -69,7 +69,6 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
-            form.GetScoresTotals();
 
         }
         public void RollDice() {
@@ -107,32 +106,11 @@ namespace Yahtzee_Game {
         public void ScoreCombination(ScoreType combination) {
             if (currentPlayer.IsAvailable(combination) == true) {
                 int[] dieValuesArray;
-                dieValuesArray = intDiceArray(combination);
+                dieValuesArray = IntDiceArray(combination);
                 currentPlayer.ScoreCombination(combination, dieValuesArray);
                 form.ShowOKButton();
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
-                form.DisableRollButton();
-
-                form.DisableScoreButton(ScoreType.Ones);
-                form.DisableScoreButton(ScoreType.Twos);
-                form.DisableScoreButton(ScoreType.Threes);
-                form.DisableScoreButton(ScoreType.Fours);
-                form.DisableScoreButton(ScoreType.Fives);
-                form.DisableScoreButton(ScoreType.Sixes);
-                form.DisableScoreButton(ScoreType.ThreeOfAKind);
-                form.DisableScoreButton(ScoreType.FourOfAKind);
-                form.DisableScoreButton(ScoreType.FullHouse);
-                form.DisableScoreButton(ScoreType.SmallStraight);
-                form.DisableScoreButton(ScoreType.LargeStraight);
-                form.DisableScoreButton(ScoreType.Chance);
-                form.DisableScoreButton(ScoreType.Yahtzee);
-
-                //for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
-                //    if ((int)scoreCombo < 6 && (int)scoreCombo > 8) {
-                //        form.DisableScoreButton(scoreCombo);
-                //    }
-                //}
             }
         }
 
@@ -143,7 +121,7 @@ namespace Yahtzee_Game {
             //Needs to be implemented
         }
 
-        public int[] intDiceArray(ScoreType combination) {
+        public int[] IntDiceArray(ScoreType combination) {
             int[] dieValuesArray = new int[5];
 
             for (int i = 0; i < 5; i++) {
@@ -151,6 +129,19 @@ namespace Yahtzee_Game {
             }
 
             return dieValuesArray;
+        }
+
+        public void PlayersFinished() {
+            bool currentPlayerFinished = currentPlayer.IsFinished();
+            if (currentPlayerFinished) {
+                playersFinished++;
+            }
+        }
+
+        public void EndGame() {
+            if (playersFinished == form.playerCount) {
+
+            }
         }
     }
 }
