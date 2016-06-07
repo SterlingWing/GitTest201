@@ -137,11 +137,10 @@ namespace Yahtzee_Game {
             EnableRollButton();
             labelMessage.Visible = true;
             labelPlayer.Visible = true;
-            die1.Text = "";
-            die2.Text = "";
-            die3.Text = "";
-            die4.Text = "";
-            die5.Text = "";
+
+            for (int i = 0; i < 5; i++) {
+                dice[i].Text = "";
+            }
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
