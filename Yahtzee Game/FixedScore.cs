@@ -57,7 +57,7 @@ namespace Yahtzee_Game {
                 if (((uniqueDieValues[0] == 1 &&
                       uniqueDieValues[1] == 2 &&
                       uniqueDieValues[2] == 3 &&
-                      uniqueDieValues[3] == 4) ||
+                      uniqueDieValues[3] == 4)||
 
                       uniqueDieValues[0] == 2 &&
                       uniqueDieValues[1] == 3 &&
