@@ -57,13 +57,11 @@ namespace Yahtzee_Game {
                 if ((uniqueDieValues[0] == 1 &&
                         uniqueDieValues[1] == 2 &&
                         uniqueDieValues[2] == 3 &&
-                        uniqueDieValues[3] == 4 &&
-                        uniqueDieValues[4] == 5) ||
+                        uniqueDieValues[3] == 4 ||
                        (uniqueDieValues[0] == 2 &&
                         uniqueDieValues[1] == 3 &&
                         uniqueDieValues[2] == 4 &&
-                        uniqueDieValues[3] == 5 &&
-                        uniqueDieValues[4] == 6)) {
+                        uniqueDieValues[3] == 5 ))) {
                             Points = 40;
                         } else {
                             Points = 0;
