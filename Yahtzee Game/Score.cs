@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee_Game {
+
+    /// <summary>
+    /// Represents a single scoring combination (ScoreType) in a yahtzee game. 
+    /// </summary>
     abstract class Score {
         private int points;
         private Label label;
@@ -13,7 +17,7 @@ namespace Yahtzee_Game {
 
         public Score(Label label) {
             this.label = label;
-        }
+        }//end Score Constructor
 
         public int Points {
             get {
@@ -23,7 +27,7 @@ namespace Yahtzee_Game {
                 points = value;
                 done = true;
             }
-        }
+        }//end Points
 
         public bool Done {
             get {
@@ -32,7 +36,7 @@ namespace Yahtzee_Game {
             set {
                 done = value;
             }
-        }
+        }//Done
 
         public void ShowScore() {
             if (done) {
@@ -40,10 +44,10 @@ namespace Yahtzee_Game {
             } else {
                 label.Text = "";
             }
-        }
+        }//end ShowScore
 
         public void Load(Label label) {
 
-        }
-    }
+        }//end Load
+    }//end Score Class
 }

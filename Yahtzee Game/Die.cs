@@ -25,13 +25,13 @@ namespace Yahtzee_Game
 
         public Die(Label dieLabels) {
             this.dieLabels = dieLabels;
-        }
+        }//end Die Constructor
 
         public int FaceValue {
             get {
                 return faceValue;
             }
-        }
+        }//end FaceValue
 
         public bool Active {
             get {
@@ -40,7 +40,7 @@ namespace Yahtzee_Game
             set {
                 active = value;
             }
-        }
+        }//end Active
 
         public void Roll() {
             if (!DEBUG) {
@@ -53,11 +53,11 @@ namespace Yahtzee_Game
                 dieLabels.Refresh();
             }
             
-        }
+        }//end Roll
 
         public void Load(Label label) {
             //Body to be implemented
-        }
+        }//end Load
 
-    }
+    }//end Die Class
 }

@@ -6,53 +6,47 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee_Game {
+
+    /// <summary>
+    /// Represents all scoring combinations that have a fixed number as their score.
+    /// Includes: Small Straight, Large Straight, Full House and Yahtzee
+    /// </summary>
     class FixedScore : Combination {
         private ScoreType scoreType;
 
         public FixedScore(ScoreType selectedScoreType, Label temp) : base(temp) {
             scoreType = selectedScoreType;
-        }
+        }//end FixedScore Constructor
 
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
 
+            //Small Straight
             if (scoreType == ScoreType.SmallStraight) {
 
                 int[] uniqueDieValues = dieValues.Distinct().ToArray();
 
                 if (uniqueDieValues.Length <= 2) {
                     Points = 0;
-                }
-                else if (uniqueDieValues.Length == 3) {
+                } else if (uniqueDieValues.Length == 3) {
                     if (uniqueDieValues[0] == uniqueDieValues[1] - 1 && uniqueDieValues[1] == uniqueDieValues[2] - 1) {
                         Points = 30;
                     } else {
                         Points = 0;
                     }
-                }
-                else if (uniqueDieValues.Length == 4) {
+                } else if (uniqueDieValues.Length == 4) {
                     if (uniqueDieValues[0] == uniqueDieValues[1] - 1 && uniqueDieValues[1] == uniqueDieValues[2] - 1 ||
                         uniqueDieValues[1] == uniqueDieValues[2] - 1 && uniqueDieValues[2] == uniqueDieValues[3] - 1) {
                         Points = 30;
                     } else {
                         Points = 0;
                     }
-                }
-                else if (uniqueDieValues.Length == 5) {
+                } else if (uniqueDieValues.Length == 5) {
                     Points = 30;
                 }
-            }
-            
-            //for (int i = 0; i < (dieValues.Length - 1); i++) {
-            //        if (scoreType == ScoreType.SmallStraight) {
-            //            if (dieValues[i] == (dieValues[i + 1] + 1) &&
-            //                dieValues[i + 1] == dieValues[i + 2] + 1) {
-            //                Points = 30;
-            //            }
-            //        }
-            //    }
 
-            else if (scoreType == ScoreType.LargeStraight) {
+            //Large Straight
+            } else if (scoreType == ScoreType.LargeStraight) {
                 int[] uniqueDieValues = dieValues.Distinct().ToArray();
                 if (uniqueDieValues.Length >= 4) {
                     if (((uniqueDieValues[0] == 1 &&
@@ -70,27 +64,24 @@ namespace Yahtzee_Game {
                           uniqueDieValues[2] == 5 &&
                           uniqueDieValues[3] == 6) {
                         Points = 40;
-                    }
-                    else {
+                    } else {
                         Points = 0;
                     }
-                }
-                else {
+                } else {
                     Points = 0;
                 }
 
-            }
-
-            else if (scoreType == ScoreType.FullHouse) {
+            //Full House
+            } else if (scoreType == ScoreType.FullHouse) {
                 int duplicateValues = dieValues.Distinct().Count();
                 if (duplicateValues < 3) {
                     Points = 25;
                 } else {
                     Points = 0;
                 }
-            }
 
-            else if (scoreType == ScoreType.Yahtzee) {
+            //Yahtzee
+            } else if (scoreType == ScoreType.Yahtzee) {
                 int duplicateValues = dieValues.Distinct().Count();
 
                 if (duplicateValues == 1) {
@@ -99,6 +90,6 @@ namespace Yahtzee_Game {
                     Points = 0;
                 }
             }
-          }
-    }
+          }//end CalculateScore
+    }//end FixedScore Class
 }

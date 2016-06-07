@@ -42,7 +42,7 @@ namespace Yahtzee_Game {
                         break;
                 }
             }
-        }
+        }//end Player Constructor
 
         public string Name { 
             get {
@@ -51,7 +51,7 @@ namespace Yahtzee_Game {
             set {
                 name = value;
             }
-        }
+        }//end Name
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
             Score score = scores[(int)combination];
@@ -59,7 +59,7 @@ namespace Yahtzee_Game {
             combinationsToDo--;
             UpdateScoreTotals(score, combination);
             UpdateGrandTotal(score);
-        }
+        }//end ScoreCombination
 
         /// <summary>
         /// Updates all the totals on the GUI excluding the GrandTotal value.
@@ -77,7 +77,7 @@ namespace Yahtzee_Game {
                 scores[7].Points = scores[7].Points + 35;
                 scores[8].Points = scores[6].Points + scores[7].Points;
             }
-        }
+        }//end UpdateScoreTotals
 
         /// <summary>
         /// Updates the grandTotal variable and updates GrandTotal score to equal grandTotal.
@@ -86,7 +86,7 @@ namespace Yahtzee_Game {
         public void UpdateGrandTotal(Score score) {
             GrandTotal = scores[6].Points + scores[7].Points + scores[16].Points + scores[17].Points;
             scores[18].Points = GrandTotal;
-        }
+        }//end UpdateGrandTotal
 
         public int GrandTotal {
             get {
@@ -95,7 +95,7 @@ namespace Yahtzee_Game {
             set {
                 grandTotal = value;
             }
-        }
+        }//end GrandTotal
 
         public bool IsAvailable(ScoreType combination) {
             if (scores[(int)combination].Done == true) {
@@ -104,7 +104,7 @@ namespace Yahtzee_Game {
             else {
                 return true;
             }
-        }
+        }//end IsAvailable
 
         public void ShowScores() {
             foreach (Score i in scores) {
@@ -112,7 +112,7 @@ namespace Yahtzee_Game {
                     i.ShowScore();
                 }
             }
-        }
+        }//end ShowScores
 
         public bool IsFinished() {
             if (combinationsToDo == 0) {
@@ -120,10 +120,10 @@ namespace Yahtzee_Game {
             } else {
                 return false;
             }
-        }
+        }//end IsFinished
 
         public void Load(Label[] temp) {
 
-        }
-    }
+        }//end Load
+    }//end Player Class
 }

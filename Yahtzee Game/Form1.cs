@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee_Game {
+
+    /// <summary>
+    /// The form used to house the yahtzee game.
+    /// </summary>
     public partial class Form1 : Form {
         Label[] dice = new Label[5];
         Button[] scoreButtons = new Button[(int)ScoreType.Yahtzee + 1];
@@ -20,7 +24,7 @@ namespace Yahtzee_Game {
 
         public Form1() {
             InitializeComponent();
-        }
+        }//end Form1 Constructor
 
 
         private void InitialiseLabelsAndButtons() {
@@ -71,34 +75,34 @@ namespace Yahtzee_Game {
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
 
-        }
+        }//end InitialiseLablsAndButtons
 
         public Label[] GetDice() {
             return dice;
-        }
+        }//end GetDice
 
         public Label[] GetScoresTotals() {
             return scoreTotals;
-        }
+        }//end GetScoreTotals
 
         public void ShowPlayerName(string name) {
             labelPlayer.Text = name;
-        }
+        }//end ShowPlayerName
 
         public void EnableRollButton() {
             buttonRollDice.Enabled = true;
-        }
+        }//end EnableRollButton
 
         public void DisableRollButton() {
             buttonRollDice.Enabled = false;
-        }
+        }//end DisbaleRollButton
 
         public void EnableCheckBoxes() {
             for (int i = 0; i < 5; i++)
             {
                 checkBoxes[i].Enabled = true;
             }
-        }
+        }//end EnableCheckBoxes
 
         public void DisableAndClearCheckBoxes() {
             for (int i = 0; i < 5; i++)
@@ -109,27 +113,27 @@ namespace Yahtzee_Game {
             {
                 checkBoxes[i].Checked = false;
             }
-        }
+        }//end DisableAndClearCheckBoxes
 
         public void EnableScoreButton(ScoreType combination) {
             scoreButtons[(int)combination].Enabled = true;
-        }
+        }//end EnableScoreButton
 
         public void DisableScoreButton(ScoreType combination) {
             scoreButtons[(int)combination].Enabled = false;
-        }
+        }//end DisableScoreButton
 
         public void CheckCheckBox(int index) {
             checkBoxes[index].Checked = true;
-        }
+        }//end CheckCheckBox
 
         public void ShowMessage(string message) {
             labelMessage.Text = message;
-        }
+        }//end ShowMessage
 
         public void ShowOKButton() {
             buttonOk.Visible = true;
-        }
+        }//end ShowOKButton
 
         public void StartNewGame() {
             InitialiseLabelsAndButtons();
@@ -140,7 +144,7 @@ namespace Yahtzee_Game {
             for (int i = 0; i < 5; i++) {
                 dice[i].Text = "";
             }
-        }
+        }//end StartNewGame
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
@@ -152,8 +156,6 @@ namespace Yahtzee_Game {
             StartNewGame();
             buttonOk.Visible = false;
         }
-
-
 
         private void buttonOk_Click(object sender, EventArgs e) {
             game.NextTurn();
@@ -270,6 +272,10 @@ namespace Yahtzee_Game {
             gridPlayerBoard.Refresh();
         }
 
+
+        /// <summary>
+        /// Enables all score buttons on the Form.
+        /// </summary>
         private void EnableAllScoreButtons() {
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
                 if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {

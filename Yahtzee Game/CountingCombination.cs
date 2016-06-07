@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee_Game {
+
+    /// <summary>
+    /// Represents scoring combinations that count the number of a single die value.
+    /// Includes: Scoring combinations in Upper Section
+    /// </summary>
     class CountingCombination : Combination{
         private int dieValue;
 
-        public CountingCombination(ScoreType selectedScoreType, Label temp2) : base(temp2) {
+        public CountingCombination(ScoreType selectedScoreType, Label label) : base(label) {
             dieValue = (int)selectedScoreType + 1;
-        }
+        }//end CountingCombination Constructor
 
         public override void CalculateScore(int[] diceValues) {
             int dieCount = 0;
@@ -21,6 +26,6 @@ namespace Yahtzee_Game {
                 }
             }
             Points = dieCount * dieValue;
-        }
-    }
+        }//end CalculateScore
+    }//end CountingCombination Class
 }

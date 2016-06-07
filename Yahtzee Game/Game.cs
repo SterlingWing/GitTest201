@@ -17,6 +17,9 @@ namespace Yahtzee_Game {
         YahtzeeBonus, SectionBTotal, GrandTotal
     }
 
+    /// <summary>
+    /// Represents a Yahtzee game
+    /// </summary>
     class Game {
         //public static string defaultPath = Environment.CurrentDirectory;
         //private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
@@ -67,7 +70,8 @@ namespace Yahtzee_Game {
             form.playerBindingSource.DataSource = players;
 
             PlayersFinished();
-        }
+        }//end Game Constructor
+
         public void NextTurn() {
             form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
@@ -82,7 +86,8 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.DisableAndClearCheckBoxes();
-        }
+        }//end NextTurn
+
         public void RollDice() {
             form.EnableCheckBoxes();
             for (int i = 0; i < 5; i++) {
@@ -109,13 +114,16 @@ namespace Yahtzee_Game {
                 form.DisableRollButton();
             }
 
-        }
+        }//end RollDice
+
         public void HoldDie(int index) {
             dice[index].Active = false;
-        }
+        }//end HoldDie
+
         public void ReleaseDie(int index) {
             dice[index].Active = true;
-        }
+        }//end ReleaseDie
+
         public void ScoreCombination(ScoreType combination) {
             if (currentPlayer.IsAvailable(combination) == true) {
                 int[] dieValuesArray;
@@ -131,15 +139,22 @@ namespace Yahtzee_Game {
                     }
                 }
             }
-        }
+        }//end ScoreCombination
         
         public static void Load(Form1 form) {
             //Needs to be implemented
-        }
+        }//end Load
+
         public void Save() {
             //Needs to be implemented
-        }
+        }//end Save
 
+        /// <summary>
+        /// Moves the die facevalues from an array of Die (dice) 
+        /// to an array of int (dieValuesArray).
+        /// </summary>
+        /// <param name="combination"></param>
+        /// <returns>dieValuesArray</returns>
         public int[] IntDiceArray(ScoreType combination) {
             int[] dieValuesArray = new int[5];
 
@@ -148,21 +163,26 @@ namespace Yahtzee_Game {
             }
 
             return dieValuesArray;
-        }
+        }//end IntDiceArray
 
+        /// <summary>
+        /// Tallies the number of players that have finished the game.
+        /// </summary>
         public void PlayersFinished() {
             bool currentPlayerFinished = currentPlayer.IsFinished();
             if (currentPlayerFinished) {
                 playersFinished++;
             }
-        }
+        }//end PlayersFinished
 
+        /// <summary>
+        /// Ends the game for all players playing.
+        /// </summary>
         public void EndGame() {
             if (playersFinished == form.playerCount) {
                 form.ShowMessage(labelMessages[3]);
-
             }
-        }
-    }
+        }//end EndGame
+    }//end Game Class
 }
 
