@@ -174,7 +174,8 @@ namespace Yahtzee_Game {
                 if (form.playerCount == 1) {
                     form.ShowMessage(labelMessages[3]);
                     form.DisableRollButton();
-                    if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                    if (MessageBox.Show("Would you like to start a new game", "Confirm", 
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                         form.StartNewGame();
                     }
                     else {
@@ -184,7 +185,8 @@ namespace Yahtzee_Game {
                 if (form.playerCount >= 2) {
                     form.ShowMessage(labelMessages[3]);
                     form.DisableRollButton();
-                    if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                    if (MessageBox.Show("Would you like to start a new game", "Confirm", 
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                         form.StartNewGame();
                     }
                     else {
