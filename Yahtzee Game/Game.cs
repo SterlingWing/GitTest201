@@ -159,7 +159,7 @@ namespace Yahtzee_Game {
         /// <summary>
         /// Tallies the number of players that have finished the game.
         /// </summary>
-        public void PlayersFinished() {
+        private void PlayersFinished() {
             if (currentPlayer.IsFinished() == true) {
                 playersFinished++;
             }
@@ -169,7 +169,7 @@ namespace Yahtzee_Game {
         /// <summary>
         /// Ends the game for all players playing.
         /// </summary>
-        public void EndGame() {
+        private void EndGame() {
             PlayersFinished();
             if (playersFinished == form.playerCount) {
                 if (form.playerCount == 1) {
@@ -203,7 +203,7 @@ namespace Yahtzee_Game {
         /// <summary>
         /// Disables all score buttons on the GUI.
         /// </summary>
-        public void DisableAllScoreButtons() {
+        private void DisableAllScoreButtons() {
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
                 if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
                     form.DisableScoreButton(scoreCombo);
