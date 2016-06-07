@@ -28,7 +28,8 @@ namespace Yahtzee_Game {
         private const int resetPlayerIndex = 0;
         private string[] labelMessages = { "Roll 1",
                                            "Choose a combination to score",
-                                           "Your turn has ended - click OK" };
+                                           "Your turn has ended - click OK",
+                                           "Game has ended, check final scores"};
 
 
 
@@ -44,6 +45,12 @@ namespace Yahtzee_Game {
             players = new BindingList<Player>();
             for (int i = 0; i < form.playerCount; i++) {
                 players.Add(new Player(("player " + (i + 1)), form.GetScoresTotals()));
+            }
+
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
+                    form.DisableScoreButton(scoreCombo);
+                }
             }
 
             form.ShowPlayerName("Player 1");
@@ -69,6 +76,7 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
+            form.GetScoresTotals();
 
         }
         public void RollDice() {
@@ -111,6 +119,14 @@ namespace Yahtzee_Game {
                 form.ShowOKButton();
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
+                form.DisableRollButton();
+
+                for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                    if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
+                        form.DisableScoreButton(scoreCombo);
+                    }
+                }
+
             }
         }
 
@@ -140,6 +156,7 @@ namespace Yahtzee_Game {
 
         public void EndGame() {
             if (playersFinished == form.playerCount) {
+                form.ShowMessage(labelMessages[3]);
 
             }
         }
