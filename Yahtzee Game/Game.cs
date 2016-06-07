@@ -207,6 +207,6 @@ namespace Yahtzee_Game {
                 }
             }
         }//end DisableAllScoreButtons
-    }//end Game Class
+    }//end Game Class.
 }
 
