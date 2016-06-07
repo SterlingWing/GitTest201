@@ -42,7 +42,7 @@ namespace Yahtzee_Game {
             }
 
             players = new BindingList<Player>();
-            for (int i = 0; i < 6 /*form.PlayerSetCountReturn()*/; i++) {
+            for (int i = 0; i < form.value; i++) {
                 players.Add(new Player(("player " + (i + 1)), form.GetScoresTotals()));
             }
 
@@ -69,6 +69,7 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
+            form.GetScoresTotals();
 
         }
         public void RollDice() {
@@ -111,6 +112,12 @@ namespace Yahtzee_Game {
                 form.ShowOKButton();
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
+                form.DisableRollButton();
+                for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                    if ((int)scoreCombo < 6 && (int)scoreCombo > 8) {
+                        form.DisableScoreButton(scoreCombo);
+                    }
+                }
             }
         }
 
