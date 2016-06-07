@@ -10,6 +10,7 @@ namespace Yahtzee_Game {
     /// <summary>
     /// Represents either the bonuses, sub-total or total score of a section.
     /// </summary>
+    [Serializable]
     class BonusOrTotal : Score {
         public BonusOrTotal(Label scoreTotals) : base(scoreTotals) {
 
