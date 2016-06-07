@@ -61,8 +61,7 @@ namespace Yahtzee_Game
             this.dieLabels = label;
             if (faceValue == 0) {
                 label.Text = string.Empty;
-            }
-            else {
+            } else {
                 label.Text = faceValue.ToString();
             }
         }//end Load

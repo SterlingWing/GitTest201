@@ -185,40 +185,35 @@ namespace Yahtzee_Game {
                 case "checkBoxDie1":
                     if (checkBoxDie1.Checked == true) {
                         game.HoldDie(0);
-                    }
-                    if (checkBoxDie1.Checked == false) {
+                    } else {
                         game.ReleaseDie(0);
                     }
                     break;
                 case "checkBoxDie2":
                     if (checkBoxDie2.Checked == true) {
                         game.HoldDie(1);
-                    }
-                    if (checkBoxDie2.Checked == false) {
+                    } else {
                         game.ReleaseDie(1);
                     }
                     break;
                 case "checkBoxDie3":
                     if (checkBoxDie3.Checked == true) {
                         game.HoldDie(2);
-                    }
-                    if (checkBoxDie3.Checked == false) {
+                    } else {
                         game.ReleaseDie(2);
                     }
                     break;
                 case "checkBoxDie4":
                     if (checkBoxDie4.Checked == true) {
                         game.HoldDie(3);
-                    }
-                    if (checkBoxDie4.Checked == false) {
+                    } else {
                         game.ReleaseDie(3);
                     }
                     break;
                 case "checkBoxDie5":
                     if (checkBoxDie5.Checked == true) {
                         game.HoldDie(4);
-                    }
-                    if (checkBoxDie5.Checked == false) {
+                    } else {
                         game.ReleaseDie(4);
                     }
                     break;
