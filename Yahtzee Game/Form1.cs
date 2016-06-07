@@ -254,7 +254,6 @@ namespace Yahtzee_Game {
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
         }
-
         private void EnableAllScoreButtons() {
             for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
                 if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {

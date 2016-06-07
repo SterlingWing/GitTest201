@@ -106,7 +106,6 @@ namespace Yahtzee_Game {
             } else {
                 return false;
             }
-
         }
 
         public void Load(Label[] temp) {
