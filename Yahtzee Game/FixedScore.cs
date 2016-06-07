@@ -20,13 +20,14 @@ namespace Yahtzee_Game {
         }//end FixedScore Constructor
 
         public override void CalculateScore(int[] dieValues) {
-            Sort(dieValues);
+            Sort(dieValues); // sort dieValues array to be in ascending order
 
             //Large Straight
             if (scoreType == ScoreType.LargeStraight) {
 
-                int[] uniqueDieValues = dieValues.Distinct().ToArray();
+                int[] uniqueDieValues = dieValues.Distinct().ToArray(); // remove duplicate dievalues and place in uniqueDieValues array
 
+                //Will search through uniqueDieValues array for dievalues 1,2,3,4,5 or 2,3,4,5,6
                 if (uniqueDieValues.Length == 5) {
                     if (((uniqueDieValues[0] == 1 &&
                           uniqueDieValues[1] == 2 &&
@@ -40,8 +41,7 @@ namespace Yahtzee_Game {
                           uniqueDieValues[3] == 5 &&
                           uniqueDieValues[4] == 6)) {
                         Points = 40;
-                    }
-                    else {
+                    } else {
                         Points = 0;
                     }
                 } else {
@@ -50,7 +50,9 @@ namespace Yahtzee_Game {
 
                     //Small Straight
                 } else if (scoreType == ScoreType.SmallStraight) {
-                int[] uniqueDieValues = dieValues.Distinct().ToArray();
+                int[] uniqueDieValues = dieValues.Distinct().ToArray(); // remove duplicate dievalues and place in uniqueDieValues array
+
+                //Will search through uniqueDieValues array for dievalues 1,2,3,4 or 2,3,4,5 or 3,4,5,6
                 if (uniqueDieValues.Length >= 4) {
                     if (((uniqueDieValues[0] == 1 &&
                           uniqueDieValues[1] == 2 &&

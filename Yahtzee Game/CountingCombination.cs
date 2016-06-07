@@ -21,6 +21,8 @@ namespace Yahtzee_Game {
 
         public override void CalculateScore(int[] diceValues) {
             int dieCount = 0;
+            
+            //for each dieFaceValue that is equal to dieValue, add one to dieCount
             for (int i = 0; i < 5; i++) {
                 if (diceValues[i] == dieValue) {
                     dieCount++;

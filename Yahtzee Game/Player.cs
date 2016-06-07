@@ -17,7 +17,7 @@ namespace Yahtzee_Game {
         private int combinationsToDo = 13;
         private Score[] scores = new Score[19];
         private int grandTotal = 0;
-        private bool accessed = false;
+        private bool accessed = false; //Tells the program if player has used their bonus 63 score
 
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
