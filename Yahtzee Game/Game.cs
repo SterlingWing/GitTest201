@@ -121,16 +121,14 @@ namespace Yahtzee_Game {
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
-
                 for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
                     if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
                         form.DisableScoreButton(scoreCombo);
                     }
                 }
-
             }
         }
-
+        
         public static void Load(Form1 form) {
             //Needs to be implemented
         }
