@@ -146,7 +146,7 @@ namespace Yahtzee_Game {
         /// </summary>
         /// <param name="combination"></param>
         /// <returns>dieValuesArray</returns>
-        public int[] IntDiceArray(ScoreType combination) {
+        private int[] IntDiceArray(ScoreType combination) {
             int[] dieValuesArray = new int[5];
 
             for (int i = 0; i < 5; i++) {
@@ -165,13 +165,12 @@ namespace Yahtzee_Game {
             }
         }//end PlayersFinished
 
+        
         /// <summary>
         /// Ends the game for all players playing.
         /// </summary>
         public void EndGame() {
             PlayersFinished();
-            
-            
             if (playersFinished == form.playerCount) {
                 if (form.playerCount == 1) {
                     form.ShowMessage(labelMessages[3]);

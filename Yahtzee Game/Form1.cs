@@ -20,7 +20,7 @@ namespace Yahtzee_Game {
         CheckBox[] checkBoxes = new CheckBox[5];
         Game game;
 
-        public decimal playerCount = 1;
+        public decimal playerCount = 1; //Extracts the number of players from the numeric up and down box
 
         public Form1() {
             InitializeComponent();
@@ -120,12 +120,8 @@ namespace Yahtzee_Game {
         }//end EnableCheckBoxes
 
         public void DisableAndClearCheckBoxes() {
-            for (int i = 0; i < 5; i++)
-            {
+            for (int i = 0; i < 5; i++) {
                 checkBoxes[i].Enabled = false;
-            }
-            for (int i = 0; i < 5; i++)
-            {
                 checkBoxes[i].Checked = false;
             }
         }//end DisableAndClearCheckBoxes
@@ -155,6 +151,7 @@ namespace Yahtzee_Game {
             EnableRollButton();
             labelMessage.Visible = true;
             labelPlayer.Visible = true;
+            buttonOk.Visible = false;
             for (int i = 0; i < 5; i++) {
                 dice[i].Text = "";
             }
@@ -356,6 +353,10 @@ namespace Yahtzee_Game {
             game = Game.Load(this);
             playerBindingSource.DataSource = game.players;
             gridPlayerBoard.Refresh();
+            labelMessage.Visible = true;
+            labelPlayer.Visible = true;
+            saveToolStripMenuItem.Enabled = true;
+            loadToolStripMenuItem.Enabled = false;
         }
     }
 }
