@@ -16,6 +16,7 @@ namespace Yahtzee_Game {
         private int combinationsToDo = 13;
         private Score[] scores = new Score[19];
         private int grandTotal = 0;
+        private bool accessed = false;
 
         public Player(string name, Label[] scoreTotals) {
             this.name = name;
@@ -54,6 +55,7 @@ namespace Yahtzee_Game {
         }//end Name
 
         public void ScoreCombination(ScoreType combination, int[] dice) {
+
             Score score = scores[(int)combination];
             ((Combination)(score)).CalculateScore(dice);
             combinationsToDo--;
@@ -73,7 +75,8 @@ namespace Yahtzee_Game {
                 scores[17].Points = scores[17].Points + score.Points;
             }
 
-            if (scores[6].Points >= 63) {
+            if (scores[6].Points >= 63 && accessed == false) {
+                accessed = true;
                 scores[7].Points = scores[7].Points + 35;
                 scores[8].Points = scores[6].Points + scores[7].Points;
             }
