@@ -172,6 +172,8 @@ namespace Yahtzee_Game {
         /// Ends the game for all players playing.
         /// </summary>
         public void EndGame() {
+            PlayersFinished();
+
             if (playersFinished == form.playerCount) {
                 if (form.playerCount == 1) {
                     form.ShowMessage(labelMessages[3]);
