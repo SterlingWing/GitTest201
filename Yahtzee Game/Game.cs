@@ -17,6 +17,9 @@ namespace Yahtzee_Game {
         YahtzeeBonus, SectionBTotal, GrandTotal
     }
 
+    /// <summary>
+    /// Represents a Yahtzee game
+    /// </summary>
     class Game {
         //public static string defaultPath = Environment.CurrentDirectory;
         //private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
@@ -33,8 +36,6 @@ namespace Yahtzee_Game {
                                            "Choose a combination to score",
                                            "Your turn has ended - click OK",
                                            "Game has ended, check final scores"};
-
-
 
         public Game(Form1 form) {
             dice = new Die[5];
@@ -66,8 +67,9 @@ namespace Yahtzee_Game {
 
             form.playerBindingSource.DataSource = players;
 
-            
-        }
+            PlayersFinished();
+        }//end Game Constructor
+
         public void NextTurn() {
             form.ShowMessage(labelMessages[0]);
             currentPlayerIndex++;
@@ -82,8 +84,8 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.DisableAndClearCheckBoxes();
-            EndGame();
-        }
+        }//end NextTurn
+
         public void RollDice() {
             form.EnableCheckBoxes();
             for (int i = 0; i < 5; i++) {
@@ -109,14 +111,16 @@ namespace Yahtzee_Game {
             if (numRolls == 4) {
                 form.DisableRollButton();
             }
+        }//end RollDice
 
-        }
         public void HoldDie(int index) {
             dice[index].Active = false;
-        }
+        }//end HoldDie
+
         public void ReleaseDie(int index) {
             dice[index].Active = true;
-        }
+        }//end ReleaseDie
+
         public void ScoreCombination(ScoreType combination) {
             if (currentPlayer.IsAvailable(combination) == true) {
                 int[] dieValuesArray;
@@ -126,21 +130,24 @@ namespace Yahtzee_Game {
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
-                for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
-                    if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
-                        form.DisableScoreButton(scoreCombo);
-                    }
-                }
+                DisableAllScoreButtons();
             }
-        }
+        }//end ScoreCombination
         
         public static void Load(Form1 form) {
             //Needs to be implemented
-        }
+        }//end Load
+
         public void Save() {
             //Needs to be implemented
-        }
+        }//end Save
 
+        /// <summary>
+        /// Moves the die facevalues from an array of Die (dice) 
+        /// to an array of int (dieValuesArray).
+        /// </summary>
+        /// <param name="combination"></param>
+        /// <returns>dieValuesArray</returns>
         public int[] IntDiceArray(ScoreType combination) {
             int[] dieValuesArray = new int[5];
 
@@ -149,39 +156,37 @@ namespace Yahtzee_Game {
             }
 
             return dieValuesArray;
-        }
+        }//end IntDiceArray
 
+        /// <summary>
+        /// Tallies the number of players that have finished the game.
+        /// </summary>
         public void PlayersFinished() {
-            if (currentPlayer.IsFinished() == true) {
+            bool currentPlayerFinished = currentPlayer.IsFinished();
+            if (currentPlayerFinished) {
                 playersFinished++;
             }
-        }
+        }//end PlayersFinished
 
+        /// <summary>
+        /// Ends the game for all players playing.
+        /// </summary>
         public void EndGame() {
-            PlayersFinished();
+            if (playersFinished == form.playerCount) {
+                form.ShowMessage(labelMessages[3]);
+            }
+        }//end EndGame
 
-                if (playersFinished == form.playerCount) {
-                    if (form.playerCount == 1) {
-                        form.ShowMessage(labelMessages[3]);
-                        form.DisableRollButton();
-                        if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-                        form.StartNewGame();
-                    }
-                    else {
-
-                    }
-                }
-                     if (form.playerCount >= 2) {
-                        form.ShowMessage(labelMessages[3]);
-                        form.DisableRollButton();
-                        if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-                        form.StartNewGame();
-                    }
-                    else {
-
-                    }
+        /// <summary>
+        /// Disables all score buttons on the GUI.
+        /// </summary>
+        public void DisableAllScoreButtons() {
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
+                    form.DisableScoreButton(scoreCombo);
                 }
             }
-        }
-    }
+        }//end DisableAllScoreButtons
+    }//end Game Class
 }
+
