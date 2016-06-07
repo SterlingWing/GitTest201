@@ -66,7 +66,7 @@ namespace Yahtzee_Game {
 
             form.playerBindingSource.DataSource = players;
 
-            PlayersFinished();
+            
         }
         public void NextTurn() {
             form.ShowMessage(labelMessages[0]);
@@ -82,6 +82,7 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.DisableAndClearCheckBoxes();
+            EndGame();
         }
         public void RollDice() {
             form.EnableCheckBoxes();
@@ -151,16 +152,35 @@ namespace Yahtzee_Game {
         }
 
         public void PlayersFinished() {
-            bool currentPlayerFinished = currentPlayer.IsFinished();
-            if (currentPlayerFinished) {
+            if (currentPlayer.IsFinished() == true) {
                 playersFinished++;
             }
         }
 
         public void EndGame() {
-            if (playersFinished == form.playerCount) {
-                form.ShowMessage(labelMessages[3]);
+            PlayersFinished();
 
+                if (playersFinished == form.playerCount) {
+                    if (form.playerCount == 1) {
+                        form.ShowMessage(labelMessages[3]);
+                        form.DisableRollButton();
+                        if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                        form.StartNewGame();
+                    }
+                    else {
+
+                    }
+                }
+                     if (form.playerCount >= 2) {
+                        form.ShowMessage(labelMessages[3]);
+                        form.DisableRollButton();
+                        if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                        form.StartNewGame();
+                    }
+                    else {
+
+                    }
+                }
             }
         }
     }

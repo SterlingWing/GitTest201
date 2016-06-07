@@ -42,15 +42,6 @@ namespace Yahtzee_Game {
                     Points = 30;
                 }
             }
-            
-            //for (int i = 0; i < (dieValues.Length - 1); i++) {
-            //        if (scoreType == ScoreType.SmallStraight) {
-            //            if (dieValues[i] == (dieValues[i + 1] + 1) &&
-            //                dieValues[i + 1] == dieValues[i + 2] + 1) {
-            //                Points = 30;
-            //            }
-            //        }
-            //    }
 
             else if (scoreType == ScoreType.LargeStraight) {
                 int[] uniqueDieValues = dieValues.Distinct().ToArray();
