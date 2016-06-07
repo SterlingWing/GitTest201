@@ -642,7 +642,6 @@
             this.checkBoxDie5.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie5.TabIndex = 9;
             this.checkBoxDie5.UseVisualStyleBackColor = true;
-            this.checkBoxDie5.CheckedChanged += new System.EventHandler(this.checkBoxDie5_CheckedChanged);
             // 
             // checkBoxDie4
             // 
@@ -653,7 +652,6 @@
             this.checkBoxDie4.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie4.TabIndex = 8;
             this.checkBoxDie4.UseVisualStyleBackColor = true;
-            this.checkBoxDie4.CheckedChanged += new System.EventHandler(this.checkBoxDie4_CheckedChanged);
             // 
             // checkBoxDie3
             // 
@@ -664,7 +662,6 @@
             this.checkBoxDie3.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie3.TabIndex = 7;
             this.checkBoxDie3.UseVisualStyleBackColor = true;
-            this.checkBoxDie3.CheckedChanged += new System.EventHandler(this.checkBoxDie3_CheckedChanged);
             // 
             // checkBoxDie2
             // 
@@ -675,7 +672,6 @@
             this.checkBoxDie2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie2.TabIndex = 6;
             this.checkBoxDie2.UseVisualStyleBackColor = true;
-            this.checkBoxDie2.CheckedChanged += new System.EventHandler(this.checkBoxDie2_CheckedChanged);
             // 
             // checkBoxDie1
             // 
@@ -686,7 +682,6 @@
             this.checkBoxDie1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDie1.TabIndex = 5;
             this.checkBoxDie1.UseVisualStyleBackColor = true;
-            this.checkBoxDie1.CheckedChanged += new System.EventHandler(this.checkBoxDie1_CheckedChanged);
             // 
             // die5
             // 

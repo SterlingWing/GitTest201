@@ -90,6 +90,12 @@ namespace Yahtzee_Game {
             button12.Click += new EventHandler(ButtonClick);
             button13.Click += new EventHandler(ButtonClick);
 
+            checkBoxDie1.CheckedChanged += new EventHandler(CheckBoxCheck);
+            checkBoxDie2.CheckedChanged += new EventHandler(CheckBoxCheck);
+            checkBoxDie3.CheckedChanged += new EventHandler(CheckBoxCheck);
+            checkBoxDie4.CheckedChanged += new EventHandler(CheckBoxCheck);
+            checkBoxDie5.CheckedChanged += new EventHandler(CheckBoxCheck);
+
         }//end InitialiseLablsAndButtons
 
         public Label[] GetDice() {
@@ -177,115 +183,50 @@ namespace Yahtzee_Game {
             buttonOk.Visible = false;
         }
 
-        private void checkBoxDie1_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxDie1.Checked == true) {
-                game.HoldDie(0);
+        private void CheckBoxCheck(object sender, EventArgs e) {
+            switch ((sender as CheckBox).Name) {
+                case "checkBoxDie1":
+                    if (checkBoxDie1.Checked == true) {
+                        game.HoldDie(0);
+                    }
+                    if (checkBoxDie1.Checked == false) {
+                        game.ReleaseDie(0);
+                    }
+                    break;
+                case "checkBoxDie2":
+                    if (checkBoxDie2.Checked == true) {
+                        game.HoldDie(1);
+                    }
+                    if (checkBoxDie2.Checked == false) {
+                        game.ReleaseDie(1);
+                    }
+                    break;
+                case "checkBoxDie3":
+                    if (checkBoxDie3.Checked == true) {
+                        game.HoldDie(2);
+                    }
+                    if (checkBoxDie3.Checked == false) {
+                        game.ReleaseDie(2);
+                    }
+                    break;
+                case "checkBoxDie4":
+                    if (checkBoxDie4.Checked == true) {
+                        game.HoldDie(3);
+                    }
+                    if (checkBoxDie4.Checked == false) {
+                        game.ReleaseDie(3);
+                    }
+                    break;
+                case "checkBoxDie5":
+                    if (checkBoxDie5.Checked == true) {
+                        game.HoldDie(4);
+                    }
+                    if (checkBoxDie5.Checked == false) {
+                        game.ReleaseDie(4);
+                    }
+                    break;
             }
-            if (checkBoxDie1.Checked == false) {
-                game.ReleaseDie(0);
-            }
         }
-
-        private void checkBoxDie2_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxDie2.Checked == true) {
-                game.HoldDie(1);
-            }
-            if (checkBoxDie2.Checked == false) {
-                game.ReleaseDie(1);
-            }
-        }
-
-        private void checkBoxDie3_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxDie3.Checked == true) {
-                game.HoldDie(2);
-            }
-            if (checkBoxDie3.Checked == false) {
-                game.ReleaseDie(2);
-            }
-        }
-
-        private void checkBoxDie4_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxDie4.Checked == true) {
-                game.HoldDie(3);
-            }
-            if (checkBoxDie4.Checked == false) {
-                game.ReleaseDie(3);
-            }
-        }
-
-        private void checkBoxDie5_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxDie5.Checked == true) {
-                game.HoldDie(4);
-            }
-            if (checkBoxDie5.Checked == false) {
-                game.ReleaseDie(4);
-            }
-        }
-
-        /*private void button1_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Ones);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button2_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Twos);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button3_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Threes);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button4_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Fours);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button5_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Fives);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button6_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Sixes);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button7_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.ThreeOfAKind);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button8_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.FourOfAKind);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button9_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.FullHouse);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button10_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.SmallStraight);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button11_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.LargeStraight);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button12_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Chance);
-            gridPlayerBoard.Refresh();
-        }
-
-        private void button13_Click(object sender, EventArgs e) {
-            game.ScoreCombination(ScoreType.Yahtzee);
-            gridPlayerBoard.Refresh();
-        }*/
 
         private void ButtonClick(object sender, EventArgs e) {
             switch ((sender as Button).Name) {
