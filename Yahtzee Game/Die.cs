@@ -46,7 +46,6 @@ namespace Yahtzee_Game
             if (!DEBUG) {
                 faceValue = random.Next(1, 7);
                 dieLabels.Text = faceValue.ToString();
-                dieLabels.Refresh();
             } else {
                 faceValue = int.Parse(rollFile.ReadLine());
                 dieLabels.Text = faceValue.ToString();
