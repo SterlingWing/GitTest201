@@ -71,8 +71,6 @@ namespace Yahtzee_Game {
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
 
-
-
         }
 
         public Label[] GetDice() {
@@ -139,6 +137,11 @@ namespace Yahtzee_Game {
             EnableRollButton();
             labelMessage.Visible = true;
             labelPlayer.Visible = true;
+            die1.Text = "";
+            die2.Text = "";
+            die3.Text = "";
+            die4.Text = "";
+            die5.Text = "";
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {

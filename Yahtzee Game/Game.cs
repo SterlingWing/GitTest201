@@ -58,6 +58,8 @@ namespace Yahtzee_Game {
 
             currentPlayerIndex = 0;
             currentPlayer = players[currentPlayerIndex];
+            currentPlayer.ShowScores();
+            
 
             form.playerBindingSource.DataSource = players;
 
@@ -76,7 +78,6 @@ namespace Yahtzee_Game {
             form.ShowPlayerName("Player " + (currentPlayerIndex + 1));
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
-            form.GetScoresTotals();
             form.DisableAndClearCheckBoxes();
         }
         public void RollDice() {
