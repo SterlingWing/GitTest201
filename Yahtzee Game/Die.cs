@@ -9,6 +9,11 @@ using System.IO;
 
 namespace Yahtzee_Game
 {
+
+    /// <summary>
+    /// This class represents a single die object which 
+    /// is capable of being rolled.
+    /// </summary>
     class Die {
         private int faceValue;
         private bool active = true;
