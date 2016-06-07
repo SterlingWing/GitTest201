@@ -137,7 +137,6 @@ namespace Yahtzee_Game {
             EnableRollButton();
             labelMessage.Visible = true;
             labelPlayer.Visible = true;
-
             for (int i = 0; i < 5; i++) {
                 dice[i].Text = "";
             }
@@ -151,6 +150,7 @@ namespace Yahtzee_Game {
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
             StartNewGame();
+            buttonOk.Visible = false;
         }
 
 
@@ -207,54 +207,67 @@ namespace Yahtzee_Game {
 
         private void button1_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Ones);
+            gridPlayerBoard.Refresh();
         }
 
         private void button2_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Twos);
+            gridPlayerBoard.Refresh();
         }
 
         private void button3_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Threes);
+            gridPlayerBoard.Refresh();
         }
 
         private void button4_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fours);
+            gridPlayerBoard.Refresh();
         }
 
         private void button5_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fives);
+            gridPlayerBoard.Refresh();
         }
 
         private void button6_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Sixes);
+            gridPlayerBoard.Refresh();
         }
 
         private void button7_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.ThreeOfAKind);
+            gridPlayerBoard.Refresh();
         }
 
         private void button8_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FourOfAKind);
+            gridPlayerBoard.Refresh();
         }
 
         private void button9_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FullHouse);
+            gridPlayerBoard.Refresh();
         }
 
         private void button10_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.SmallStraight);
+            gridPlayerBoard.Refresh();
         }
 
         private void button11_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.LargeStraight);
+            gridPlayerBoard.Refresh();
         }
 
         private void button12_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Chance);
+            gridPlayerBoard.Refresh();
         }
 
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
+            gridPlayerBoard.Refresh();
         }
 
         private void EnableAllScoreButtons() {

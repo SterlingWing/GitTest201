@@ -14,8 +14,9 @@ namespace Yahtzee_Game
         private bool active = true;
         private Label dieLabels;
         private static Random random = new Random();
-        private StreamReader rollFile;
-        private static bool DEBUG;
+        private static StreamReader rollFile;
+        private static bool DEBUG = false;
+        //private static string rollFileName = Game.defaultPath + "\\basictestrolls.txt";
 
         public Die(Label dieLabels) {
             this.dieLabels = dieLabels;
@@ -37,8 +38,16 @@ namespace Yahtzee_Game
         }
 
         public void Roll() {
-            faceValue = random.Next(1, 7);
-            dieLabels.Text = faceValue.ToString();
+            if (!DEBUG) {
+                faceValue = random.Next(1, 7);
+                dieLabels.Text = faceValue.ToString();
+                dieLabels.Refresh();
+            } else {
+                faceValue = int.Parse(rollFile.ReadLine());
+                dieLabels.Text = faceValue.ToString();
+                dieLabels.Refresh();
+            }
+            
         }
 
         public void Load(Label label) {

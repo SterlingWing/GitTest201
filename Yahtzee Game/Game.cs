@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.IO;
 
 namespace Yahtzee_Game {
 
@@ -17,6 +18,8 @@ namespace Yahtzee_Game {
     }
 
     class Game {
+        //public static string defaultPath = Environment.CurrentDirectory;
+        //private static string savedGameFile = defaultPath + "\\YahtzeeGame.dat";
         private BindingList<Player> players;
         private int currentPlayerIndex;
         private Player currentPlayer;

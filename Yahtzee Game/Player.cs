@@ -112,11 +112,5 @@ namespace Yahtzee_Game {
         public void Load(Label[] temp) {
 
         }
-
-        public BindingList<Player> players {
-            get {
-                return players;
-            }
-        }
     }
 }
