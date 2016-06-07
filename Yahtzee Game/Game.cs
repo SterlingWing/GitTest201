@@ -84,6 +84,7 @@ namespace Yahtzee_Game {
             currentPlayer = players[currentPlayerIndex];
             currentPlayer.ShowScores();
             form.DisableAndClearCheckBoxes();
+            EndGame();
         }//end NextTurn
 
         public void RollDice() {
@@ -162,8 +163,7 @@ namespace Yahtzee_Game {
         /// Tallies the number of players that have finished the game.
         /// </summary>
         public void PlayersFinished() {
-            bool currentPlayerFinished = currentPlayer.IsFinished();
-            if (currentPlayerFinished) {
+            if (currentPlayer.IsFinished() == true) {
                 playersFinished++;
             }
         }//end PlayersFinished
@@ -173,7 +173,26 @@ namespace Yahtzee_Game {
         /// </summary>
         public void EndGame() {
             if (playersFinished == form.playerCount) {
-                form.ShowMessage(labelMessages[3]);
+                if (form.playerCount == 1) {
+                    form.ShowMessage(labelMessages[3]);
+                    form.DisableRollButton();
+                    if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                        form.StartNewGame();
+                    }
+                    else {
+                    }
+                }
+            else if (playersFinished == form.playerCount - 1) { 
+                if (form.playerCount >= 2) {
+                    form.ShowMessage(labelMessages[3]);
+                    form.DisableRollButton();
+                    if (MessageBox.Show("Would you like to start a new game", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                        form.StartNewGame();
+                    }
+                    else {
+                    }
+                    }
+                }
             }
         }//end EndGame
 
