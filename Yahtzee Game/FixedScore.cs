@@ -89,6 +89,16 @@ namespace Yahtzee_Game {
                     Points = 0;
                 }
             }
+
+            else if (scoreType == ScoreType.Yahtzee) {
+                int duplicateValues = dieValues.Distinct().Count();
+
+                if (duplicateValues == 1) {
+                    Points = 50;
+                } else {
+                    Points = 0;
+                }
+            }
           }
     }
 }

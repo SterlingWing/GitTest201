@@ -71,7 +71,8 @@ namespace Yahtzee_Game {
         }
 
         public void UpdateGrandTotal(Score score) {
-            scores[18].Points = scores[6].Points + scores[7].Points + scores[16].Points + scores[17].Points;
+            GrandTotal = scores[6].Points + scores[7].Points + scores[16].Points + scores[17].Points;
+            scores[18].Points = GrandTotal;
         }
 
         public int GrandTotal {
