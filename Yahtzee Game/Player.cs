@@ -64,33 +64,7 @@ namespace Yahtzee_Game {
             UpdateGrandTotal(score);
         }//end ScoreCombination
 
-        /// <summary>
-        /// Updates all the totals on the GUI excluding the GrandTotal value.
-        /// </summary>
-        /// <param name="score"></param>
-        /// <param name="combination"></param>
-        public void UpdateScoreTotals(Score score, ScoreType combination) {
-            if ((int)combination < 6) {
-                scores[6].Points = scores[6].Points + score.Points;
-            } else if ((int)combination > 8) {
-                scores[17].Points = scores[17].Points + score.Points;
-            }
 
-            if (scores[6].Points >= 63 && accessed == false) {
-                accessed = true;
-                scores[7].Points = scores[7].Points + 35;
-                scores[8].Points = scores[6].Points + scores[7].Points;
-            }
-        }//end UpdateScoreTotals
-
-        /// <summary>
-        /// Updates the grandTotal variable and updates GrandTotal score to equal grandTotal.
-        /// </summary>
-        /// <param name="score"></param>
-        public void UpdateGrandTotal(Score score) {
-            GrandTotal = scores[6].Points + scores[7].Points + scores[16].Points + scores[17].Points;
-            scores[18].Points = GrandTotal;
-        }//end UpdateGrandTotal
 
         public int GrandTotal {
             get {
@@ -131,6 +105,38 @@ namespace Yahtzee_Game {
                 scores[i].Load(scoreTotals[i]);
             }
         }//end Load
+         
+        
+         /// <summary>
+         /// Updates all the totals on the GUI excluding the GrandTotal value.
+         /// </summary>
+         /// <param name="score"></param>
+         /// <param name="combination"></param>
+        private void UpdateScoreTotals(Score score, ScoreType combination) {
+            if ((int)combination < 6) {
+                scores[6].Points = scores[6].Points + score.Points;
+            }
+            else if ((int)combination > 8) {
+                scores[17].Points = scores[17].Points + score.Points;
+            }
 
+            if (scores[6].Points >= 63 && accessed == false) {
+                accessed = true;
+                scores[7].Points = scores[7].Points + 35;
+                scores[8].Points = scores[6].Points + scores[7].Points;
+            }
+        }//end UpdateScoreTotals
+
+        /// <summary>
+        /// Updates the grandTotal variable and updates GrandTotal score to equal grandTotal.
+        /// </summary>
+        /// <param name="score"></param>
+        private void UpdateGrandTotal(Score score) {
+            GrandTotal = scores[6].Points + scores[7].Points + scores[16].Points + scores[17].Points;
+            scores[18].Points = GrandTotal;
+
+
+        }//end UpdateGrandTotal
     }//end Player Class
 }
+
