@@ -130,6 +130,7 @@ namespace Yahtzee_Game {
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
+                DisableAllScoreButtons();
             }
         }//end ScoreCombination
         
