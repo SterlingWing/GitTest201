@@ -185,4 +185,3 @@ namespace Yahtzee_Game {
         }
     }
 }
-

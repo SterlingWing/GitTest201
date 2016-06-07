@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Yahtzee_Game {
+
+    /// <summary>
+    /// Represents all scoring combinations where the score is 
+    /// the total of the dice face values.
+    /// Includes: 3 of a Kind, 4 of a Kind and Chance.
+    /// </summary>
     class TotalOfDice : Combination {
         private int numberOfOneKind;
 
-        public TotalOfDice(ScoreType scoreType, Label temp2) : base(temp2) {
+        public TotalOfDice(ScoreType scoreType, Label label) : base(label) {
             if (scoreType == ScoreType.ThreeOfAKind) {
                 numberOfOneKind = 3;
             }
@@ -21,7 +27,7 @@ namespace Yahtzee_Game {
             if (scoreType == ScoreType.Chance) {
                 numberOfOneKind = 0;
             }
-        }
+        }//end TotalOfDice Constructor
 
         public override void CalculateScore(int[] dieValues) {
             Sort(dieValues);
@@ -47,7 +53,7 @@ namespace Yahtzee_Game {
 
             } else if (numberOfOneKind == 0) {
                         Points = dieValues.Sum();
-                    }
                 }
-        }
-    }
+        }//end CalculateScore
+    }//end TotalOfDice Class
+}
