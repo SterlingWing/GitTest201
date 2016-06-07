@@ -42,9 +42,12 @@ namespace Yahtzee_Game {
             }
 
             players = new BindingList<Player>();
-            for (int i = 0; i < form.PlayerSetCountReturn(); i++) {
+            for (int i = 0; i < 6 /*form.PlayerSetCountReturn()*/; i++) {
                 players.Add(new Player(("player " + (i + 1)), form.GetScoresTotals()));
             }
+
+            form.ShowPlayerName("Player 1");
+            form.ShowMessage("Roll 1");
 
             currentPlayerIndex = 0;
             currentPlayer = players[currentPlayerIndex];

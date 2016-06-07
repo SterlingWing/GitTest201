@@ -86,21 +86,21 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridPlayerBoard = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grandTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lablePlayersTitle = new System.Windows.Forms.Label();
             this.playerSetCount = new System.Windows.Forms.NumericUpDown();
             this.labelPlayerCount = new System.Windows.Forms.Label();
             this.labelYahtzeeTitle = new System.Windows.Forms.Label();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grandTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -372,6 +372,7 @@
             // button7
             // 
             this.button7.AutoSize = true;
+            this.button7.Enabled = false;
             this.button7.Location = new System.Drawing.Point(278, 263);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 30);
@@ -383,6 +384,7 @@
             // button8
             // 
             this.button8.AutoSize = true;
+            this.button8.Enabled = false;
             this.button8.Location = new System.Drawing.Point(278, 296);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(94, 30);
@@ -394,6 +396,7 @@
             // button9
             // 
             this.button9.AutoSize = true;
+            this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(277, 327);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(95, 30);
@@ -405,6 +408,7 @@
             // button13
             // 
             this.button13.AutoSize = true;
+            this.button13.Enabled = false;
             this.button13.Location = new System.Drawing.Point(293, 453);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(79, 30);
@@ -416,6 +420,7 @@
             // button10
             // 
             this.button10.AutoSize = true;
+            this.button10.Enabled = false;
             this.button10.Location = new System.Drawing.Point(254, 360);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(118, 30);
@@ -427,6 +432,7 @@
             // button11
             // 
             this.button11.AutoSize = true;
+            this.button11.Enabled = false;
             this.button11.Location = new System.Drawing.Point(252, 391);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(120, 30);
@@ -438,6 +444,7 @@
             // button12
             // 
             this.button12.AutoSize = true;
+            this.button12.Enabled = false;
             this.button12.Location = new System.Drawing.Point(297, 422);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 30);
@@ -467,6 +474,7 @@
             // button6
             // 
             this.button6.AutoSize = true;
+            this.button6.Enabled = false;
             this.button6.Location = new System.Drawing.Point(28, 415);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 30);
@@ -478,6 +486,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(28, 384);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 30);
@@ -498,6 +507,7 @@
             // button4
             // 
             this.button4.AutoSize = true;
+            this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(28, 355);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 30);
@@ -518,6 +528,7 @@
             // button3
             // 
             this.button3.AutoSize = true;
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(28, 322);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 30);
@@ -538,6 +549,7 @@
             // button2
             // 
             this.button2.AutoSize = true;
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(28, 291);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 30);
@@ -558,6 +570,7 @@
             // button1
             // 
             this.button1.AutoSize = true;
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(28, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 30);
@@ -598,6 +611,7 @@
             this.labelPlayer.Size = new System.Drawing.Size(198, 38);
             this.labelPlayer.TabIndex = 13;
             this.labelPlayer.Text = "Player Label";
+            this.labelPlayer.Visible = false;
             // 
             // labelMessage
             // 
@@ -609,6 +623,7 @@
             this.labelMessage.Size = new System.Drawing.Size(138, 25);
             this.labelMessage.TabIndex = 12;
             this.labelMessage.Text = "message label";
+            this.labelMessage.Visible = false;
             // 
             // labelHoldValueMessage
             // 
@@ -794,27 +809,6 @@
             this.gridPlayerBoard.Size = new System.Drawing.Size(215, 169);
             this.gridPlayerBoard.TabIndex = 4;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nameDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // grandTotalDataGridViewTextBoxColumn
-            // 
-            this.grandTotalDataGridViewTextBoxColumn.DataPropertyName = "GrandTotal";
-            this.grandTotalDataGridViewTextBoxColumn.HeaderText = "GrandTotal";
-            this.grandTotalDataGridViewTextBoxColumn.Name = "grandTotalDataGridViewTextBoxColumn";
-            this.grandTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.grandTotalDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grandTotalDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
-            // 
             // lablePlayersTitle
             // 
             this.lablePlayersTitle.AutoSize = true;
@@ -849,6 +843,7 @@
             0,
             0,
             0});
+            this.playerSetCount.ValueChanged += new System.EventHandler(this.playerSetCount_ValueChanged);
             // 
             // labelPlayerCount
             // 
@@ -874,6 +869,27 @@
             this.labelYahtzeeTitle.TabIndex = 0;
             this.labelYahtzeeTitle.Text = "Yahtzee";
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nameDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // grandTotalDataGridViewTextBoxColumn
+            // 
+            this.grandTotalDataGridViewTextBoxColumn.DataPropertyName = "GrandTotal";
+            this.grandTotalDataGridViewTextBoxColumn.HeaderText = "GrandTotal";
+            this.grandTotalDataGridViewTextBoxColumn.Name = "grandTotalDataGridViewTextBoxColumn";
+            this.grandTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.grandTotalDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grandTotalDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(Yahtzee_Game.Player);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -893,8 +909,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPlayerBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

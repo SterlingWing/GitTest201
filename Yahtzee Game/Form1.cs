@@ -70,8 +70,8 @@ namespace Yahtzee_Game {
             checkBoxes[3] = checkBoxDie4;
             checkBoxes[4] = checkBoxDie5;
 
-            labelPlayer.Text = "Player 1";
-            labelMessage.Text = "Roll 1";
+
+
         }
 
         public Label[] GetDice() {
@@ -136,12 +136,14 @@ namespace Yahtzee_Game {
             InitialiseLabelsAndButtons();
             game = new Game(this);
             EnableRollButton();
+            labelMessage.Visible = true;
+            labelPlayer.Visible = true;
         }
 
         private void buttonRollDice_Click(object sender, EventArgs e) {
             EnableCheckBoxes();
             game.RollDice();
-
+            enableAllScoreButtons();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -202,57 +204,101 @@ namespace Yahtzee_Game {
 
         private void button1_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Ones);
+            disableAllScoreButtons();
         }
 
         private void button2_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Twos);
+            disableAllScoreButtons();
         }
 
         private void button3_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Threes);
+            disableAllScoreButtons();
         }
 
         private void button4_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fours);
+            disableAllScoreButtons();
         }
 
         private void button5_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Fives);
+            disableAllScoreButtons();
         }
 
         private void button6_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Sixes);
+            disableAllScoreButtons();
         }
 
         private void button7_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.ThreeOfAKind);
+            disableAllScoreButtons();
         }
 
         private void button8_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FourOfAKind);
+            disableAllScoreButtons();
         }
 
         private void button9_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.FullHouse);
+            disableAllScoreButtons();
         }
 
         private void button10_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.SmallStraight);
+            disableAllScoreButtons();
         }
 
         private void button11_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.LargeStraight);
+            disableAllScoreButtons();
         }
 
         private void button12_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Chance);
+            disableAllScoreButtons();
         }
 
         private void button13_Click(object sender, EventArgs e) {
             game.ScoreCombination(ScoreType.Yahtzee);
+            disableAllScoreButtons();
         }
-        public decimal PlayerSetCountReturn() {
-            return playerSetCount.Value;
+        private void disableAllScoreButtons() {
+            DisableScoreButton(ScoreType.Ones);
+            DisableScoreButton(ScoreType.Twos);
+            DisableScoreButton(ScoreType.Threes);
+            DisableScoreButton(ScoreType.Fours);
+            DisableScoreButton(ScoreType.Fives);
+            DisableScoreButton(ScoreType.Sixes);
+            DisableScoreButton(ScoreType.ThreeOfAKind);
+            DisableScoreButton(ScoreType.FourOfAKind);
+            DisableScoreButton(ScoreType.FullHouse);
+            DisableScoreButton(ScoreType.SmallStraight);
+            DisableScoreButton(ScoreType.LargeStraight);
+            DisableScoreButton(ScoreType.Chance);
+            DisableScoreButton(ScoreType.Yahtzee);
+        }
+        private void enableAllScoreButtons() {
+            EnableScoreButton(ScoreType.Ones);
+            EnableScoreButton(ScoreType.Twos);
+            EnableScoreButton(ScoreType.Threes);
+            EnableScoreButton(ScoreType.Fours);
+            EnableScoreButton(ScoreType.Fives);
+            EnableScoreButton(ScoreType.Sixes);
+            EnableScoreButton(ScoreType.ThreeOfAKind);
+            EnableScoreButton(ScoreType.FourOfAKind);
+            EnableScoreButton(ScoreType.FullHouse);
+            EnableScoreButton(ScoreType.SmallStraight);
+            EnableScoreButton(ScoreType.LargeStraight);
+            EnableScoreButton(ScoreType.Chance);
+            EnableScoreButton(ScoreType.Yahtzee);
+        }
+
+        private void playerSetCount_ValueChanged(object sender, EventArgs e) {
+
         }
     }
 }
