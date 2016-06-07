@@ -37,8 +37,6 @@ namespace Yahtzee_Game {
                                            "Your turn has ended - click OK",
                                            "Game has ended, check final scores"};
 
-
-
         public Game(Form1 form) {
             dice = new Die[5];
             this.form = form;
@@ -113,7 +111,6 @@ namespace Yahtzee_Game {
             if (numRolls == 4) {
                 form.DisableRollButton();
             }
-
         }//end RollDice
 
         public void HoldDie(int index) {
@@ -133,11 +130,6 @@ namespace Yahtzee_Game {
                 form.ShowMessage("Your turn has ended - click OK");
                 currentPlayer.ShowScores();
                 form.DisableRollButton();
-                for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
-                    if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
-                        form.DisableScoreButton(scoreCombo);
-                    }
-                }
             }
         }//end ScoreCombination
         
@@ -183,6 +175,17 @@ namespace Yahtzee_Game {
                 form.ShowMessage(labelMessages[3]);
             }
         }//end EndGame
+
+        /// <summary>
+        /// Disables all score buttons on the GUI.
+        /// </summary>
+        public void DisableAllScoreButtons() {
+            for (ScoreType scoreCombo = ScoreType.Ones; scoreCombo <= ScoreType.Yahtzee; scoreCombo++) {
+                if ((int)scoreCombo < 6 || (int)scoreCombo > 8) {
+                    form.DisableScoreButton(scoreCombo);
+                }
+            }
+        }//end DisableAllScoreButtons
     }//end Game Class
 }
 
